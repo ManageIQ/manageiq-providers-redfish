@@ -1,0 +1,14 @@
+---
+:ems:
+  :ems_redfish:
+    :blacklisted_event_names: []
+    :event_handling:
+      :event_groups:
+
+:http_proxy:
+  :redfish:
+    :host:
+    :password:
+    :port:
+    :user:
+
