@@ -12,3 +12,5 @@
     :port:
     :user:
 
+:log:
+  :level_redfish: info
