@@ -1,5 +1,7 @@
 module ManageIQ::Providers::Redfish
   class PhysicalInfraManager < ManageIQ::Providers::PhysicalInfraManager
+    require_nested :Refresher
+
     include Vmdb::Logging
     include ManagerMixin
 

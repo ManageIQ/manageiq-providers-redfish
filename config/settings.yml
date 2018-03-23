@@ -5,6 +5,10 @@
     :event_handling:
       :event_groups:
 
+:ems_refresh:
+  :redfish_ph_infra:
+    :inventory_object_refresh: true
+
 :http_proxy:
   :redfish:
     :host:

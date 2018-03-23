@@ -8,5 +8,21 @@ FactoryGirl.define do
         ems.authentications << FactoryGirl.create(:authentication)
       end
     end
+
+    trait :vcr do
+      hostname do
+        # Keep in sync with filter_sensitive_data in spec/spec_helper.rb!
+        Rails.application.secrets.redfish.try(:[], "host") || "redfishhost"
+      end
+
+      after(:create) do |ems|
+        secrets = Rails.application.secrets.redfish
+        ems.authentications << FactoryGirl.create(
+          :authentication,
+          :userid   => secrets.try(:[], "userid") || "REDFISH_USERID",
+          :password => secrets.try(:[], "password") || "REDFISH_PASSWORD"
+        )
+      end
+    end
   end
 end
