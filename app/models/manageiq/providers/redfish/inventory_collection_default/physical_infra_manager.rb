@@ -24,5 +24,19 @@ module ManageIQ::Providers::Redfish
       }
       super(attributes.merge(extra_attributes))
     end
+
+    def self.physical_server_details(extra_attributes = {})
+      attributes = {
+        :inventory_object_attributes => %i(
+          contact
+          description
+          location
+          room
+          rack_name
+          lowest_rack_unit
+        )
+      }
+      super(attributes.merge(extra_attributes))
+    end
   end
 end

@@ -6,6 +6,12 @@ module ManageIQ::Providers::Redfish
     include Vmdb::Logging
     include ManagerMixin
 
+    has_many :physical_server_details,
+             :class_name => "AssetDetail",
+             :source     => :asset_detail,
+             :through    => :physical_servers,
+             :as         => :physical_server
+
     def self.ems_type
       @ems_type ||= "redfish_ph_infra".freeze
     end
