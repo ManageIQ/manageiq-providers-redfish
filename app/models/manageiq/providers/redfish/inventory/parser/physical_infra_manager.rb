@@ -3,6 +3,7 @@ module ManageIQ::Providers::Redfish
     def parse
       physical_servers
       physical_server_details
+      hardwares
     end
 
     private
@@ -60,6 +61,19 @@ module ManageIQ::Providers::Redfish
 
     def get_rack(detail)
       detail.dig("Placement", "Rack") || ""
+    end
+
+    def hardwares
+      collector.hardwares.each do |h|
+        server = persister.physical_servers.find_or_build(h[:server_id])
+        computer = persister.computer_systems.find_or_build(server)
+        hardware = persister.hardwares.find_or_build(computer)
+        hardware.assign_attributes(
+          :disk_capacity   => h[:capacity],
+          :memory_mb       => h[:memory_mb],
+          :cpu_total_cores => h[:cpu_cores]
+        )
+      end
     end
   end
 end

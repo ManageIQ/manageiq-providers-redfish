@@ -16,6 +16,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
         assert_ems
         assert_physical_servers
         assert_physical_server_details
+        assert_hardwares
       end
     end
   end
@@ -25,6 +26,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
     expect(ems.physical_servers.map(&:ems_ref)).to match_array([server_id])
     expect(ems.physical_server_details.count).to eq(1)
     expect(ems.computer_systems.count).to eq(1)
+    expect(ems.hardwares.count).to eq(1)
   end
 
   def assert_physical_servers
@@ -55,6 +57,15 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
     #                 meaningful test.
     expect(d).to have_attributes(
       :resource_type => "PhysicalServer"
+    )
+  end
+
+  def assert_hardwares
+    h = Hardware.first
+    expect(h).to have_attributes(
+      :disk_capacity   => 0,
+      :memory_mb       => 32_768,
+      :cpu_total_cores => 40
     )
   end
 end

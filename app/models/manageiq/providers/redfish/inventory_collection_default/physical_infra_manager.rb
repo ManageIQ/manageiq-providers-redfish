@@ -38,5 +38,16 @@ module ManageIQ::Providers::Redfish
       }
       super(attributes.merge(extra_attributes))
     end
+
+    def self.hardwares(extra_attributes = {})
+      attributes = {
+        :inventory_object_attributes => %i(
+          disk_capacity
+          memory_mb
+          cpu_total_cores
+        )
+      }
+      super(attributes.merge(extra_attributes))
+    end
   end
 end
