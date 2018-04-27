@@ -18,3 +18,9 @@
 
 :log:
   :level_redfish: info
+
+:workers:
+  :worker_base:
+    :queue_worker_base:
+      :ems_refresh_worker:
+        :ems_refresh_worker_redfish_physical_infra: {}
