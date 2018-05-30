@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
       Date:
-      - Tue, 08 May 2018 05:50:50 GMT
+      - Mon, 28 May 2018 07:15:35 GMT
       Odata-Version:
       - '4.0'
       Content-Type:
@@ -39,8 +39,8 @@ http_interactions:
         "SessionService": {"@odata.id": "/redfish/v1/SessionService"}, "Systems":
         {"@odata.id": "/redfish/v1/Systems"}, "Tasks": {"@odata.id": "/redfish/v1/TaskService"},
         "UpdateService": {"@odata.id": "/redfish/v1/UpdateService"}}'
-    http_version:
-  recorded_at: Tue, 08 May 2018 05:50:50 GMT
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
 - request:
     method: post
     uri: https://REDFISH_HOST:8889/redfish/v1/Sessions
@@ -60,23 +60,23 @@ http_interactions:
       Server:
       - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
       Date:
-      - Tue, 08 May 2018 05:50:50 GMT
+      - Mon, 28 May 2018 07:15:35 GMT
       Odata-Version:
       - '4.0'
       Content-Type:
       - application/json
       Location:
-      - "/redfish/v1/Sessions/b146128f-990d-4990-8908-0999bc2c4541"
+      - "/redfish/v1/Sessions/5be09ff4-a454-4a43-b5f8-f47dc82a2659"
       X-Auth-Token:
-      - '0912b643-eec1-426c-8d06-b52aa1cdd673'
+      - a17159f6-f554-478f-afcb-73cba94b242e
     body:
       encoding: ASCII-8BIT
       string: '{"@odata.context": "/redfish/v1/$metadata#Session.Session", "@odata.type":
         "#Session.v1_0_0.Session", "Name": "User Session", "Description": "User Session",
-        "UserName": "REDFISH_USERID", "@odata.id": "/redfish/v1/Sessions/b146128f-990d-4990-8908-0999bc2c4541",
-        "Id": "b146128f-990d-4990-8908-0999bc2c4541"}'
-    http_version:
-  recorded_at: Tue, 08 May 2018 05:50:50 GMT
+        "UserName": "REDFISH_USERID", "@odata.id": "/redfish/v1/Sessions/5be09ff4-a454-4a43-b5f8-f47dc82a2659",
+        "Id": "5be09ff4-a454-4a43-b5f8-f47dc82a2659"}'
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems
@@ -89,7 +89,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - '0912b643-eec1-426c-8d06-b52aa1cdd673'
+      - a17159f6-f554-478f-afcb-73cba94b242e
   response:
     status:
       code: 200
@@ -98,7 +98,7 @@ http_interactions:
       Server:
       - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
       Date:
-      - Tue, 08 May 2018 05:50:50 GMT
+      - Mon, 28 May 2018 07:15:35 GMT
       Odata-Version:
       - '4.0'
       Content-Type:
@@ -110,8 +110,8 @@ http_interactions:
         "Description": "Collection of Computer Systems", "Members@odata.count": 1,
         "Name": "Computer System Collection", "Members": [{"@odata.id": "/redfish/v1/Systems/System.Embedded.1"}],
         "@odata.context": "/redfish/v1/$metadata#ComputerSystemCollection.ComputerSystemCollection"}'
-    http_version:
-  recorded_at: Tue, 08 May 2018 05:50:50 GMT
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System.Embedded.1
@@ -124,7 +124,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - '0912b643-eec1-426c-8d06-b52aa1cdd673'
+      - a17159f6-f554-478f-afcb-73cba94b242e
   response:
     status:
       code: 200
@@ -133,7 +133,7 @@ http_interactions:
       Server:
       - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
       Date:
-      - Tue, 08 May 2018 05:50:50 GMT
+      - Mon, 28 May 2018 07:15:35 GMT
       Odata-Version:
       - '4.0'
       Content-Type:
@@ -182,8 +182,71 @@ http_interactions:
         "SDCard", "UefiHttp"], "BootSourceOverrideEnabled": "Once", "BootSourceOverrideMode":
         "UEFI"}, "Status": {"State": "StandbyOffline", "Health": "OK", "HealthRollup":
         "OK"}}'
-    http_version:
-  recorded_at: Tue, 08 May 2018 05:50:50 GMT
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/System.Embedded.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - a17159f6-f554-478f-afcb-73cba94b242e
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
+      Date:
+      - Mon, 28 May 2018 07:15:35 GMT
+      Odata-Version:
+      - '4.0'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Links": {"Contains": [], "ComputerSystems": [{"@odata.id": "/redfish/v1/Systems/System.Embedded.1"}],
+        "PoweredBy@odata.count": 0, "PoweredBy": [], "CooledBy@odata.count": 12, "ManagersInChassis":
+        [{"@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"}], "Contains@odata.count":
+        0, "CooledBy": [{"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._1"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._2"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._3"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._4"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._5"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._6"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._7"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._8"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._9"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._10"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._11"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._12"}],
+        "ManagersInChassis@odata.count": 1, "ManagedBy": [{"@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"}],
+        "ComputerSystems@odata.count": 1, "ManagedBy@odata.count": 1}, "@redfish.copyright":
+        "Copyright  2017  Dell, Inc.  All rights reserved", "Manufacturer": "Dell
+        Inc.", "PowerState": "Off", "Thermal": {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Thermal"},
+        "Name": "Computer System Chassis", "AssetTag": null, "SerialNumber": "CN701636AB0013",
+        "PhysicalSecurity": {"IntrusionSensor": null, "IntrusionSensorReArm": null,
+        "IntrusionSensorNumber": null}, "@odata.type": "#Chassis.v1_2_0.Chassis",
+        "IndicatorLED": "Off", "SKU": null, "Actions": {"#Chassis.Reset": {"target":
+        "/redfish/v1/Chassis/System.Embedded.1/Actions/Chassis.Reset", "ResetType@Redfish.AllowableValues":
+        ["On", "ForceOff"]}}, "Model": "DSS9630M", "@odata.id": "/redfish/v1/Chassis/System.Embedded.1",
+        "Id": "System.Embedded.1", "Power": {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Power"},
+        "PartNumber": "033RF3X04", "@odata.context": "/redfish/v1/$metadata#Chassis.Chassis",
+        "Location": {"Info": null, "InfoFormat": null}, "Status": {"State": "Enabled",
+        "Health": "OK", "HealthRollup": "OK"}, "Description": "It represents the properties
+        for physical components for any system.It represent racks, rackmount servers,
+        blades, standalone, modular systems,enclosures, and all other containers.The
+        non-cpu/device centric parts of the schema are all accessed either directly
+        or indirectly through this resource.", "ChassisType": "Enclosure"}'
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1
@@ -203,7 +266,7 @@ http_interactions:
       Server:
       - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
       Date:
-      - Tue, 08 May 2018 05:50:50 GMT
+      - Mon, 28 May 2018 07:15:35 GMT
       Odata-Version:
       - '4.0'
       Content-Type:
@@ -223,8 +286,8 @@ http_interactions:
         "SessionService": {"@odata.id": "/redfish/v1/SessionService"}, "Systems":
         {"@odata.id": "/redfish/v1/Systems"}, "Tasks": {"@odata.id": "/redfish/v1/TaskService"},
         "UpdateService": {"@odata.id": "/redfish/v1/UpdateService"}}'
-    http_version:
-  recorded_at: Tue, 08 May 2018 05:50:50 GMT
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
 - request:
     method: post
     uri: https://REDFISH_HOST:8889/redfish/v1/Sessions
@@ -244,23 +307,23 @@ http_interactions:
       Server:
       - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
       Date:
-      - Tue, 08 May 2018 05:50:50 GMT
+      - Mon, 28 May 2018 07:15:35 GMT
       Odata-Version:
       - '4.0'
       Content-Type:
       - application/json
       Location:
-      - "/redfish/v1/Sessions/8a6dd099-ad51-44b2-952f-9ae772b6f53b"
+      - "/redfish/v1/Sessions/6d5c8654-ab28-4390-bec0-e772dca581cc"
       X-Auth-Token:
-      - 65711aeb-d61f-4150-bf93-6fcc715c678d
+      - 0ca89eb7-aa54-406a-89f7-6c998ec9a9b8
     body:
       encoding: ASCII-8BIT
       string: '{"@odata.context": "/redfish/v1/$metadata#Session.Session", "@odata.type":
         "#Session.v1_0_0.Session", "Name": "User Session", "Description": "User Session",
-        "UserName": "REDFISH_USERID", "@odata.id": "/redfish/v1/Sessions/8a6dd099-ad51-44b2-952f-9ae772b6f53b",
-        "Id": "8a6dd099-ad51-44b2-952f-9ae772b6f53b"}'
-    http_version:
-  recorded_at: Tue, 08 May 2018 05:50:50 GMT
+        "UserName": "REDFISH_USERID", "@odata.id": "/redfish/v1/Sessions/6d5c8654-ab28-4390-bec0-e772dca581cc",
+        "Id": "6d5c8654-ab28-4390-bec0-e772dca581cc"}'
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems
@@ -273,7 +336,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 65711aeb-d61f-4150-bf93-6fcc715c678d
+      - 0ca89eb7-aa54-406a-89f7-6c998ec9a9b8
   response:
     status:
       code: 200
@@ -282,7 +345,7 @@ http_interactions:
       Server:
       - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
       Date:
-      - Tue, 08 May 2018 05:50:50 GMT
+      - Mon, 28 May 2018 07:15:35 GMT
       Odata-Version:
       - '4.0'
       Content-Type:
@@ -294,8 +357,8 @@ http_interactions:
         "Description": "Collection of Computer Systems", "Members@odata.count": 1,
         "Name": "Computer System Collection", "Members": [{"@odata.id": "/redfish/v1/Systems/System.Embedded.1"}],
         "@odata.context": "/redfish/v1/$metadata#ComputerSystemCollection.ComputerSystemCollection"}'
-    http_version:
-  recorded_at: Tue, 08 May 2018 05:50:50 GMT
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System.Embedded.1
@@ -308,7 +371,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 65711aeb-d61f-4150-bf93-6fcc715c678d
+      - 0ca89eb7-aa54-406a-89f7-6c998ec9a9b8
   response:
     status:
       code: 200
@@ -317,7 +380,7 @@ http_interactions:
       Server:
       - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
       Date:
-      - Tue, 08 May 2018 05:50:50 GMT
+      - Mon, 28 May 2018 07:15:35 GMT
       Odata-Version:
       - '4.0'
       Content-Type:
@@ -366,6 +429,69 @@ http_interactions:
         "SDCard", "UefiHttp"], "BootSourceOverrideEnabled": "Once", "BootSourceOverrideMode":
         "UEFI"}, "Status": {"State": "StandbyOffline", "Health": "OK", "HealthRollup":
         "OK"}}'
-    http_version:
-  recorded_at: Tue, 08 May 2018 05:50:50 GMT
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/System.Embedded.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 0ca89eb7-aa54-406a-89f7-6c998ec9a9b8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
+      Date:
+      - Mon, 28 May 2018 07:15:35 GMT
+      Odata-Version:
+      - '4.0'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Links": {"Contains": [], "ComputerSystems": [{"@odata.id": "/redfish/v1/Systems/System.Embedded.1"}],
+        "PoweredBy@odata.count": 0, "PoweredBy": [], "CooledBy@odata.count": 12, "ManagersInChassis":
+        [{"@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"}], "Contains@odata.count":
+        0, "CooledBy": [{"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._1"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._2"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._3"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._4"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._5"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._6"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._7"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._8"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._9"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._10"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._11"},
+        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._12"}],
+        "ManagersInChassis@odata.count": 1, "ManagedBy": [{"@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"}],
+        "ComputerSystems@odata.count": 1, "ManagedBy@odata.count": 1}, "@redfish.copyright":
+        "Copyright  2017  Dell, Inc.  All rights reserved", "Manufacturer": "Dell
+        Inc.", "PowerState": "Off", "Thermal": {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Thermal"},
+        "Name": "Computer System Chassis", "AssetTag": null, "SerialNumber": "CN701636AB0013",
+        "PhysicalSecurity": {"IntrusionSensor": null, "IntrusionSensorReArm": null,
+        "IntrusionSensorNumber": null}, "@odata.type": "#Chassis.v1_2_0.Chassis",
+        "IndicatorLED": "Off", "SKU": null, "Actions": {"#Chassis.Reset": {"target":
+        "/redfish/v1/Chassis/System.Embedded.1/Actions/Chassis.Reset", "ResetType@Redfish.AllowableValues":
+        ["On", "ForceOff"]}}, "Model": "DSS9630M", "@odata.id": "/redfish/v1/Chassis/System.Embedded.1",
+        "Id": "System.Embedded.1", "Power": {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Power"},
+        "PartNumber": "033RF3X04", "@odata.context": "/redfish/v1/$metadata#Chassis.Chassis",
+        "Location": {"Info": null, "InfoFormat": null}, "Status": {"State": "Enabled",
+        "Health": "OK", "HealthRollup": "OK"}, "Description": "It represents the properties
+        for physical components for any system.It represent racks, rackmount servers,
+        blades, standalone, modular systems,enclosures, and all other containers.The
+        non-cpu/device centric parts of the schema are all accessed either directly
+        or indirectly through this resource.", "ChassisType": "Enclosure"}'
+    http_version: 
+  recorded_at: Mon, 28 May 2018 07:15:35 GMT
 recorded_with: VCR 3.0.3

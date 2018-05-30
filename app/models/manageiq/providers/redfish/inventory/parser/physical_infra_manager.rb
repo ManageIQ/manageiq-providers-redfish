@@ -2,6 +2,7 @@ module ManageIQ::Providers::Redfish
   class Inventory::Parser::PhysicalInfraManager < Inventory::Parser
     def parse
       physical_servers
+      physical_server_details
     end
 
     private
@@ -27,6 +28,37 @@ module ManageIQ::Providers::Redfish
           :physical_rack_id       => 0
         )
       end
+    end
+
+    def physical_server_details
+      # TODO(tadeboro): There is no similar data in Redfish service, so
+      # mapping will need to be quite sophisticated if we would like to get
+      # more info into database.
+      collector.physical_server_details.each do |d|
+        server = persister.physical_servers.lazy_find(d[:server_id])
+        persister.physical_server_details.build(
+          :resource         => server,
+          :contact          => "",
+          :description      => "",
+          :location         => get_location(d),
+          :room             => "",
+          :rack_name        => get_rack(d),
+          :lowest_rack_unit => ""
+        )
+      end
+    end
+
+    def get_location(detail)
+      [
+        detail.dig("PostalAddress", "HouseNumber"),
+        detail.dig("PostalAddress", "Street"),
+        detail.dig("PostalAddress", "City"),
+        detail.dig("PostalAddress", "Country")
+      ].compact.join(", ")
+    end
+
+    def get_rack(detail)
+      detail.dig("Placement", "Rack") || ""
     end
   end
 end
