@@ -5,6 +5,7 @@ module ManageIQ::Providers::Redfish
 
     include Vmdb::Logging
     include ManagerMixin
+    include_concern "Operations"
 
     has_many :physical_server_details,
              :class_name => "AssetDetail",
