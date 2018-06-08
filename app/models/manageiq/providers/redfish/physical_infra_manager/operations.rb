@@ -3,5 +3,6 @@ module ManageIQ::Providers::Redfish
     extend ActiveSupport::Concern
 
     include_concern "Power"
+    include_concern "Led"
   end
 end
