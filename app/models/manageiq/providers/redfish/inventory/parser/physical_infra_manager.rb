@@ -27,6 +27,7 @@ module ManageIQ::Providers::Redfish
           :location_led_state     => s["IndicatorLED"],
           :physical_rack_id       => 0
         )
+        persister.computer_systems.build(:managed_entity => server)
       end
     end
 

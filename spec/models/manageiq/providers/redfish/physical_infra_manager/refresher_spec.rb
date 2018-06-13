@@ -24,6 +24,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
     expect(ems.physical_servers.count).to eq(1)
     expect(ems.physical_servers.map(&:ems_ref)).to match_array([server_id])
     expect(ems.physical_server_details.count).to eq(1)
+    expect(ems.computer_systems.count).to eq(1)
   end
 
   def assert_physical_servers

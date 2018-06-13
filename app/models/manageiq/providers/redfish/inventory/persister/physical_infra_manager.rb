@@ -4,6 +4,7 @@ module ManageIQ::Providers::Redfish
       collections = %i(
         physical_servers
         physical_server_details
+        computer_systems
       )
       add_inventory_collections(physical_infra, collections)
     end
