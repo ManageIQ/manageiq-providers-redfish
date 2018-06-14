@@ -15,6 +15,9 @@ module ManageIQ::Providers::Redfish
     has_many :computer_systems,
              :through => :physical_servers,
              :as      => :computer_system
+    has_many :hardwares,
+             :through => :physical_servers,
+             :as      => :hardware
 
     def self.ems_type
       @ems_type ||= "redfish_ph_infra".freeze

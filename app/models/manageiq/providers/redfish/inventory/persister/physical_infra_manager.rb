@@ -5,6 +5,7 @@ module ManageIQ::Providers::Redfish
         physical_servers
         physical_server_details
         computer_systems
+        hardwares
       )
       add_inventory_collections(physical_infra, collections)
     end

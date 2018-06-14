@@ -16,33 +16,27 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
-      Server:
-      - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
-      Date:
-      - Mon, 04 Jun 2018 10:23:19 GMT
-      Odata-Version:
-      - '4.0'
       Content-Type:
       - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Wed, 13 Jun 2018 13:52:57 GMT
+      Content-Length:
+      - '1000'
+      Connection:
+      - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.context": "/redfish/v1/$metadata#ServiceRoot.ServiceRoot",
-        "@odata.id": "/redfish/v1", "@odata.type": "#ServiceRoot.v1_1_0.ServiceRoot",
-        "AccountService": {"@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/AccountService"},
-        "Chassis": {"@odata.id": "/redfish/v1/Chassis"}, "Description": "Root Service",
-        "EventService": {"@odata.id": "/redfish/v1/EventService"}, "Id": "RootService",
-        "JsonSchemas": {"@odata.id": "/redfish/v1/JSONSchemas"}, "Links": {"Sessions":
-        {"@odata.id": "/redfish/v1/Sessions"}}, "Managers": {"@odata.id": "/redfish/v1/Managers"},
-        "Name": "Root Service", "Oem": {"Dell": {"@odata.type": "/redfish/v1/Schemas/Dell.v1_0_0#Dell.ServiceRoot",
-        "IsBranded": 0, "ManagerMACAddress": "10:98:36:a9:05:b0", "ServiceTag": ""}},
-        "RedfishVersion": "1.0.2", "Registries": {"@odata.id": "/redfish/v1/Registries"},
-        "SessionService": {"@odata.id": "/redfish/v1/SessionService"}, "Systems":
-        {"@odata.id": "/redfish/v1/Systems"}, "Tasks": {"@odata.id": "/redfish/v1/TaskService"},
-        "UpdateService": {"@odata.id": "/redfish/v1/UpdateService"}}'
+      string: '{"@odata.context":"/redfish/v1/$metadata#ServiceRoot.ServiceRoot","@odata.id":"/redfish/v1","@odata.type":"#ServiceRoot.v1_1_0.ServiceRoot","AccountService":{"@odata.id":"/redfish/v1/Managers/iDRAC.Embedded.1/AccountService"},"Chassis":{"@odata.id":"/redfish/v1/Chassis"},"Description":"Root
+        Service","EventService":{"@odata.id":"/redfish/v1/EventService"},"Id":"RootService","JsonSchemas":{"@odata.id":"/redfish/v1/JSONSchemas"},"Links":{"Sessions":{"@odata.id":"/redfish/v1/Sessions"}},"Managers":{"@odata.id":"/redfish/v1/Managers"},"Name":"Root
+        Service","Oem":{"Dell":{"@odata.type":"/redfish/v1/Schemas/Dell.v1_0_0#Dell.ServiceRoot","IsBranded":0,"ManagerMACAddress":"10:98:36:a9:05:b0","ServiceTag":""}},"RedfishVersion":"1.0.2","Registries":{"@odata.id":"/redfish/v1/Registries"},"SessionService":{"@odata.id":"/redfish/v1/SessionService"},"Systems":{"@odata.id":"/redfish/v1/Systems"},"Tasks":{"@odata.id":"/redfish/v1/TaskService"},"UpdateService":{"@odata.id":"/redfish/v1/UpdateService"}}
+
+'
     http_version: 
-  recorded_at: Mon, 04 Jun 2018 10:23:19 GMT
+  recorded_at: Wed, 13 Jun 2018 13:52:57 GMT
 - request:
     method: post
     uri: https://REDFISH_HOST:8889/redfish/v1/Sessions
@@ -61,28 +55,25 @@ http_interactions:
   response:
     status:
       code: 201
-      message: Created
+      message: 'Created '
     headers:
-      Server:
-      - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
-      Date:
-      - Mon, 04 Jun 2018 10:23:19 GMT
-      Odata-Version:
-      - '4.0'
       Content-Type:
       - application/json
-      Location:
-      - "/redfish/v1/Sessions/2a16495e-31ec-48eb-8c03-44c478f5efff"
       X-Auth-Token:
-      - a94f8c52-0ae2-49a3-baf0-7a2eba764c31
+      - dummy
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Wed, 13 Jun 2018 13:52:57 GMT
+      Content-Length:
+      - '71'
+      Connection:
+      - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.context": "/redfish/v1/$metadata#Session.Session", "@odata.type":
-        "#Session.v1_0_0.Session", "Name": "User Session", "Description": "User Session",
-        "UserName": "REDFISH_USERID", "@odata.id": "/redfish/v1/Sessions/2a16495e-31ec-48eb-8c03-44c478f5efff",
-        "Id": "2a16495e-31ec-48eb-8c03-44c478f5efff"}'
+      string: '{"Name":"User Session","Description":"User Session","UserName":"REDFISH_USERID"}'
     http_version: 
-  recorded_at: Mon, 04 Jun 2018 10:23:19 GMT
+  recorded_at: Wed, 13 Jun 2018 13:52:57 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System.Embedded.1
@@ -97,66 +88,199 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - a94f8c52-0ae2-49a3-baf0-7a2eba764c31
+      - dummy
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
       Server:
-      - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
+      - Apache/2.4
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - DENY
+      Content-Type:
+      - application/json;odata.metadata=minimal;charset=utf-8
+      Allow:
+      - POST,PATCH
+      Access-Control-Allow-Origin:
+      - "*"
       Date:
-      - Mon, 04 Jun 2018 10:23:19 GMT
+      - Sat, 20 May 2017 09:58:17 GMT
       Odata-Version:
       - '4.0'
-      Content-Type:
-      - application/json
+      Link:
+      - "</redfish/v1/Schemas/ComputerSystem.v1_1_0.json>;rel=describedby"
+      Content-Length:
+      - '5262'
+      Connection:
+      - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"SimpleStorage": {"@odata.id": "/redfish/v1/Systems/System.Embedded.1/Storage/Controllers"},
-        "Links": {"CooledBy@odata.count": 12, "PoweredBy@odata.count": 0, "Oem": {"Dell":
-        {"BootSources": {"@odata.id": "/redfish/v1/Systems/System.Embedded.1/BootSources"},
-        "@odata.type": "#Dell.v1_0_0.BootSources"}}, "ManagedBy": [{"@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"}],
-        "Chassis": [{"@odata.id": "/redfish/v1/Chassis/System.Embedded.1"}], "Chassis@odata.count":
-        1, "PoweredBy": [], "CooledBy": [{"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._1"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._2"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._3"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._4"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._5"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._6"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._7"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._8"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._9"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._10"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._11"},
-        {"@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._12"}],
-        "ManagedBy@odata.count": 1}, "Processors": {"@odata.id": "/redfish/v1/Systems/System.Embedded.1/Processors"},
-        "@redfish.copyright": "Copyright  2017  Dell, Inc.  All rights reserved",
-        "Manufacturer": "Dell Inc.", "PowerState": "Off", "UUID": "ffffffff-ffff-ffff-ffff-ffffffffffff",
-        "Name": "System", "AssetTag": "", "HostName": "", "SerialNumber": "CN701636AB0013",
-        "@odata.type": "#ComputerSystem.v1_1_0.ComputerSystem", "TrustedModules":
-        [{"Status": {"State": "Disabled"}}], "IndicatorLED": "Off", "SKU": "", "MemorySummary":
-        {"TotalSystemMemoryGiB": 32.0, "Status": {"State": "Enabled", "Health": null,
-        "HealthRollup": null}, "MemoryMirroring": "System"}, "Model": "DSS9630M",
-        "@odata.id": "/redfish/v1/Systems/System.Embedded.1", "Id": "System.Embedded.1",
-        "Bios": {"@odata.id": "/redfish/v1/Systems/System.Embedded.1/Bios"}, "SecureBoot":
-        {"@odata.id": "/redfish/v1/Systems/System.Embedded.1/SecureBoot"}, "ProcessorSummary":
-        {"Status": {"State": "Enabled", "Health": null, "HealthRollup": null}, "Count":
-        2, "Model": ""}, "SystemType": "Physical", "@odata.context": "/redfish/v1/$metadata#ComputerSystem.ComputerSystem",
-        "PartNumber": "033RF3X04", "BiosVersion": "0.4.8", "EthernetInterfaces": {"@odata.id":
-        "/redfish/v1/Systems/System.Embedded.1/EthernetInterfaces"}, "Description":
-        "Computer System which represents a machine (physical or virtual) and the
-        local resources such as memory, cpu and other devices that can be accessed
-        from that machine.", "Actions": {"#ComputerSystem.Reset": {"target": "/redfish/v1/Systems/System.Embedded.1/Actions/ComputerSystem.Reset",
-        "ResetType@Redfish.AllowableValues": ["On", "ForceOff", "GracefulRestart",
-        "GracefulShutdown", "PushPowerButton", "Nmi"]}}, "Boot": {"UefiTargetBootSourceOverride":
-        "", "BootSourceOverrideTarget": "None", "BootSourceOverrideTarget@Redfish.AllowableValues":
-        ["None", "Pxe", "Floppy", "Cd", "Hdd", "BiosSetup", "Utilities", "UefiTarget",
-        "SDCard", "UefiHttp"], "BootSourceOverrideEnabled": "Once", "BootSourceOverrideMode":
-        "UEFI"}, "Status": {"State": "StandbyOffline", "Health": "OK", "HealthRollup":
-        "OK"}}'
+      string: |-
+        {
+            "SimpleStorage": {
+                "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Storage/Controllers"
+            },
+            "Links": {
+                "CooledBy@odata.count": 12,
+                "PoweredBy@odata.count": 0,
+                "Oem": {
+                    "Dell": {
+                        "BootSources": {
+                            "@odata.id": "/redfish/v1/Systems/System.Embedded.1/BootSources"
+                        },
+                        "@odata.type": "#Dell.v1_0_0.BootSources"
+                    }
+                },
+                "ManagedBy": [
+                    {
+                        "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                    }
+                ],
+                "Chassis": [
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1"
+                    }
+                ],
+                "Chassis@odata.count": 1,
+                "PoweredBy": [],
+                "CooledBy": [
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._1"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._2"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._3"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._4"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._5"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._6"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._7"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._8"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._9"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._10"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._11"
+                    },
+                    {
+                        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._12"
+                    }
+                ],
+                "ManagedBy@odata.count": 1
+            },
+            "Processors": {
+                "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Processors"
+            },
+            "@redfish.copyright": "Copyright  2017  Dell, Inc.  All rights reserved",
+            "Manufacturer": "Dell Inc.",
+            "PowerState": "Off",
+            "UUID": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+            "Name": "System",
+            "AssetTag": "",
+            "HostName": "",
+            "SerialNumber": "CN701636AB0013",
+            "@odata.type": "#ComputerSystem.v1_1_0.ComputerSystem",
+            "TrustedModules": [
+                {
+                    "Status": {
+                        "State": "Disabled"
+                    }
+                }
+            ],
+            "IndicatorLED": "Off",
+            "SKU": "",
+            "MemorySummary": {
+                "TotalSystemMemoryGiB": 32.0,
+                "Status": {
+                    "State": "Enabled",
+                    "Health": null,
+                    "HealthRollup": null
+                },
+                "MemoryMirroring": "System"
+            },
+            "Model": "DSS9630M",
+            "@odata.id": "/redfish/v1/Systems/System.Embedded.1",
+            "Id": "System.Embedded.1",
+            "Bios": {
+                "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Bios"
+            },
+            "SecureBoot": {
+                "@odata.id": "/redfish/v1/Systems/System.Embedded.1/SecureBoot"
+            },
+            "ProcessorSummary": {
+                "Status": {
+                    "State": "Enabled",
+                    "Health": null,
+                    "HealthRollup": null
+                },
+                "Count": 2,
+                "Model": ""
+            },
+            "SystemType": "Physical",
+            "@odata.context": "/redfish/v1/$metadata#ComputerSystem.ComputerSystem",
+            "PartNumber": "033RF3X04",
+            "BiosVersion": "0.4.8",
+            "EthernetInterfaces": {
+                "@odata.id": "/redfish/v1/Systems/System.Embedded.1/EthernetInterfaces"
+            },
+            "Description": "Computer System which represents a machine (physical or virtual) and the local resources such as memory, cpu and other devices that can be accessed from that machine.",
+            "Actions": {
+                "#ComputerSystem.Reset": {
+                    "target": "/redfish/v1/Systems/System.Embedded.1/Actions/ComputerSystem.Reset",
+                    "ResetType@Redfish.AllowableValues": [
+                        "On",
+                        "ForceOff",
+                        "GracefulRestart",
+                        "GracefulShutdown",
+                        "PushPowerButton",
+                        "Nmi"
+                    ]
+                }
+            },
+            "Boot": {
+                "UefiTargetBootSourceOverride": "",
+                "BootSourceOverrideTarget": "None",
+                "BootSourceOverrideTarget@Redfish.AllowableValues": [
+                    "None",
+                    "Pxe",
+                    "Floppy",
+                    "Cd",
+                    "Hdd",
+                    "BiosSetup",
+                    "Utilities",
+                    "UefiTarget",
+                    "SDCard",
+                    "UefiHttp"
+                ],
+                "BootSourceOverrideEnabled": "Once",
+                "BootSourceOverrideMode": "UEFI"
+            },
+            "Status": {
+                "State": "StandbyOffline",
+                "Health": "OK",
+                "HealthRollup": "OK"
+            }
+        }
     http_version: 
-  recorded_at: Mon, 04 Jun 2018 10:23:19 GMT
+  recorded_at: Wed, 13 Jun 2018 13:52:57 GMT
 - request:
     method: post
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System.Embedded.1/Actions/ComputerSystem.Reset
@@ -171,21 +295,25 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - a94f8c52-0ae2-49a3-baf0-7a2eba764c31
+      - dummy
       Content-Type:
       - application/json
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 501
+      message: 'Not Implemented '
     headers:
       Server:
-      - RedfishMockupHTTPD_v1.0.0 Python/3.6.5
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 04 Jun 2018 10:23:19 GMT
+      - Wed, 13 Jun 2018 13:52:57 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - Keep-Alive
     body:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Mon, 04 Jun 2018 10:23:19 GMT
+  recorded_at: Wed, 13 Jun 2018 13:52:57 GMT
 recorded_with: VCR 3.0.3
