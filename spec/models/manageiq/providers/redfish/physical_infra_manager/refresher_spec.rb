@@ -44,8 +44,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
       :field_replaceable_unit => "dummy",
       :raw_power_state        => "Off",
       :vendor                 => "unknown",
-      :location_led_state     => "Off",
-      :physical_rack_id       => 0
+      :location_led_state     => "Off"
     )
   end
 
