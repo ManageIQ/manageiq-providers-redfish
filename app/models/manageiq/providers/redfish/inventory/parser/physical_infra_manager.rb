@@ -25,8 +25,7 @@ module ManageIQ::Providers::Redfish
           :field_replaceable_unit => "dummy",
           :raw_power_state        => s["PowerState"],
           :vendor                 => "unknown",
-          :location_led_state     => s["IndicatorLED"],
-          :physical_rack_id       => 0
+          :location_led_state     => s["IndicatorLED"]
         )
         persister.computer_systems.build(:managed_entity => server)
       end
