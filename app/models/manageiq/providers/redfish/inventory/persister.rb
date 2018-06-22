@@ -4,8 +4,24 @@ module ManageIQ::Providers::Redfish
 
     protected
 
-    def physical_infra
-      InventoryCollectionDefault::PhysicalInfraManager
+    def targeted?
+      false
+    end
+
+    def strategy
+      nil
+    end
+
+    def parent
+      manager.presence
+    end
+
+    def shared_options
+      {
+        :targeted => targeted?,
+        :strategy => nil,
+        :parent   => parent
+      }
     end
   end
 end
