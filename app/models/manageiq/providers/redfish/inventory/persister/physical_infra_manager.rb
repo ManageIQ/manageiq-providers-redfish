@@ -1,13 +1,9 @@
 module ManageIQ::Providers::Redfish
   class Inventory::Persister::PhysicalInfraManager < Inventory::Persister
+    include Inventory::Persister::Definitions::PhysicalInfraCollections
+
     def initialize_inventory_collections
-      collections = %i(
-        physical_servers
-        physical_server_details
-        computer_systems
-        hardwares
-      )
-      add_inventory_collections(physical_infra, collections)
+      initialize_physical_infra_collections
     end
   end
 end
