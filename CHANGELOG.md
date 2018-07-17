@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 
+## Unreleased as of Sprint 89 - 2018-07-16
+
+### Added
+- Persister: InventoryCollection building through add_collection() [(#14)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/14)
+
 ## Unreleased as of Sprint 89 - 2018-07-02
 
 ### Fixed
