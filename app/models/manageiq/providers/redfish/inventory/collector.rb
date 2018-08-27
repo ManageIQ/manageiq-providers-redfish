@@ -1,5 +1,5 @@
 module ManageIQ::Providers::Redfish
-  class Inventory::Collector < ManagerRefresh::Inventory::Collector
+  class Inventory::Collector < ManageIQ::Providers::Inventory::Collector
     require_nested :PhysicalInfraManager
 
     def rf_client
