@@ -1,5 +1,5 @@
 module ManageIQ::Providers::Redfish
-  class Inventory::Persister < ManagerRefresh::Inventory::Persister
+  class Inventory::Persister < ManageIQ::Providers::Inventory::Persister
     require_nested :PhysicalInfraManager
 
     protected
