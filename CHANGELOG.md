@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 
+## Unreleased as of Sprint 94 - 2018-09-10
+
+### Added
+- Moving Inventory Builder functionality to Inventory [(#25)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/25)
+- Add plugin display name [(#23)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/23)
+
 ## Unreleased as of Sprint 89 - 2018-07-16
 
 ### Added
