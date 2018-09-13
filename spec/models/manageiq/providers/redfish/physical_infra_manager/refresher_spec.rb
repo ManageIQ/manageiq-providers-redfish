@@ -32,20 +32,16 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
   def assert_physical_servers
     s = PhysicalServer.find_by(:ems_ref => server_id)
     expect(s).to have_attributes(
-      :type                   => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
-      :ems_id                 => ems.id,
-      :name                   => "System.Embedded.1",
-      :health_state           => "OK",
-      :power_state            => "Off",
-      :hostname               => "",
-      :product_name           => "dummy",
-      :manufacturer           => "Dell Inc.",
-      :machine_type           => "dummy",
-      :model                  => "DSS9630M",
-      :serial_number          => "CN701636AB0013",
-      :field_replaceable_unit => "dummy",
-      :raw_power_state        => "Off",
-      :vendor                 => "unknown",
+      :ems_id          => ems.id,
+      :health_state    => "OK",
+      :hostname        => "",
+      :manufacturer    => "Dell Inc.",
+      :model           => "DSS9630M",
+      :name            => "System.Embedded.1",
+      :power_state     => "Off",
+      :raw_power_state => "Off",
+      :serial_number   => "CN701636AB0013",
+      :type            => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
     )
   end
 
