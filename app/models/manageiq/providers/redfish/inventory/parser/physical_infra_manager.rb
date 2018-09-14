@@ -25,7 +25,6 @@ module ManageIQ::Providers::Redfish
           :field_replaceable_unit => "dummy",
           :raw_power_state        => s["PowerState"],
           :vendor                 => "unknown",
-          :location_led_state     => s["IndicatorLED"]
         )
         persister.computer_systems.build(:managed_entity => server)
       end
@@ -38,13 +37,14 @@ module ManageIQ::Providers::Redfish
       collector.physical_server_details.each do |d|
         server = persister.physical_servers.lazy_find(d[:server_id])
         persister.physical_server_details.build(
-          :resource         => server,
-          :contact          => "",
-          :description      => "",
-          :location         => get_location(d),
-          :room             => "",
-          :rack_name        => get_rack(d),
-          :lowest_rack_unit => ""
+          :resource           => server,
+          :contact            => "",
+          :description        => "",
+          :location           => get_location(d),
+          :room               => "",
+          :rack_name          => get_rack(d),
+          :location_led_state => d["IndicatorLED"],
+          :lowest_rack_unit   => ""
         )
       end
     end
