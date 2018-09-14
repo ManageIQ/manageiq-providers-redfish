@@ -5,7 +5,7 @@ module ManageIQ::Providers::Redfish
     end
 
     def physical_server_details
-      rf_client.Systems.Members.collect { |s| get_server_location(s) }
+      rf_client.Systems.Members.collect { |s| get_server_details(s) }
     end
 
     def hardwares
@@ -13,6 +13,10 @@ module ManageIQ::Providers::Redfish
     end
 
     private
+
+    def get_server_details(server)
+      get_server_location(server).merge("IndicatorLED" => server.IndicatorLED)
+    end
 
     def get_server_location(server)
       loc = { :server_id => server["@odata.id"] }

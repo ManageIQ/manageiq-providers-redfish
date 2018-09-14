@@ -46,7 +46,6 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
       :field_replaceable_unit => "dummy",
       :raw_power_state        => "Off",
       :vendor                 => "unknown",
-      :location_led_state     => "Off"
     )
   end
 
@@ -55,7 +54,8 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
     # TODO(tadeboro): We need better source of data before we can create more
     #                 meaningful test.
     expect(d).to have_attributes(
-      :resource_type => "PhysicalServer"
+      :location_led_state => "Off",
+      :resource_type      => "PhysicalServer",
     )
   end
 
