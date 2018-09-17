@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:07 GMT
+      - Mon, 24 Sep 2018 20:54:11 GMT
       Content-Length:
       - '362'
       Connection:
@@ -33,7 +33,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/","Chassis":{"@odata.id":"/redfish/v1/Chassis"},"EventService":{"@odata.id":"/redfish/v1/EventService"},"Id":"RootService","Links":{"Sessions":{"@odata.id":"/redfish/v1/SessionService/Sessions"}},"Name":"RackManager
         Root Service","SessionService":{"@odata.id":"/redfish/v1/SessionService"},"Systems":{"@odata.id":"/redfish/v1/Systems"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:07 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
 - request:
     method: post
     uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
@@ -57,20 +57,20 @@ http_interactions:
       Content-Type:
       - application/json
       X-Auth-Token:
-      - 0d31712f-a566-43b4-909f-80aae0fc980c
+      - c2910924-0ea6-406d-a06c-9661e2efd57b
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:07 GMT
+      - Mon, 24 Sep 2018 20:54:11 GMT
       Content-Length:
       - '253'
       Connection:
       - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/0d31712f-a566-43b4-909f-80aae0fc980c","Id":"0d31712f-a566-43b4-909f-80aae0fc980c","Name":"0d31712f-a566-43b4-909f-80aae0fc980c","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
+      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/c2910924-0ea6-406d-a06c-9661e2efd57b","Id":"c2910924-0ea6-406d-a06c-9661e2efd57b","Name":"c2910924-0ea6-406d-a06c-9661e2efd57b","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:07 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System.Embedded.1
@@ -85,7 +85,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 0d31712f-a566-43b4-909f-80aae0fc980c
+      - c2910924-0ea6-406d-a06c-9661e2efd57b
   response:
     status:
       code: 404
@@ -94,7 +94,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:07 GMT
+      - Mon, 24 Sep 2018 20:54:11 GMT
       Content-Length:
       - '0'
       Connection:
@@ -103,10 +103,10 @@ http_interactions:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:07 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
 - request:
     method: delete
-    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions/0d31712f-a566-43b4-909f-80aae0fc980c
+    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions/c2910924-0ea6-406d-a06c-9661e2efd57b
     body:
       encoding: US-ASCII
       string: ''
@@ -118,7 +118,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 0d31712f-a566-43b4-909f-80aae0fc980c
+      - c2910924-0ea6-406d-a06c-9661e2efd57b
   response:
     status:
       code: 204
@@ -127,12 +127,12 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:07 GMT
+      - Mon, 24 Sep 2018 20:54:11 GMT
       Connection:
       - Keep-Alive
     body:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:07 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
 recorded_with: VCR 3.0.3

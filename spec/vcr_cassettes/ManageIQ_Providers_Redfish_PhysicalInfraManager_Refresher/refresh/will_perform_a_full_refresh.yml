@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:02 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '362'
       Connection:
@@ -33,7 +33,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/","Chassis":{"@odata.id":"/redfish/v1/Chassis"},"EventService":{"@odata.id":"/redfish/v1/EventService"},"Id":"RootService","Links":{"Sessions":{"@odata.id":"/redfish/v1/SessionService/Sessions"}},"Name":"RackManager
         Root Service","SessionService":{"@odata.id":"/redfish/v1/SessionService"},"Systems":{"@odata.id":"/redfish/v1/Systems"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:02 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: post
     uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
@@ -57,20 +57,20 @@ http_interactions:
       Content-Type:
       - application/json
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:02 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '253'
       Connection:
       - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/b2ef62d6-f45d-4316-912a-dfefddf4e2c9","Id":"b2ef62d6-f45d-4316-912a-dfefddf4e2c9","Name":"b2ef62d6-f45d-4316-912a-dfefddf4e2c9","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
+      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/9065ac4e-16e1-42b5-a8f5-d46598770bda","Id":"9065ac4e-16e1-42b5-a8f5-d46598770bda","Name":"9065ac4e-16e1-42b5-a8f5-d46598770bda","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:02 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems
@@ -85,7 +85,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -96,7 +96,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:02 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '260'
       Connection:
@@ -106,7 +106,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2"},{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1"}],"Members@odata.count":3,"Name":"Computer
         System Collection"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:02 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1
@@ -121,7 +121,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -132,7 +132,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:02 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '984'
       Connection:
@@ -143,7 +143,7 @@ http_interactions:
         Computer System Node","Id":"System-1-1-1-1","IndicatorLED":"Off","Links":{"Chassis":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"}]},"Manufacturer":"Dell","MemorySummary":{"Status":{"Health":null,"State":"Enabled"},"TotalSystemMemoryGiB":32},"Model":"DSS9630M","Name":"G5
         Computer System","PowerState":"PoweringOn","ProcessorSummary":{"Count":2,"Model":"","Status":{"Health":"OK","State":"Enabled"}},"Processors":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors"},"SerialNumber":"CN701636AB0013","Status":{"Health":"OK","State":"StandbyOffline"},"Storage":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage"},"SystemType":"Physical","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:02 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2
@@ -158,7 +158,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -169,7 +169,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '972'
       Connection:
@@ -180,7 +180,7 @@ http_interactions:
         Computer System Node","Id":"System-1-1-1-2","IndicatorLED":"On","Links":{"Chassis":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"}]},"Manufacturer":"Dell","MemorySummary":{"Status":{"Health":null,"State":"Enabled"},"TotalSystemMemoryGiB":32},"Model":"DSS9630M","Name":"G5
         Computer System","PowerState":"Off","ProcessorSummary":{"Count":2,"Model":"","Status":{"Health":"OK","State":"Enabled"}},"Processors":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Processors"},"SerialNumber":"23840jr9384j","Status":{"Health":"Warning","State":"Enabled"},"Storage":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage"},"SystemType":"Physical","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1
@@ -195,7 +195,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -206,7 +206,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '1109'
       Connection:
@@ -216,7 +216,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1","Actions":{"#ComputerSystem.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulRestart","GracefulShutdown","PushPowerButton","Nmi"],"target":"/redfish/v1/Systems/System-1-2-1-1/Actions/ComputerSystem.Reset"}},"HostName":"hostname.example.com","Id":"System-1-2-1-1","IndicatorLED":"Blinking","Links":{"Chassis":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-2-1"}],"Chassis@odata.count":1},"Manufacturer":"Dell
         Inc.","MemorySummary":{"MemoryMirroring":"System","Status":{"Health":null,"HealthRollup":null,"State":"Enabled"},"TotalSystemMemoryGiB":32},"Model":"DSS9630M","Name":"System","PartNumber":"033RF3X04","PowerState":"On","ProcessorSummary":{"Count":2,"Model":"","Status":{"Health":null,"HealthRollup":null,"State":"Enabled"}},"Processors":{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Processors"},"SerialNumber":"945hjf0927mf","SimpleStorage":{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers"},"Status":{"Health":"Critical","State":"Disabled"},"SystemType":"Physical","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-1
@@ -231,7 +231,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -242,7 +242,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '530'
       Connection:
@@ -252,80 +252,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1","ChassisType":"Sled","Description":"G5
         Sled-Level Enclosure","Id":"Sled-1-1-1","IndicatorLED":"Blinking","Links":{"ComputerSystems":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2"}],"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Block-1-1"}},"Manufacturer":"Dell","Model":"DSS9630M","Name":"G5_Sled","PartNumber":"cnwo8hfn4","PowerState":"Off","SerialNumber":"h894hf5n926h","Status":{"Health":"Warning","State":"StandbyOffline"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
-- request:
-    method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.62.0
-      Accept:
-      - application/json
-      Odata-Version:
-      - '4.0'
-      X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
-  response:
-    status:
-      code: 200
-      message: 'OK '
-    headers:
-      Content-Type:
-      - application/json
-      Server:
-      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
-      Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
-      Content-Length:
-      - '526'
-      Connection:
-      - Keep-Alive
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/Chassis/Block-1-1","ChassisType":"Enclosure","Description":"G5
-        Block Chassis","Id":"Block-1-1","IndicatorLED":"On","Links":{"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Rack-1"},"Contains":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-2"}]},"Location":{"Placement":{"Rack":"Rack-1"}},"Manufacturer":"Dell","Model":"G5
-        Block","Name":"G5_Block","PartNumber":"9845ujtf0347","PowerState":"On","SerialNumber":"11","Status":{"Health":"OK","State":"Enabled"}}'
-    http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
-- request:
-    method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.62.0
-      Accept:
-      - application/json
-      Odata-Version:
-      - '4.0'
-      X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
-  response:
-    status:
-      code: 200
-      message: 'OK '
-    headers:
-      Content-Type:
-      - application/json
-      Server:
-      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
-      Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
-      Content-Length:
-      - '621'
-      Connection:
-      - Keep-Alive
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/Chassis/Rack-1","Actions":{"#Chassis.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulShutdown"],"target":"/redfish/v1/Chassis/Rack-1/Actions/Chassis.Reset"}},"ChassisType":"Rack","Id":"Rack-1","Links":{"Contains":[{"@odata.id":"/redfish/v1/Chassis/Block-1-1"},{"@odata.id":"/redfish/v1/Chassis/Block-1-2"}]},"Location":{"PostalAddress":{"City":"Chesapeake","Country":"VA","HouseNumber":"123","Street":"Adams
-        Ave."}},"Manufacturer":"Dell","Model":"DSS9000","Name":"G5_Rack","PowerState":"On","SerialNumber":"1","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
-    http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-2-1
@@ -340,7 +267,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -351,7 +278,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '465'
       Connection:
@@ -361,7 +288,80 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Chassis/Sled-1-2-1","ChassisType":"Sled","Description":"G5
         Sled-Level Enclosure","Id":"Sled-1-2-1","IndicatorLED":"Off","Links":{"ComputerSystems":[{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1"},{"@odata.id":"/redfish/v1/Systems/System-1-2-1-2"}],"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Block-1-2"}},"Manufacturer":"Dell","Model":"DSS9630M","Name":"G5_Sled","PowerState":"Off","Status":{"Health":"OK","State":"StandbyOffline"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:07 GMT
+      Content-Length:
+      - '526'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Block-1-1","ChassisType":"Enclosure","Description":"G5
+        Block Chassis","Id":"Block-1-1","IndicatorLED":"On","Links":{"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Rack-1"},"Contains":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-2"}]},"Location":{"Placement":{"Rack":"Rack-1"}},"Manufacturer":"Dell","Model":"G5
+        Block","Name":"G5_Block","PartNumber":"9845ujtf0347","PowerState":"On","SerialNumber":"11","Status":{"Health":"OK","State":"Enabled"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:07 GMT
+      Content-Length:
+      - '621'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Rack-1","Actions":{"#Chassis.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulShutdown"],"target":"/redfish/v1/Chassis/Rack-1/Actions/Chassis.Reset"}},"ChassisType":"Rack","Id":"Rack-1","Links":{"Contains":[{"@odata.id":"/redfish/v1/Chassis/Block-1-1"},{"@odata.id":"/redfish/v1/Chassis/Block-1-2"}]},"Location":{"PostalAddress":{"City":"Chesapeake","Country":"VA","HouseNumber":"123","Street":"Adams
+        Ave."}},"Manufacturer":"Dell","Model":"DSS9000","Name":"G5_Rack","PowerState":"On","SerialNumber":"1","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-2
@@ -376,7 +376,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -387,7 +387,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '458'
       Connection:
@@ -398,7 +398,7 @@ http_interactions:
         Block Chassis","Id":"Block-1-2","Links":{"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Rack-1"},"Contains":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-2-1"}]},"Location":{"Placement":{"Rack":"Rack-1"}},"Manufacturer":"Dell","Model":"G5
         Block","Name":"G5_Block","PartNumber":"93j4fo3hn4f","PowerState":"On","SerialNumber":"12","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors
@@ -413,7 +413,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -424,7 +424,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '226'
       Connection:
@@ -433,7 +433,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors/","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors/1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors/2"}],"Members@odata.count":2}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors/1
@@ -448,7 +448,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -459,7 +459,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '626'
       Connection:
@@ -472,7 +472,7 @@ http_interactions:
         2.60GHz","Name":"Processor 1","ProcessorArchitecture":"x86","ProcessorId":{"EffectiveFamily":"0x06","EffectiveModel":"0x55","IdentificationRegisters":"0x00050654bfebfbff","MicrocodeInfo":null,"Step":"0x04","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU
         1","Status":{"Health":"OK","State":"Enabled"},"TotalCores":12,"TotalThreads":24}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors/2
@@ -487,7 +487,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -498,7 +498,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '626'
       Connection:
@@ -511,7 +511,7 @@ http_interactions:
         2.60GHz","Name":"Processor 2","ProcessorArchitecture":"x86","ProcessorId":{"EffectiveFamily":"0x06","EffectiveModel":"0x55","IdentificationRegisters":"0x00050654bfebfbff","MicrocodeInfo":null,"Step":"0x04","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU
         2","Status":{"Health":"OK","State":"Enabled"},"TotalCores":12,"TotalThreads":24}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage
@@ -526,7 +526,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -537,7 +537,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '294'
       Connection:
@@ -547,7 +547,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/","Description":"A
         Collection of Storage resource instances.","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8"}],"Members@odata.count":2}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1
@@ -562,7 +562,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -573,7 +573,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '550'
       Connection:
@@ -584,7 +584,7 @@ http_interactions:
         resource is used to represent a storage for a Redfish implementation.","Drives":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2"}],"Drives@odata.count":3,"Id":"RAID_Slot1","Name":"RAID
         Storage","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8
@@ -599,7 +599,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -610,7 +610,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:07 GMT
       Content-Length:
       - '477'
       Connection:
@@ -621,7 +621,7 @@ http_interactions:
         resource is used to represent a storage for a Redfish implementation.","Drives":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1"}],"Drives@odata.count":2,"Id":"M.2_Slot8","Name":"M.2
         Storage","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0
@@ -636,7 +636,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -647,7 +647,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '597'
       Connection:
@@ -657,7 +657,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.0","Identifiers":[{"DurableName":"9847693487","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"984576947398476589","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1
@@ -672,7 +672,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -683,7 +683,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '591'
       Connection:
@@ -693,7 +693,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.1","Identifiers":[{"DurableName":"9345098734","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"938754938039","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2
@@ -708,7 +708,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -719,7 +719,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '599'
       Connection:
@@ -729,7 +729,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.2","Identifiers":[{"DurableName":"9854376923746987","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"09834579274032","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
@@ -744,7 +744,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -755,7 +755,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '580'
       Connection:
@@ -767,7 +767,7 @@ http_interactions:
         CV3-8D128","Name":"128GB M.2 SATA SSD","PartNumber":"SSD0L20505","Protocol":"SATA","Revision":"T87RA34
         ","RotationSpeedRPM":0,"SerialNumber":"83465192783","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
@@ -782,7 +782,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -793,7 +793,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '584'
       Connection:
@@ -805,7 +805,7 @@ http_interactions:
         CV3-8D128","Name":"128GB M.2 SATA SSD","PartNumber":"SSD0L20505","Protocol":"SATA","Revision":"T87RA34
         ","RotationSpeedRPM":0,"SerialNumber":"934759369847658","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors
@@ -820,7 +820,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -831,7 +831,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '226'
       Connection:
@@ -840,7 +840,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Processors/","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Processors/1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Processors/2"}],"Members@odata.count":2}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors/1
@@ -855,7 +855,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -866,7 +866,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:03 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '639'
       Connection:
@@ -879,7 +879,7 @@ http_interactions:
         2.60GHz","Name":"Processor 1","ProcessorArchitecture":"x86","ProcessorId":{"EffectiveFamily":"0x06","EffectiveModel":"0x55","IdentificationRegisters":"0x00050654bfebfbff","MicrocodeInfo":null,"Step":"0x04","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU
         1","Status":{"Health":"OK","State":"Enabled"},"TotalCores":12,"TotalThreads":24}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:03 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors/2
@@ -894,7 +894,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -905,7 +905,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '639'
       Connection:
@@ -918,7 +918,7 @@ http_interactions:
         2.60GHz","Name":"Processor 2","ProcessorArchitecture":"x86","ProcessorId":{"EffectiveFamily":"0x06","EffectiveModel":"0x55","IdentificationRegisters":"0x00050654bfebfbff","MicrocodeInfo":null,"Step":"0x04","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU
         2","Status":{"Health":"OK","State":"Enabled"},"TotalCores":12,"TotalThreads":24}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage
@@ -933,7 +933,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -944,7 +944,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '294'
       Connection:
@@ -954,7 +954,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/","Description":"A
         Collection of Storage resource instances.","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8"}],"Members@odata.count":2}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1
@@ -969,7 +969,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -980,7 +980,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '550'
       Connection:
@@ -991,7 +991,7 @@ http_interactions:
         resource is used to represent a storage for a Redfish implementation.","Drives":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2"}],"Drives@odata.count":3,"Id":"RAID_Slot1","Name":"RAID
         Storage","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8
@@ -1006,7 +1006,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1017,7 +1017,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '477'
       Connection:
@@ -1028,7 +1028,7 @@ http_interactions:
         resource is used to represent a storage for a Redfish implementation.","Drives":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1"}],"Drives@odata.count":2,"Id":"M.2_Slot8","Name":"M.2
         Storage","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0
@@ -1043,7 +1043,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1054,7 +1054,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '595'
       Connection:
@@ -1064,7 +1064,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.0","Identifiers":[{"DurableName":"098453t0h432","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"9823jf3149jdf1","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1
@@ -1079,7 +1079,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1090,7 +1090,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '595'
       Connection:
@@ -1100,7 +1100,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.1","Identifiers":[{"DurableName":"98483j590j249","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"983j90f8j1349","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2
@@ -1115,7 +1115,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1126,7 +1126,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '600'
       Connection:
@@ -1136,7 +1136,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.2","Identifiers":[{"DurableName":"90845j09fj0345","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"9084ut9fm2o3987jn","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
@@ -1151,7 +1151,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1162,7 +1162,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '581'
       Connection:
@@ -1174,7 +1174,7 @@ http_interactions:
         CV3-8D128","Name":"128GB M.2 SATA SSD","PartNumber":"SSD0L20505","Protocol":"SATA","Revision":"T87RA34
         ","RotationSpeedRPM":0,"SerialNumber":"9504868r903j","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
@@ -1189,7 +1189,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1200,7 +1200,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '584'
       Connection:
@@ -1212,7 +1212,7 @@ http_interactions:
         CV3-8D128","Name":"128GB M.2 SATA SSD","PartNumber":"SSD0L20505","Protocol":"SATA","Revision":"T87RA34
         ","RotationSpeedRPM":0,"SerialNumber":"7rh8o32h47","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Processors
@@ -1227,7 +1227,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1238,7 +1238,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '259'
       Connection:
@@ -1248,7 +1248,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Processors","Description":"Collection
         of Processors for this System","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Processors/CPU.Socket.1"}],"Members@odata.count":1,"Name":"ProcessorsCollection"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Processors/CPU.Socket.1
@@ -1263,7 +1263,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1274,7 +1274,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '562'
       Connection:
@@ -1285,7 +1285,7 @@ http_interactions:
         the properties of a Processor attached to this System","Id":"CPU.Socket.1","InstructionSet":[{"Member":"x86-64"}],"Manufacturer":"Intel","MaxSpeedMHz":4000,"Model":"","Name":"CPU
         1","ProcessorArchitecture":[{"Member":"x86"}],"ProcessorId":{"EffectiveFamily":"6","EffectiveModel":"85","IdentificationRegisters":"0x00050652","MicrocodeInfo":null,"Step":"2","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU.Socket.1","TotalCores":20,"TotalThreads":40}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers
@@ -1300,7 +1300,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1311,7 +1311,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '288'
       Connection:
@@ -1322,7 +1322,7 @@ http_interactions:
         of Controllers for this system","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers/AHCI.Embedded.1-1"}],"Members@odata.count":1,"Name":"Simple
         Storage Collection"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:08 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers/AHCI.Embedded.1-1
@@ -1337,7 +1337,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - b2ef62d6-f45d-4316-912a-dfefddf4e2c9
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
   response:
     status:
       code: 200
@@ -1348,7 +1348,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:08 GMT
       Content-Length:
       - '453'
       Connection:
@@ -1360,7 +1360,151 @@ http_interactions:
         storage device 2","Status":{"Health":"OK","State":"Enabled"},"CapacityBytes":137438953472}],"Devices@odata.count":2,"Id":"AHCI.Embedded.1-1","Name":"Lewisburg
         SSATA Controller [AHCI mode]"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:09 GMT
+      Content-Length:
+      - '436'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis","Members":[{"@odata.id":"/redfish/v1/Chassis/Rack-1"},{"@odata.id":"/redfish/v1/Chassis/Block-1-1"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-2"},{"@odata.id":"/redfish/v1/Chassis/Block-1-2"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-2-1"},{"@odata.id":"/redfish/v1/Chassis/Rack-2"},{"@odata.id":"/redfish/v1/Chassis/Block-2-1"}],"Members@odata.count":8}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:09 GMT
+      Content-Length:
+      - '414'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-2","ChassisType":"Sled","Description":"G5
+        Sled-Level Enclosure","Id":"Sled-1-1-2","IndicatorLED":"Off","Links":{"ComputerSystems":[{"@odata.id":"/redfish/v1/Systems/System-1-1-2-1"}],"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Block-1-1"}},"Manufacturer":"Dell","Model":"DSS9630M","Name":"G5_Sled","PowerState":"Off","Status":{"Health":"OK","State":"StandbyOffline"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:09 GMT
+      Content-Length:
+      - '575'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Rack-2","Actions":{"#Chassis.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulShutdown"],"target":"/redfish/v1/Chassis/Rack-2/Actions/Chassis.Reset"}},"ChassisType":"Rack","Id":"Rack-2","Links":{"Contains":[{"@odata.id":"/redfish/v1/Chassis/Block-2-1"}]},"Location":{"PostalAddress":{"City":"Chesapeake","Country":"VA","HouseNumber":"123","Street":"Adams
+        Ave."}},"Manufacturer":"Dell","Model":"DSS9000","Name":"G5_Rack","PowerState":"On","SerialNumber":"2","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-2-1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 9065ac4e-16e1-42b5-a8f5-d46598770bda
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:09 GMT
+      Content-Length:
+      - '371'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Block-2-1","ChassisType":"Enclosure","Description":"G5
+        Block Chassis","Id":"Block-2-1","Links":{"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Rack-2"}},"Location":{"Placement":{"Rack":"Rack-2"}},"Manufacturer":"Dell","Model":"G5
+        Block","Name":"G5_Block","PowerState":"On","SerialNumber":"21","Status":{"Health":"OK","State":"Enabled"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1
@@ -1384,7 +1528,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '362'
       Connection:
@@ -1394,7 +1538,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/","Chassis":{"@odata.id":"/redfish/v1/Chassis"},"EventService":{"@odata.id":"/redfish/v1/EventService"},"Id":"RootService","Links":{"Sessions":{"@odata.id":"/redfish/v1/SessionService/Sessions"}},"Name":"RackManager
         Root Service","SessionService":{"@odata.id":"/redfish/v1/SessionService"},"Systems":{"@odata.id":"/redfish/v1/Systems"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: post
     uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
@@ -1418,20 +1562,20 @@ http_interactions:
       Content-Type:
       - application/json
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '253'
       Connection:
       - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/7b4aed10-b2a5-4081-88a2-f6af4b4febbd","Id":"7b4aed10-b2a5-4081-88a2-f6af4b4febbd","Name":"7b4aed10-b2a5-4081-88a2-f6af4b4febbd","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
+      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/bf841a19-fa6b-424d-84cb-32800d857370","Id":"bf841a19-fa6b-424d-84cb-32800d857370","Name":"bf841a19-fa6b-424d-84cb-32800d857370","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems
@@ -1446,7 +1590,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1457,7 +1601,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '260'
       Connection:
@@ -1467,7 +1611,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2"},{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1"}],"Members@odata.count":3,"Name":"Computer
         System Collection"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1
@@ -1482,7 +1626,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1493,7 +1637,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:04 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '984'
       Connection:
@@ -1504,7 +1648,7 @@ http_interactions:
         Computer System Node","Id":"System-1-1-1-1","IndicatorLED":"Off","Links":{"Chassis":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"}]},"Manufacturer":"Dell","MemorySummary":{"Status":{"Health":null,"State":"Enabled"},"TotalSystemMemoryGiB":32},"Model":"DSS9630M","Name":"G5
         Computer System","PowerState":"PoweringOn","ProcessorSummary":{"Count":2,"Model":"","Status":{"Health":"OK","State":"Enabled"}},"Processors":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors"},"SerialNumber":"CN701636AB0013","Status":{"Health":"OK","State":"StandbyOffline"},"Storage":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage"},"SystemType":"Physical","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:04 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2
@@ -1519,7 +1663,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1530,7 +1674,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '972'
       Connection:
@@ -1541,7 +1685,7 @@ http_interactions:
         Computer System Node","Id":"System-1-1-1-2","IndicatorLED":"On","Links":{"Chassis":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"}]},"Manufacturer":"Dell","MemorySummary":{"Status":{"Health":null,"State":"Enabled"},"TotalSystemMemoryGiB":32},"Model":"DSS9630M","Name":"G5
         Computer System","PowerState":"Off","ProcessorSummary":{"Count":2,"Model":"","Status":{"Health":"OK","State":"Enabled"}},"Processors":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Processors"},"SerialNumber":"23840jr9384j","Status":{"Health":"Warning","State":"Enabled"},"Storage":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage"},"SystemType":"Physical","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1
@@ -1556,7 +1700,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1567,7 +1711,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '1109'
       Connection:
@@ -1577,7 +1721,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1","Actions":{"#ComputerSystem.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulRestart","GracefulShutdown","PushPowerButton","Nmi"],"target":"/redfish/v1/Systems/System-1-2-1-1/Actions/ComputerSystem.Reset"}},"HostName":"hostname.example.com","Id":"System-1-2-1-1","IndicatorLED":"Blinking","Links":{"Chassis":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-2-1"}],"Chassis@odata.count":1},"Manufacturer":"Dell
         Inc.","MemorySummary":{"MemoryMirroring":"System","Status":{"Health":null,"HealthRollup":null,"State":"Enabled"},"TotalSystemMemoryGiB":32},"Model":"DSS9630M","Name":"System","PartNumber":"033RF3X04","PowerState":"On","ProcessorSummary":{"Count":2,"Model":"","Status":{"Health":null,"HealthRollup":null,"State":"Enabled"}},"Processors":{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Processors"},"SerialNumber":"945hjf0927mf","SimpleStorage":{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers"},"Status":{"Health":"Critical","State":"Disabled"},"SystemType":"Physical","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-1
@@ -1592,7 +1736,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1603,7 +1747,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '530'
       Connection:
@@ -1613,80 +1757,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1","ChassisType":"Sled","Description":"G5
         Sled-Level Enclosure","Id":"Sled-1-1-1","IndicatorLED":"Blinking","Links":{"ComputerSystems":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2"}],"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Block-1-1"}},"Manufacturer":"Dell","Model":"DSS9630M","Name":"G5_Sled","PartNumber":"cnwo8hfn4","PowerState":"Off","SerialNumber":"h894hf5n926h","Status":{"Health":"Warning","State":"StandbyOffline"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
-- request:
-    method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.62.0
-      Accept:
-      - application/json
-      Odata-Version:
-      - '4.0'
-      X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
-  response:
-    status:
-      code: 200
-      message: 'OK '
-    headers:
-      Content-Type:
-      - application/json
-      Server:
-      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
-      Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
-      Content-Length:
-      - '526'
-      Connection:
-      - Keep-Alive
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/Chassis/Block-1-1","ChassisType":"Enclosure","Description":"G5
-        Block Chassis","Id":"Block-1-1","IndicatorLED":"On","Links":{"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Rack-1"},"Contains":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-2"}]},"Location":{"Placement":{"Rack":"Rack-1"}},"Manufacturer":"Dell","Model":"G5
-        Block","Name":"G5_Block","PartNumber":"9845ujtf0347","PowerState":"On","SerialNumber":"11","Status":{"Health":"OK","State":"Enabled"}}'
-    http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
-- request:
-    method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - excon/0.62.0
-      Accept:
-      - application/json
-      Odata-Version:
-      - '4.0'
-      X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
-  response:
-    status:
-      code: 200
-      message: 'OK '
-    headers:
-      Content-Type:
-      - application/json
-      Server:
-      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
-      Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
-      Content-Length:
-      - '621'
-      Connection:
-      - Keep-Alive
-    body:
-      encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/Chassis/Rack-1","Actions":{"#Chassis.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulShutdown"],"target":"/redfish/v1/Chassis/Rack-1/Actions/Chassis.Reset"}},"ChassisType":"Rack","Id":"Rack-1","Links":{"Contains":[{"@odata.id":"/redfish/v1/Chassis/Block-1-1"},{"@odata.id":"/redfish/v1/Chassis/Block-1-2"}]},"Location":{"PostalAddress":{"City":"Chesapeake","Country":"VA","HouseNumber":"123","Street":"Adams
-        Ave."}},"Manufacturer":"Dell","Model":"DSS9000","Name":"G5_Rack","PowerState":"On","SerialNumber":"1","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
-    http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-2-1
@@ -1701,7 +1772,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1712,7 +1783,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '465'
       Connection:
@@ -1722,7 +1793,80 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Chassis/Sled-1-2-1","ChassisType":"Sled","Description":"G5
         Sled-Level Enclosure","Id":"Sled-1-2-1","IndicatorLED":"Off","Links":{"ComputerSystems":[{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1"},{"@odata.id":"/redfish/v1/Systems/System-1-2-1-2"}],"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Block-1-2"}},"Manufacturer":"Dell","Model":"DSS9630M","Name":"G5_Sled","PowerState":"Off","Status":{"Health":"OK","State":"StandbyOffline"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - bf841a19-fa6b-424d-84cb-32800d857370
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:09 GMT
+      Content-Length:
+      - '526'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Block-1-1","ChassisType":"Enclosure","Description":"G5
+        Block Chassis","Id":"Block-1-1","IndicatorLED":"On","Links":{"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Rack-1"},"Contains":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-2"}]},"Location":{"Placement":{"Rack":"Rack-1"}},"Manufacturer":"Dell","Model":"G5
+        Block","Name":"G5_Block","PartNumber":"9845ujtf0347","PowerState":"On","SerialNumber":"11","Status":{"Health":"OK","State":"Enabled"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - bf841a19-fa6b-424d-84cb-32800d857370
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:09 GMT
+      Content-Length:
+      - '621'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Rack-1","Actions":{"#Chassis.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulShutdown"],"target":"/redfish/v1/Chassis/Rack-1/Actions/Chassis.Reset"}},"ChassisType":"Rack","Id":"Rack-1","Links":{"Contains":[{"@odata.id":"/redfish/v1/Chassis/Block-1-1"},{"@odata.id":"/redfish/v1/Chassis/Block-1-2"}]},"Location":{"PostalAddress":{"City":"Chesapeake","Country":"VA","HouseNumber":"123","Street":"Adams
+        Ave."}},"Manufacturer":"Dell","Model":"DSS9000","Name":"G5_Rack","PowerState":"On","SerialNumber":"1","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-2
@@ -1737,7 +1881,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1748,7 +1892,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '458'
       Connection:
@@ -1759,7 +1903,7 @@ http_interactions:
         Block Chassis","Id":"Block-1-2","Links":{"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Rack-1"},"Contains":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-2-1"}]},"Location":{"Placement":{"Rack":"Rack-1"}},"Manufacturer":"Dell","Model":"G5
         Block","Name":"G5_Block","PartNumber":"93j4fo3hn4f","PowerState":"On","SerialNumber":"12","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors
@@ -1774,7 +1918,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1785,7 +1929,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '226'
       Connection:
@@ -1794,7 +1938,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors/","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors/1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors/2"}],"Members@odata.count":2}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors/1
@@ -1809,7 +1953,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1820,7 +1964,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '626'
       Connection:
@@ -1833,7 +1977,7 @@ http_interactions:
         2.60GHz","Name":"Processor 1","ProcessorArchitecture":"x86","ProcessorId":{"EffectiveFamily":"0x06","EffectiveModel":"0x55","IdentificationRegisters":"0x00050654bfebfbff","MicrocodeInfo":null,"Step":"0x04","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU
         1","Status":{"Health":"OK","State":"Enabled"},"TotalCores":12,"TotalThreads":24}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors/2
@@ -1848,7 +1992,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1859,7 +2003,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '626'
       Connection:
@@ -1872,7 +2016,7 @@ http_interactions:
         2.60GHz","Name":"Processor 2","ProcessorArchitecture":"x86","ProcessorId":{"EffectiveFamily":"0x06","EffectiveModel":"0x55","IdentificationRegisters":"0x00050654bfebfbff","MicrocodeInfo":null,"Step":"0x04","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU
         2","Status":{"Health":"OK","State":"Enabled"},"TotalCores":12,"TotalThreads":24}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:09 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage
@@ -1887,7 +2031,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1898,7 +2042,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:09 GMT
       Content-Length:
       - '294'
       Connection:
@@ -1908,7 +2052,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/","Description":"A
         Collection of Storage resource instances.","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8"}],"Members@odata.count":2}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1
@@ -1923,7 +2067,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1934,7 +2078,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '550'
       Connection:
@@ -1945,7 +2089,7 @@ http_interactions:
         resource is used to represent a storage for a Redfish implementation.","Drives":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2"}],"Drives@odata.count":3,"Id":"RAID_Slot1","Name":"RAID
         Storage","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8
@@ -1960,7 +2104,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -1971,7 +2115,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '477'
       Connection:
@@ -1982,7 +2126,7 @@ http_interactions:
         resource is used to represent a storage for a Redfish implementation.","Drives":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1"}],"Drives@odata.count":2,"Id":"M.2_Slot8","Name":"M.2
         Storage","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0
@@ -1997,7 +2141,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2008,7 +2152,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '597'
       Connection:
@@ -2018,7 +2162,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.0","Identifiers":[{"DurableName":"9847693487","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"984576947398476589","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1
@@ -2033,7 +2177,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2044,7 +2188,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '591'
       Connection:
@@ -2054,7 +2198,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.1","Identifiers":[{"DurableName":"9345098734","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"938754938039","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2
@@ -2069,7 +2213,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2080,7 +2224,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '599'
       Connection:
@@ -2090,7 +2234,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.2","Identifiers":[{"DurableName":"9854376923746987","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"09834579274032","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
@@ -2105,7 +2249,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2116,7 +2260,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '580'
       Connection:
@@ -2128,7 +2272,7 @@ http_interactions:
         CV3-8D128","Name":"128GB M.2 SATA SSD","PartNumber":"SSD0L20505","Protocol":"SATA","Revision":"T87RA34
         ","RotationSpeedRPM":0,"SerialNumber":"83465192783","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
@@ -2143,7 +2287,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2154,7 +2298,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '584'
       Connection:
@@ -2166,7 +2310,7 @@ http_interactions:
         CV3-8D128","Name":"128GB M.2 SATA SSD","PartNumber":"SSD0L20505","Protocol":"SATA","Revision":"T87RA34
         ","RotationSpeedRPM":0,"SerialNumber":"934759369847658","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors
@@ -2181,7 +2325,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2192,7 +2336,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '226'
       Connection:
@@ -2201,7 +2345,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Processors/","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Processors/1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Processors/2"}],"Members@odata.count":2}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:05 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors/1
@@ -2216,7 +2360,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2227,7 +2371,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:05 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '639'
       Connection:
@@ -2240,7 +2384,7 @@ http_interactions:
         2.60GHz","Name":"Processor 1","ProcessorArchitecture":"x86","ProcessorId":{"EffectiveFamily":"0x06","EffectiveModel":"0x55","IdentificationRegisters":"0x00050654bfebfbff","MicrocodeInfo":null,"Step":"0x04","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU
         1","Status":{"Health":"OK","State":"Enabled"},"TotalCores":12,"TotalThreads":24}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors/2
@@ -2255,7 +2399,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2266,7 +2410,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '639'
       Connection:
@@ -2279,7 +2423,7 @@ http_interactions:
         2.60GHz","Name":"Processor 2","ProcessorArchitecture":"x86","ProcessorId":{"EffectiveFamily":"0x06","EffectiveModel":"0x55","IdentificationRegisters":"0x00050654bfebfbff","MicrocodeInfo":null,"Step":"0x04","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU
         2","Status":{"Health":"OK","State":"Enabled"},"TotalCores":12,"TotalThreads":24}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage
@@ -2294,7 +2438,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2305,7 +2449,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '294'
       Connection:
@@ -2315,7 +2459,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/","Description":"A
         Collection of Storage resource instances.","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8"}],"Members@odata.count":2}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1
@@ -2330,7 +2474,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2341,7 +2485,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '550'
       Connection:
@@ -2352,7 +2496,7 @@ http_interactions:
         resource is used to represent a storage for a Redfish implementation.","Drives":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2"}],"Drives@odata.count":3,"Id":"RAID_Slot1","Name":"RAID
         Storage","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8
@@ -2367,7 +2511,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2378,7 +2522,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '477'
       Connection:
@@ -2389,7 +2533,7 @@ http_interactions:
         resource is used to represent a storage for a Redfish implementation.","Drives":[{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0"},{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1"}],"Drives@odata.count":2,"Id":"M.2_Slot8","Name":"M.2
         Storage","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0
@@ -2404,7 +2548,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2415,7 +2559,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '595'
       Connection:
@@ -2425,7 +2569,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.0","Identifiers":[{"DurableName":"098453t0h432","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"9823jf3149jdf1","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1
@@ -2440,7 +2584,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2451,7 +2595,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '595'
       Connection:
@@ -2461,7 +2605,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.1","Identifiers":[{"DurableName":"98483j590j249","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"983j90f8j1349","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2
@@ -2476,7 +2620,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2487,7 +2631,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '600'
       Connection:
@@ -2497,7 +2641,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2","BlockSizeBytes":512,"CapableSpeedGbs":6,"CapacityBytes":1920383410176,"Description":"This
         resource is used to represent a drive for a Redfish implementation.","FailurePredicted":false,"Id":"Disk.2","Identifiers":[{"DurableName":"90845j09fj0345","DurableNameFormat":"UUID"}],"Manufacturer":"ATA","MediaType":null,"Model":"","Name":"MTFDDAK1T9TCB-1AR1ZA","PartNumber":"D7A09328","Protocol":"SATA","Revision":"MD44","RotationSpeedRPM":65535,"SerialNumber":"9084ut9fm2o3987jn","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
@@ -2512,7 +2656,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2523,7 +2667,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '581'
       Connection:
@@ -2535,7 +2679,7 @@ http_interactions:
         CV3-8D128","Name":"128GB M.2 SATA SSD","PartNumber":"SSD0L20505","Protocol":"SATA","Revision":"T87RA34
         ","RotationSpeedRPM":0,"SerialNumber":"9504868r903j","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
@@ -2550,7 +2694,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2561,7 +2705,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '584'
       Connection:
@@ -2573,7 +2717,7 @@ http_interactions:
         CV3-8D128","Name":"128GB M.2 SATA SSD","PartNumber":"SSD0L20505","Protocol":"SATA","Revision":"T87RA34
         ","RotationSpeedRPM":0,"SerialNumber":"7rh8o32h47","Status":{"Health":"OK","State":"Enabled"}}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Processors
@@ -2588,7 +2732,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2599,7 +2743,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '259'
       Connection:
@@ -2609,7 +2753,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Processors","Description":"Collection
         of Processors for this System","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Processors/CPU.Socket.1"}],"Members@odata.count":1,"Name":"ProcessorsCollection"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:10 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Processors/CPU.Socket.1
@@ -2624,7 +2768,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2635,7 +2779,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:10 GMT
       Content-Length:
       - '562'
       Connection:
@@ -2646,7 +2790,7 @@ http_interactions:
         the properties of a Processor attached to this System","Id":"CPU.Socket.1","InstructionSet":[{"Member":"x86-64"}],"Manufacturer":"Intel","MaxSpeedMHz":4000,"Model":"","Name":"CPU
         1","ProcessorArchitecture":[{"Member":"x86"}],"ProcessorId":{"EffectiveFamily":"6","EffectiveModel":"85","IdentificationRegisters":"0x00050652","MicrocodeInfo":null,"Step":"2","VendorId":"GenuineIntel"},"ProcessorType":"CPU","Socket":"CPU.Socket.1","TotalCores":20,"TotalThreads":40}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers
@@ -2661,7 +2805,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2672,7 +2816,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:11 GMT
       Content-Length:
       - '288'
       Connection:
@@ -2683,7 +2827,7 @@ http_interactions:
         of Controllers for this system","Members":[{"@odata.id":"/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers/AHCI.Embedded.1-1"}],"Members@odata.count":1,"Name":"Simple
         Storage Collection"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers/AHCI.Embedded.1-1
@@ -2698,7 +2842,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 7b4aed10-b2a5-4081-88a2-f6af4b4febbd
+      - bf841a19-fa6b-424d-84cb-32800d857370
   response:
     status:
       code: 200
@@ -2709,7 +2853,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Mon, 24 Sep 2018 13:48:06 GMT
+      - Mon, 24 Sep 2018 20:54:11 GMT
       Content-Length:
       - '453'
       Connection:
@@ -2721,5 +2865,149 @@ http_interactions:
         storage device 2","Status":{"Health":"OK","State":"Enabled"},"CapacityBytes":137438953472}],"Devices@odata.count":2,"Id":"AHCI.Embedded.1-1","Name":"Lewisburg
         SSATA Controller [AHCI mode]"}'
     http_version: 
-  recorded_at: Mon, 24 Sep 2018 13:48:06 GMT
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - bf841a19-fa6b-424d-84cb-32800d857370
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:11 GMT
+      Content-Length:
+      - '436'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis","Members":[{"@odata.id":"/redfish/v1/Chassis/Rack-1"},{"@odata.id":"/redfish/v1/Chassis/Block-1-1"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-2"},{"@odata.id":"/redfish/v1/Chassis/Block-1-2"},{"@odata.id":"/redfish/v1/Chassis/Sled-1-2-1"},{"@odata.id":"/redfish/v1/Chassis/Rack-2"},{"@odata.id":"/redfish/v1/Chassis/Block-2-1"}],"Members@odata.count":8}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - bf841a19-fa6b-424d-84cb-32800d857370
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:11 GMT
+      Content-Length:
+      - '414'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-2","ChassisType":"Sled","Description":"G5
+        Sled-Level Enclosure","Id":"Sled-1-1-2","IndicatorLED":"Off","Links":{"ComputerSystems":[{"@odata.id":"/redfish/v1/Systems/System-1-1-2-1"}],"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Block-1-1"}},"Manufacturer":"Dell","Model":"DSS9630M","Name":"G5_Sled","PowerState":"Off","Status":{"Health":"OK","State":"StandbyOffline"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - bf841a19-fa6b-424d-84cb-32800d857370
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:11 GMT
+      Content-Length:
+      - '575'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Rack-2","Actions":{"#Chassis.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulShutdown"],"target":"/redfish/v1/Chassis/Rack-2/Actions/Chassis.Reset"}},"ChassisType":"Rack","Id":"Rack-2","Links":{"Contains":[{"@odata.id":"/redfish/v1/Chassis/Block-2-1"}]},"Location":{"PostalAddress":{"City":"Chesapeake","Country":"VA","HouseNumber":"123","Street":"Adams
+        Ave."}},"Manufacturer":"Dell","Model":"DSS9000","Name":"G5_Rack","PowerState":"On","SerialNumber":"2","Status":{"Health":"OK","HealthRollup":"OK","State":"Enabled"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-2-1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - bf841a19-fa6b-424d-84cb-32800d857370
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 20:54:11 GMT
+      Content-Length:
+      - '371'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Chassis/Block-2-1","ChassisType":"Enclosure","Description":"G5
+        Block Chassis","Id":"Block-2-1","Links":{"ContainedBy":{"@odata.id":"/redfish/v1/Chassis/Rack-2"}},"Location":{"Placement":{"Rack":"Rack-2"}},"Manufacturer":"Dell","Model":"G5
+        Block","Name":"G5_Block","PowerState":"On","SerialNumber":"21","Status":{"Health":"OK","State":"Enabled"}}'
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 20:54:11 GMT
 recorded_with: VCR 3.0.3

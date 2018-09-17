@@ -55,6 +55,13 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
     }
   end
 
+  let(:racks) do
+    {
+      "/redfish/v1/Chassis/Rack-1" => { :name => "Rack-1" },
+      "/redfish/v1/Chassis/Rack-2" => { :name => "Rack-2" },
+    }
+  end
+
   describe "refresh", :vcr do
     it "will perform a full refresh" do
       2.times do # Test for refresh idempotence
@@ -65,6 +72,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
         assert_physical_servers
         assert_physical_server_details
         assert_hardwares
+        assert_racks
       end
     end
   end
@@ -75,6 +83,9 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
     expect(ems.physical_server_details.count).to eq(3)
     expect(ems.computer_systems.count).to eq(3)
     expect(ems.hardwares.count).to eq(3)
+
+    expect(ems.physical_racks.count).to eq(2)
+    expect(ems.physical_racks.map(&:ems_ref)).to match_array(racks.keys)
   end
 
   def check_attributes(instance, attrs, key = nil)
@@ -103,6 +114,13 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
       system = ComputerSystem.find_by!(:managed_entity => server)
       hardware = Hardware.find_by!(:computer_system => system)
       check_attributes(hardware, attrs, :hardware)
+    end
+  end
+
+  def assert_racks
+    racks.each do |ems_ref, attrs|
+      rack = PhysicalRack.find_by!(:ems_ref => ems_ref)
+      check_attributes(rack, attrs)
     end
   end
 end

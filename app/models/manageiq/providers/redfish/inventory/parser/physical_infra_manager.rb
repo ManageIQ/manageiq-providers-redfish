@@ -4,17 +4,22 @@ module ManageIQ::Providers::Redfish
       physical_servers
       physical_server_details
       hardwares
+      physical_racks
     end
 
     private
 
     def physical_servers
       collector.physical_servers.each do |s|
+        enclosure = s.dig("Links", "Chassis", 0, "@odata.id")
+        rack = persister.physical_racks.lazy_find(enclosure) if enclosure
+
         server = persister.physical_servers.build(
           :ems_ref         => s["@odata.id"],
           :health_state    => s.Status.Health,
           :hostname        => s.HostName,
           :name            => s.Id,
+          :physical_rack   => rack,
           :power_state     => s.PowerState,
           :raw_power_state => s.PowerState,
           :type            => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
@@ -98,6 +103,15 @@ module ManageIQ::Providers::Redfish
 
     def get_storage_capacity(storage)
       storage.Drives.reduce(0) { |acc, d| acc + (d.CapacityBytes || 0) }
+    end
+
+    def physical_racks
+      collector.physical_racks.each do |r|
+        persister.physical_racks.build(
+          :ems_ref => r["@odata.id"],
+          :name    => r.Id
+        )
+      end
     end
   end
 end
