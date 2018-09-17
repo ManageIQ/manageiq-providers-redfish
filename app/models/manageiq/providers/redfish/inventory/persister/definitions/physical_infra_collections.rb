@@ -8,6 +8,8 @@ module ManageIQ::Providers::Redfish::Inventory::Persister::Definitions::Physical
       computer_systems
       hardwares
       physical_racks
+      physical_chassis
+      physical_chassis_details
     ).each do |name|
       add_collection(physical_infra, name)
     end
