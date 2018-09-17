@@ -17,6 +17,12 @@ module ManageIQ::Providers::Redfish::ManagerMixin
     self.class.raw_connect(username, password, host, port, protocol)
   end
 
+  def disconnect(connection)
+    connection.logout
+  rescue StandardError => error
+    $redfish_log.warn("Disconnect failed: #{error}")
+  end
+
   def verify_credentials(auth_type = nil, options = {})
     options[:auth_type] = auth_type
     with_provider_connection(options) { true }
