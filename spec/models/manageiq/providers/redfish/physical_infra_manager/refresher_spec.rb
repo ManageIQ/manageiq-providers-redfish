@@ -35,23 +35,21 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
       :ems_id          => ems.id,
       :health_state    => "OK",
       :hostname        => "",
-      :manufacturer    => "Dell Inc.",
-      :model           => "DSS9630M",
       :name            => "System.Embedded.1",
       :power_state     => "Off",
       :raw_power_state => "Off",
-      :serial_number   => "CN701636AB0013",
       :type            => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
     )
   end
 
   def assert_physical_server_details
     d = AssetDetail.find_by(:resource_type => "PhysicalServer")
-    # TODO(tadeboro): We need better source of data before we can create more
-    #                 meaningful test.
     expect(d).to have_attributes(
       :location_led_state => "Off",
+      :manufacturer       => "Dell Inc.",
+      :model              => "DSS9630M",
       :resource_type      => "PhysicalServer",
+      :serial_number      => "CN701636AB0013",
     )
   end
 
