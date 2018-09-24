@@ -23,21 +23,20 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Thu, 13 Sep 2018 12:28:38 GMT
+      - Mon, 24 Sep 2018 13:48:07 GMT
       Content-Length:
-      - '999'
+      - '362'
       Connection:
       - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.context":"/redfish/v1/$metadata#ServiceRoot.ServiceRoot","@odata.id":"/redfish/v1","@odata.type":"#ServiceRoot.v1_1_0.ServiceRoot","AccountService":{"@odata.id":"/redfish/v1/Managers/iDRAC.Embedded.1/AccountService"},"Chassis":{"@odata.id":"/redfish/v1/Chassis"},"Description":"Root
-        Service","EventService":{"@odata.id":"/redfish/v1/EventService"},"Id":"RootService","JsonSchemas":{"@odata.id":"/redfish/v1/JSONSchemas"},"Links":{"Sessions":{"@odata.id":"/redfish/v1/Sessions"}},"Managers":{"@odata.id":"/redfish/v1/Managers"},"Name":"Root
-        Service","Oem":{"Dell":{"@odata.type":"/redfish/v1/Schemas/Dell.v1_0_0#Dell.ServiceRoot","IsBranded":0,"ManagerMACAddress":"10:98:36:a9:05:b0","ServiceTag":""}},"RedfishVersion":"1.0.2","Registries":{"@odata.id":"/redfish/v1/Registries"},"SessionService":{"@odata.id":"/redfish/v1/SessionService"},"Systems":{"@odata.id":"/redfish/v1/Systems"},"Tasks":{"@odata.id":"/redfish/v1/TaskService"},"UpdateService":{"@odata.id":"/redfish/v1/UpdateService"}}'
+      string: '{"@odata.id":"/redfish/v1/","Chassis":{"@odata.id":"/redfish/v1/Chassis"},"EventService":{"@odata.id":"/redfish/v1/EventService"},"Id":"RootService","Links":{"Sessions":{"@odata.id":"/redfish/v1/SessionService/Sessions"}},"Name":"RackManager
+        Root Service","SessionService":{"@odata.id":"/redfish/v1/SessionService"},"Systems":{"@odata.id":"/redfish/v1/Systems"}}'
     http_version: 
-  recorded_at: Thu, 13 Sep 2018 12:28:38 GMT
+  recorded_at: Mon, 24 Sep 2018 13:48:07 GMT
 - request:
     method: post
-    uri: https://REDFISH_HOST:8889/redfish/v1/Sessions
+    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
     body:
       encoding: UTF-8
       string: '{"UserName":"REDFISH_USERID","Password":"REDFISH_PASSWORD"}'
@@ -58,20 +57,20 @@ http_interactions:
       Content-Type:
       - application/json
       X-Auth-Token:
-      - a5b212d9-9529-444b-8f66-9d73a499b1df
+      - 8abdde5d-0194-45ab-9586-8f647a1d5e61
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Thu, 13 Sep 2018 12:28:38 GMT
+      - Mon, 24 Sep 2018 13:48:07 GMT
       Content-Length:
-      - '238'
+      - '253'
       Connection:
       - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/Sessions/a5b212d9-9529-444b-8f66-9d73a499b1df","Id":"a5b212d9-9529-444b-8f66-9d73a499b1df","Name":"a5b212d9-9529-444b-8f66-9d73a499b1df","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
+      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/8abdde5d-0194-45ab-9586-8f647a1d5e61","Id":"8abdde5d-0194-45ab-9586-8f647a1d5e61","Name":"8abdde5d-0194-45ab-9586-8f647a1d5e61","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
     http_version: 
-  recorded_at: Thu, 13 Sep 2018 12:28:38 GMT
+  recorded_at: Mon, 24 Sep 2018 13:48:07 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System.Embedded.1
@@ -86,59 +85,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - a5b212d9-9529-444b-8f66-9d73a499b1df
-  response:
-    status:
-      code: 200
-      message: 'OK '
-    headers:
-      Server:
-      - Apache/2.4
-      Cache-Control:
-      - no-cache
-      X-Frame-Options:
-      - DENY
-      Content-Type:
-      - application/json;odata.metadata=minimal;charset=utf-8
-      Allow:
-      - POST,PATCH
-      Access-Control-Allow-Origin:
-      - "*"
-      Date:
-      - Sat, 20 May 2017 09:58:17 GMT
-      Odata-Version:
-      - '4.0'
-      Link:
-      - "</redfish/v1/Schemas/ComputerSystem.v1_1_0.json>;rel=describedby"
-      Content-Length:
-      - '3515'
-      Connection:
-      - Keep-Alive
-    body:
-      encoding: ASCII-8BIT
-      string: '{"SimpleStorage":{"@odata.id":"/redfish/v1/Systems/System.Embedded.1/Storage/Controllers"},"Links":{"CooledBy@odata.count":12,"PoweredBy@odata.count":0,"Oem":{"Dell":{"BootSources":{"@odata.id":"/redfish/v1/Systems/System.Embedded.1/BootSources"},"@odata.type":"#Dell.v1_0_0.BootSources"}},"ManagedBy":[{"@odata.id":"/redfish/v1/Managers/iDRAC.Embedded.1"}],"Chassis":[{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1"}],"Chassis@odata.count":1,"PoweredBy":[],"CooledBy":[{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._1"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._2"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._3"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._4"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._5"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._6"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._7"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._8"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._9"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._10"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._11"},{"@odata.id":"/redfish/v1/Chassis/System.Embedded.1/Sensors/Fans/0x17||Fan.Embedded._12"}],"ManagedBy@odata.count":1},"Processors":{"@odata.id":"/redfish/v1/Systems/System.Embedded.1/Processors"},"@redfish.copyright":"Copyright  2017  Dell,
-        Inc.  All rights reserved","Manufacturer":"Dell Inc.","PowerState":"Off","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff","Name":"System","AssetTag":"","HostName":"","SerialNumber":"CN701636AB0013","@odata.type":"#ComputerSystem.v1_1_0.ComputerSystem","TrustedModules":[{"Status":{"State":"Disabled"}}],"IndicatorLED":"Off","SKU":"","MemorySummary":{"TotalSystemMemoryGiB":32.0,"Status":{"State":"Enabled","Health":null,"HealthRollup":null},"MemoryMirroring":"System"},"Model":"DSS9630M","@odata.id":"/redfish/v1/Systems/System.Embedded.1","Id":"System.Embedded.1","Bios":{"@odata.id":"/redfish/v1/Systems/System.Embedded.1/Bios"},"SecureBoot":{"@odata.id":"/redfish/v1/Systems/System.Embedded.1/SecureBoot"},"ProcessorSummary":{"Status":{"State":"Enabled","Health":null,"HealthRollup":null},"Count":2,"Model":""},"SystemType":"Physical","@odata.context":"/redfish/v1/$metadata#ComputerSystem.ComputerSystem","PartNumber":"033RF3X04","BiosVersion":"0.4.8","EthernetInterfaces":{"@odata.id":"/redfish/v1/Systems/System.Embedded.1/EthernetInterfaces"},"Description":"Computer
-        System which represents a machine (physical or virtual) and the local resources
-        such as memory, cpu and other devices that can be accessed from that machine.","Actions":{"#ComputerSystem.Reset":{"target":"/redfish/v1/Systems/System.Embedded.1/Actions/ComputerSystem.Reset","ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulRestart","GracefulShutdown","PushPowerButton","Nmi"]}},"Boot":{"UefiTargetBootSourceOverride":"","BootSourceOverrideTarget":"None","BootSourceOverrideTarget@Redfish.AllowableValues":["None","Pxe","Floppy","Cd","Hdd","BiosSetup","Utilities","UefiTarget","SDCard","UefiHttp"],"BootSourceOverrideEnabled":"Once","BootSourceOverrideMode":"UEFI"},"Status":{"State":"StandbyOffline","Health":"OK","HealthRollup":"OK"}}'
-    http_version: 
-  recorded_at: Thu, 13 Sep 2018 12:28:39 GMT
-- request:
-    method: post
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System.Embedded.1/Actions/ComputerSystem.Reset
-    body:
-      encoding: UTF-8
-      string: '{"ResetType":"GracefulShutdown"}'
-    headers:
-      User-Agent:
-      - excon/0.62.0
-      Accept:
-      - application/json
-      Odata-Version:
-      - '4.0'
-      X-Auth-Token:
-      - a5b212d9-9529-444b-8f66-9d73a499b1df
-      Content-Type:
-      - application/json
+      - 8abdde5d-0194-45ab-9586-8f647a1d5e61
   response:
     status:
       code: 404
@@ -147,7 +94,7 @@ http_interactions:
       Server:
       - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
       Date:
-      - Thu, 13 Sep 2018 12:28:39 GMT
+      - Mon, 24 Sep 2018 13:48:07 GMT
       Content-Length:
       - '0'
       Connection:
@@ -156,5 +103,36 @@ http_interactions:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Thu, 13 Sep 2018 12:28:39 GMT
+  recorded_at: Mon, 24 Sep 2018 13:48:07 GMT
+- request:
+    method: delete
+    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions/8abdde5d-0194-45ab-9586-8f647a1d5e61
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 8abdde5d-0194-45ab-9586-8f647a1d5e61
+  response:
+    status:
+      code: 204
+      message: 'No Content '
+    headers:
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.3/2017-12-14) OpenSSL/1.1.0g
+      Date:
+      - Mon, 24 Sep 2018 13:48:07 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Mon, 24 Sep 2018 13:48:07 GMT
 recorded_with: VCR 3.0.3
