@@ -14,12 +14,9 @@ module ManageIQ::Providers::Redfish
           :ems_ref         => s["@odata.id"],
           :health_state    => s.Status.Health,
           :hostname        => s.HostName,
-          :manufacturer    => s.Manufacturer,
-          :model           => s.Model,
           :name            => s.Id,
           :power_state     => s.PowerState,
           :raw_power_state => s.PowerState,
-          :serial_number   => s.SerialNumber,
           :type            => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
         )
         persister.computer_systems.build(:managed_entity => server)
@@ -34,8 +31,11 @@ module ManageIQ::Providers::Redfish
           :description        => s.Description,
           :location           => format_location(location),
           :location_led_state => s.IndicatorLED,
+          :manufacturer       => s.Manufacturer,
+          :model              => s.Model,
           :rack_name          => location.dig("Placement", "Rack"),
           :resource           => server,
+          :serial_number      => s.SerialNumber,
         )
       end
     end
