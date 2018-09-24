@@ -4,6 +4,9 @@
     :blacklisted_event_names: []
     :event_handling:
       :event_groups:
+        :general:
+          :critical:
+          - !ruby/regexp /^redfish_/
 
 :ems_refresh:
   :redfish_ph_infra:
