@@ -4,6 +4,9 @@
     :blacklisted_event_names: []
     :event_handling:
       :event_groups:
+        :general:
+          :critical:
+          - !ruby/regexp /^redfish_/
 
 :ems_refresh:
   :redfish_ph_infra:
@@ -24,3 +27,5 @@
     :queue_worker_base:
       :ems_refresh_worker:
         :ems_refresh_worker_redfish_physical_infra: {}
+    :event_catcher:
+      :event_catcher_redfish: {}
