@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 
+## Unreleased as of Sprint 95 - 2018-09-24
+
+### Added
+- Move server info into asset details table [(#31)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/31)
+- Implement disconnect functionality [(#30)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/30)
+
+### Fixed
+- Move LED state from server to asset details [(#29)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/29)
+
 ## Unreleased as of Sprint 94 - 2018-09-10
 
 ### Added
