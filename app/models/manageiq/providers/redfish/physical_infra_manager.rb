@@ -14,6 +14,10 @@ module ManageIQ::Providers::Redfish
              :source     => :asset_detail,
              :through    => :physical_servers,
              :as         => :physical_server
+    has_many :physical_chassis_details,
+             :class_name => "AssetDetail",
+             :source     => :asset_detail,
+             :through    => :physical_chassis
     has_many :computer_systems,
              :through => :physical_servers,
              :as      => :computer_system
