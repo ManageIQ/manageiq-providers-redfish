@@ -4,20 +4,29 @@ module ManageIQ::Providers::Redfish
       physical_servers
       physical_server_details
       hardwares
+      physical_racks
+      physical_chassis
+      physical_chassis_details
     end
 
     private
 
     def physical_servers
       collector.physical_servers.each do |s|
+        parent_id = s.dig("Links", "Chassis", 0, "@odata.id")
+        rack = persister.physical_racks.lazy_find(parent_id) if parent_id
+        chassis = persister.physical_chassis.lazy_find(parent_id) if parent_id
+
         server = persister.physical_servers.build(
-          :ems_ref         => s["@odata.id"],
-          :health_state    => s.Status.Health,
-          :hostname        => s.HostName,
-          :name            => s.Id,
-          :power_state     => s.PowerState,
-          :raw_power_state => s.PowerState,
-          :type            => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
+          :ems_ref          => s["@odata.id"],
+          :health_state     => s.Status.Health,
+          :hostname         => s.HostName,
+          :name             => s.Id,
+          :physical_chassis => chassis,
+          :physical_rack    => rack,
+          :power_state      => s.PowerState,
+          :raw_power_state  => s.PowerState,
+          :type             => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
         )
         persister.computer_systems.build(:managed_entity => server)
       end
@@ -42,8 +51,11 @@ module ManageIQ::Providers::Redfish
 
     def get_server_location(server)
       return {} if server.Links.Chassis.empty?
+      get_chassis_location(server.Links.Chassis.first)
+    end
 
-      chassis = [server.Links.Chassis.first]
+    def get_chassis_location(chassis)
+      chassis = [chassis]
       while chassis.last.Links.respond_to?("ContainedBy")
         chassis.push(chassis.last.Links.ContainedBy)
       end
@@ -98,6 +110,48 @@ module ManageIQ::Providers::Redfish
 
     def get_storage_capacity(storage)
       storage.Drives.reduce(0) { |acc, d| acc + (d.CapacityBytes || 0) }
+    end
+
+    def physical_racks
+      collector.physical_racks.each do |r|
+        persister.physical_racks.build(
+          :ems_ref => r["@odata.id"],
+          :name    => r.Id
+        )
+      end
+    end
+
+    def physical_chassis
+      collector.physical_chassis.each do |c|
+        parent_id = c.dig("Links", "ContainedBy", "@odata.id")
+        chassis = persister.physical_chassis.lazy_find(parent_id) if parent_id
+        rack = persister.physical_racks.lazy_find(parent_id) if parent_id
+
+        persister.physical_chassis.build(
+          :ems_ref                 => c["@odata.id"],
+          :health_state            => c.Status.Health,
+          :name                    => c.Id,
+          :parent_physical_chassis => chassis,
+          :physical_rack           => rack,
+        )
+      end
+    end
+
+    def physical_chassis_details
+      collector.physical_chassis.each do |c|
+        chassis = persister.physical_chassis.lazy_find(c["@odata.id"])
+        location = get_chassis_location(c)
+        persister.physical_chassis_details.build(
+          :description        => c.Description,
+          :location           => format_location(location),
+          :location_led_state => c.IndicatorLED,
+          :manufacturer       => c.Manufacturer,
+          :model              => c.Model,
+          :part_number        => c.PartNumber,
+          :resource           => chassis,
+          :serial_number      => c.SerialNumber,
+        )
+      end
     end
   end
 end
