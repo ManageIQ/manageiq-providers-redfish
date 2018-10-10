@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 
+## Unreleased as of Sprint 96 - 2018-10-08
+
+### Added
+- Add event catcher for Redfish provider [(#34)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/34)
+- Add physical racks and chassis [(#33)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/33)
+
 ## Unreleased as of Sprint 95 - 2018-09-24
 
 ### Added
