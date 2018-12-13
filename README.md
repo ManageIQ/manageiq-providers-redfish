@@ -1,7 +1,7 @@
 # ManageIQ plugin for the Redfish provider
 
 [![Gem Version](https://badge.fury.io/rb/manageiq-providers-redfish.svg)](http://badge.fury.io/rb/manageiq-providers-redfish)
-[![Build Status](https://travis-ci.org/ManageIQ/manageiq-providers-redfish.svg)](https://travis-ci.org/ManageIQ/manageiq-providers-redfish)
+[![Build Status](https://travis-ci.org/ManageIQ/manageiq-providers-redfish.svg?branch=master)](https://travis-ci.org/ManageIQ/manageiq-providers-redfish)
 [![Code Climate](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish)
 [![Test Coverage](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/coverage)
 [![Dependency Status](https://gemnasium.com/ManageIQ/manageiq-providers-redfish.svg)](https://gemnasium.com/ManageIQ/manageiq-providers-redfish)
