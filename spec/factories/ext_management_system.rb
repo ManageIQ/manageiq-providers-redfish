@@ -1,11 +1,11 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :ems_redfish_physical_infra,
           :aliases => ["manageiq/providers/redfish/physical_infra"],
           :class   => "ManageIQ::Providers::Redfish::PhysicalInfraManager",
           :parent  => :ems_physical_infra do
     trait :auth do
       after(:create) do |ems|
-        ems.authentications << FactoryGirl.create(:authentication)
+        ems.authentications << FactoryBot.create(:authentication)
       end
     end
 
@@ -20,7 +20,7 @@ FactoryGirl.define do
 
       after(:create) do |ems|
         secrets = Rails.application.secrets.redfish
-        ems.authentications << FactoryGirl.create(
+        ems.authentications << FactoryBot.create(
           :authentication,
           :userid   => secrets.try(:[], "userid") || "REDFISH_USERID",
           :password => secrets.try(:[], "password") || "REDFISH_PASSWORD"

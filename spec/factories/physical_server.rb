@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :redfish_physical_server,
           :class  => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
           :parent => :physical_server do

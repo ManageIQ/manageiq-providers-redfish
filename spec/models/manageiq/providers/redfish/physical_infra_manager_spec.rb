@@ -10,7 +10,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager do
   let(:rf_module) { class_double("RedfishClient").as_stubbed_const }
   let(:rf_client) { instance_double("RedfishClient::Root") }
   subject(:ems) do
-    FactoryGirl.create(:ems_redfish_physical_infra, :auth,
+    FactoryBot.create(:ems_redfish_physical_infra, :auth,
                        :hostname => "host",
                        :port     => 1234)
   end
@@ -44,7 +44,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager do
 
   context "#connect" do
     it "aborts on missing credentials" do
-      ems = FactoryGirl.create(:ems_redfish_physical_infra)
+      ems = FactoryBot.create(:ems_redfish_physical_infra)
       expect { ems.connect }.to raise_error(MiqException::MiqHostError)
     end
 

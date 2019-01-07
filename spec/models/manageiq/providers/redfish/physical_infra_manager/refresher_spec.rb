@@ -1,6 +1,6 @@
 describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
   subject(:ems) do
-    FactoryGirl.create(:ems_redfish_physical_infra, :vcr,
+    FactoryBot.create(:ems_redfish_physical_infra, :vcr,
                        :security_protocol => "ssl",
                        :port              => 8889)
   end
