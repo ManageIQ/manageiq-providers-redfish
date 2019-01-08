@@ -1,7 +1,7 @@
 describe ManageIQ::Providers::Redfish::PhysicalInfraManager do
-  let(:server) { FactoryGirl.create(:redfish_physical_server, :vcr) }
+  let(:server) { FactoryBot.create(:redfish_physical_server, :vcr) }
   subject(:ems) do
-    FactoryGirl.create(:ems_redfish_physical_infra, :vcr)
+    FactoryBot.create(:ems_redfish_physical_infra, :vcr)
   end
 
   describe "#blink_loc_led", :vcr do
