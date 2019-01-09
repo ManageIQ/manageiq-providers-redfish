@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 
-## Hammer Beta-1 - Released 2018-10-12
+## Hammer-1
 
 ### Added
 - Move server info into asset details table [(#31)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/31)
@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Add power operations to physical server [(#5)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/5)
 - Add physical racks and chassis [(#33)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/33)
 - Update i18n catalog for hammer [(#37)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/37)
+- Add event catcher for Redfish provider [(#34)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/34)
 
 ### Fixed
 - Move LED state from server to asset details [(#29)](https://github.com/ManageIQ/manageiq-providers-redfish/pull/29)
