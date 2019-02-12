@@ -10,8 +10,8 @@ FactoryBot.define do
     end
 
     trait :vcr do
-      security_protocol "ssl"
-      port 8889
+      security_protocol { "ssl" }
+      port { 8889 }
 
       hostname do
         # Keep in sync with filter_sensitive_data in spec/spec_helper.rb!
