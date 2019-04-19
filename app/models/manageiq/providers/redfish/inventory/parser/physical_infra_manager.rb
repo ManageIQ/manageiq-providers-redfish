@@ -21,7 +21,7 @@ module ManageIQ::Providers::Redfish
           :ems_ref          => s["@odata.id"],
           :health_state     => s.Status.Health,
           :hostname         => s.HostName,
-          :name             => s.Id,
+          :name             => resource_name(s),
           :physical_chassis => chassis,
           :physical_rack    => rack,
           :power_state      => s.PowerState,
@@ -30,6 +30,14 @@ module ManageIQ::Providers::Redfish
         )
         persister.computer_systems.build(:managed_entity => server)
       end
+    end
+
+    def resource_name(res)
+      parts = []
+      parts << res.Manufacturer if res.Manufacturer
+      parts << res.Name if res.Name
+      parts << "(#{res.SerialNumber})" if res.SerialNumber
+      parts.join(" ")
     end
 
     def physical_server_details
@@ -130,7 +138,7 @@ module ManageIQ::Providers::Redfish
         persister.physical_chassis.build(
           :ems_ref                 => c["@odata.id"],
           :health_state            => c.Status.Health,
-          :name                    => c.Id,
+          :name                    => resource_name(c),
           :parent_physical_chassis => chassis,
           :physical_rack           => rack,
         )

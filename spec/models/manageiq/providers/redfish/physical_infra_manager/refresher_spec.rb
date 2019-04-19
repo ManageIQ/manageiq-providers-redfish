@@ -10,7 +10,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
       "/redfish/v1/Systems/System-1-1-1-1" => {
         :server       => {
           :health_state    => "OK",
-          :name            => "System-1-1-1-1",
+          :name            => "Dell G5 Computer System (CN701636AB0013)",
           :power_state     => "PoweringOn",
           :raw_power_state => "PoweringOn",
         },
@@ -34,7 +34,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
         :server       => {
           :health_state    => "Critical",
           :hostname        => "hostname.example.com",
-          :name            => "System-1-2-1-1",
+          :name            => "Dell Inc. System (945hjf0927mf)",
           :power_state     => "On",
           :raw_power_state => "On",
         },
@@ -67,7 +67,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
       "/redfish/v1/Chassis/Block-1-1"  => {
         :chassis      => {
           :health_state => "OK",
-          :name         => "Block-1-1",
+          :name         => "Dell G5_Block (11)",
         },
         :asset_detail => {
           :description        => "G5 Block Chassis",
@@ -84,7 +84,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
       "/redfish/v1/Chassis/Sled-1-1-1" => {
         :chassis      => {
           :health_state => "Warning",
-          :name         => "Sled-1-1-1",
+          :name         => "Dell G5_Sled (h894hf5n926h)",
         },
         :asset_detail => {
           :description        => "G5 Sled-Level Enclosure",
