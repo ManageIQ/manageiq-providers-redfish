@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RedfishServerProvisionDialog componentDidMount fetchPxeServers fails 1`] = `
+<p>
+  MSG
+</p>
+`;
+
+exports[`RedfishServerProvisionDialog componentDidMount fetchPxeServers succeeds 1`] = `
+<PxeDetails
+  customizationTemplates={Array []}
+  loading={false}
+  physicalServerIds={
+    Array [
+      123,
+    ]
+  }
+  pxeImages={Array []}
+  pxeServers={
+    Array [
+      Object {
+        "label": "PXE1 (URI1)",
+        "value": 1,
+      },
+    ]
+  }
+  updateFormState={[Function]}
+/>
+`;
