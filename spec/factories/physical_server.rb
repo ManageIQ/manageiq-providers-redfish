@@ -3,7 +3,7 @@ FactoryBot.define do
           :class  => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
           :parent => :physical_server do
     trait :vcr do
-      ems_ref { "/redfish/v1/Systems/System.Embedded.1" }
+      ems_ref { "/redfish/v1/Systems/System-1-1-1-1" }
     end
   end
 end

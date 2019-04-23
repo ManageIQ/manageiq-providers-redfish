@@ -4,6 +4,7 @@ module ManageIQ::Providers::Redfish
     require_nested :EventParser
     require_nested :Refresher
     require_nested :RefreshWorker
+    require_nested :PhysicalServer
 
     include Vmdb::Logging
     include ManagerMixin
