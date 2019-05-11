@@ -13,4 +13,18 @@ require 'bundler/gem_tasks'
 
 FileList['lib/tasks_private/**/*.rake'].each { |r| load r }
 
+namespace :yarn do
+  desc "install yarn dependencies"
+  task :install do
+    system('yarn install')
+    exit $CHILD_STATUS.exitstatus
+  end
+
+  desc "run jest tests"
+  task :test do
+    system('yarn test')
+    exit $CHILD_STATUS.exitstatus
+  end
+end
+
 task :default => :spec

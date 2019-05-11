@@ -11,13 +11,25 @@ notifications:
     on_success: change
     on_failure: always
     on_start: never
-cache: bundler
+cache:
+  bundler: true
+  yarn: true
 env:
   global:
   - RUBY_GC_HEAP_GROWTH_MAX_SLOTS=300000
   - RUBY_GC_HEAP_INIT_SLOTS=600000
   - RUBY_GC_HEAP_GROWTH_FACTOR=1.25
+  matrix:
+    - TEST_SUITE=spec
+    - TEST_SUITE=yarn:test
+matrix:
+  exclude:
+    - rvm: 2.4.5
+      env: TEST_SUITE=yarn:test
 addons:
   postgresql: '10'
-install: bin/setup
+install:
+- bin/setup
+- "bundle exec rake yarn:install"
+script: bundle exec rake $TEST_SUITE
 after_script: bundle exec codeclimate-test-reporter
