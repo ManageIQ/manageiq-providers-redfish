@@ -1,7 +1,7 @@
 dist: xenial
 language: ruby
 rvm:
-- 2.4.5
+- 2.4.6
 - 2.5.3
 sudo: false
 notifications:
@@ -20,16 +20,16 @@ env:
   - RUBY_GC_HEAP_INIT_SLOTS=600000
   - RUBY_GC_HEAP_GROWTH_FACTOR=1.25
   matrix:
-    - TEST_SUITE=spec
-    - TEST_SUITE=yarn:test
+  - TEST_SUITE=spec
+  - TEST_SUITE=yarn:test
 matrix:
   exclude:
-    - rvm: 2.4.5
-      env: TEST_SUITE=yarn:test
+  - rvm: 2.4.5
+    env: TEST_SUITE=yarn:test
 addons:
   postgresql: '10'
 install:
 - bin/setup
-- "bundle exec rake yarn:install"
+- bundle exec rake yarn:install
 script: bundle exec rake $TEST_SUITE
 after_script: bundle exec codeclimate-test-reporter
