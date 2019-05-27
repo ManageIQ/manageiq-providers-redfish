@@ -4,6 +4,8 @@ export const fetchPxeImagesForServer = (serverId) => API.get(`/api/pxe_servers/$
 
 export const fetchTemplatesForPxeImage = (pxeImageId) => API.get(`/api/pxe_images/${pxeImageId}/customization_templates?expand=resources&attributes=id,name`);
 
+export const fetchFirmwareBinariesForServer = (serverId) => API.get(`/api/physical_servers/${serverId}/firmware_binaries?expand=resources&attributes=id,name,description`);
+
 export const createProvisionRequest = (physicalServerIds, pxeImageId, templateId) => API.post(`/api/requests`, {
   options: {
     request_type: 'provision_physical_server',
@@ -16,6 +18,17 @@ export const createProvisionRequest = (physicalServerIds, pxeImageId, templateId
   response['results'].forEach(res => window.add_flash(res.message, res.status === 'Ok' ? 'success' : 'error'));
 });
 
+export const createFirmwareUpdateRequest = (physicalServerIds, firmwareBinaryId) => API.post(`/api/requests`, {
+  options: {
+    request_type: 'physical_server_firmware_update',
+    src_ids: physicalServerIds,
+    firmware_binary_id: firmwareBinaryId
+  },
+  auto_approve: true
+}).then(response => {
+  response['results'].forEach(res => window.add_flash(res.message, res.status === 'Ok' ? 'success' : 'error'));
+});
+
 export const handleApiError = (self) => {
   return (err) => {
     let msg = __('Unknown API error');
@@ -23,6 +36,17 @@ export const handleApiError = (self) => {
       msg = err.data.error.message
     }
     self.setState({loading: false, error: msg});
+  };
+};
+
+export const handleApiErrorHooks = (setLoading, setError) => {
+  return (err) => {
+    let msg = __('Unknown API error');
+    if(err.data && err.data.error && err.data.error.message) {
+      msg = err.data.error.message
+    }
+    setLoading(false);
+    setError(msg);
   };
 };
 

@@ -29,6 +29,24 @@ module ManageIQ::Providers::Redfish
               :enabled => false,
               :onwhen  => "1+"
             ),
+            button(
+              :physical_server_firmware_update,
+              "pficon pficon-maintenance fa-lg",
+              t = N_("Update Firmware of Physical Servers"),
+              t,
+              :klass   => ApplicationHelper::Button::ButtonWithoutRbacCheck,
+              :data    => {
+                "function"      => "sendDataWithRx",
+                "function-data" => {
+                  :controller     => "provider_dialogs",
+                  :button         => :physical_server_firmware_update,
+                  :modal_title    => N_("Update Physical Servers' Firmware"),
+                  :component_name => "RedfishServerFirmwareUpdateDialog",
+                }.to_json,
+              },
+              :enabled => false,
+              :onwhen  => "1+"
+            ),
           ]
         ),
       ]
