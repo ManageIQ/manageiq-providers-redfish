@@ -26,14 +26,14 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Provision do
     end
 
     context 'abort when missing customization template' do
-      let(:options) { { :configuration_profile_id => 'missing' } }
+      let(:options) { { :customization_template_id => 'missing' } }
       it do
         expect { subject.start_provisioning }.to raise_error(MiqException::MiqProvisionError)
       end
     end
 
     context 'when all steps succeed' do
-      let(:options) { { :pxe_image_id => pxe_image.id, :configuration_profile_id => template.id } }
+      let(:options) { { :pxe_image_id => pxe_image.id, :customization_template_id => template.id } }
       it do
         expect(server).to receive(:deploy_pxe_config).with(pxe_image, template)
         expect(server).to receive(:reboot_using_pxe)
@@ -45,7 +45,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Provision do
     end
 
     context 'when all steps succeed after polling' do
-      let(:options) { { :pxe_image_id => pxe_image.id, :configuration_profile_id => template.id } }
+      let(:options) { { :pxe_image_id => pxe_image.id, :customization_template_id => template.id } }
       it do
         expect(server).to receive(:deploy_pxe_config).with(pxe_image, template)
         expect(server).to receive(:reboot_using_pxe)
