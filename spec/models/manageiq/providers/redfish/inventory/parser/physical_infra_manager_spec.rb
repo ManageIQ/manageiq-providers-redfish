@@ -1,6 +1,6 @@
 describe ManageIQ::Providers::Redfish::Inventory::Parser::PhysicalInfraManager do
   def new_resource(content)
-    RedfishClient::Resource.new(nil, :content => content)
+    RedfishClient::Resource.new(nil, :raw => content)
   end
 
   subject(:parser) { described_class.new }
