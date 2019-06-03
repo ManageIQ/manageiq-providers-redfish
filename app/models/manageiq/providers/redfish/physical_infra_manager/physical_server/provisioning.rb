@@ -8,7 +8,7 @@ module ManageIQ::Providers::Redfish
       end
     end
 
-    def reboot_using_pxe
+    def next_boot_using_pxe
       with_provider_object do |system|
         response = system.patch(
           :payload => {
@@ -20,14 +20,18 @@ module ManageIQ::Providers::Redfish
         )
         raise MiqException::MiqProvisionError, "Cannot override boot order: #{response.data[:body]}" if response.status >= 400
       end
-      # TODO: we perform force reboot which will fail in some cases. Need to handle with supports mixin.
-      restart_now
     end
 
     def powered_on_now?
-      # TODO(miha-plesko): we should rely on VMDB state instead contacting provider.
-      # Update implementation once we have event-driven targeted refresh implemented.
-      with_provider_object { |system| system.PowerState.to_s.downcase == 'on' }
+      power_state_now == "on"
+    end
+
+    def powered_off_now?
+      power_state_now == "off"
+    end
+
+    def power_state_now
+      with_provider_object { |system| system.PowerState.downcase }
     end
 
     private
