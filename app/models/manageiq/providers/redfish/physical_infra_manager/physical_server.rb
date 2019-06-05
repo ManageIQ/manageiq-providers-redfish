@@ -7,7 +7,7 @@ module ManageIQ::Providers::Redfish
     end
 
     def provider_object(connection)
-      connection.find(ems_ref)
+      connection.find!(ems_ref)
     end
   end
 end
