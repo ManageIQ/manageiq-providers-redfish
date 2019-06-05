@@ -15,5 +15,11 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer do
         expect(subject.ems_ref).to match(".+/#{system.Id}")
       end
     end
+
+    it "raises en exception if provider object is missing" do
+      subject.ems_ref = "/invalid"
+      expect { subject.with_provider_object { |_| nil } }
+        .to raise_error RedfishClient::Resource::NoResource
+    end
   end
 end
