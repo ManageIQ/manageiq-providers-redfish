@@ -1,0 +1,179 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
+      Date:
+      - Sun, 16 Jun 2019 07:35:11 GMT
+      Content-Length:
+      - '362'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/","Chassis":{"@odata.id":"/redfish/v1/Chassis"},"EventService":{"@odata.id":"/redfish/v1/EventService"},"Id":"RootService","Links":{"Sessions":{"@odata.id":"/redfish/v1/SessionService/Sessions"}},"Name":"RackManager
+        Root Service","SessionService":{"@odata.id":"/redfish/v1/SessionService"},"Systems":{"@odata.id":"/redfish/v1/Systems"}}'
+    http_version: 
+  recorded_at: Sun, 16 Jun 2019 07:35:11 GMT
+- request:
+    method: post
+    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
+    body:
+      encoding: UTF-8
+      string: '{"UserName":"REDFISH_USERID","Password":"REDFISH_PASSWORD"}'
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 'Created '
+    headers:
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 6f7c8bd4-e2cd-4db4-9cad-212cfb114687
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
+      Date:
+      - Sun, 16 Jun 2019 07:35:11 GMT
+      Content-Length:
+      - '253'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/6f7c8bd4-e2cd-4db4-9cad-212cfb114687","Id":"6f7c8bd4-e2cd-4db4-9cad-212cfb114687","Name":"6f7c8bd4-e2cd-4db4-9cad-212cfb114687","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
+    http_version: 
+  recorded_at: Sun, 16 Jun 2019 07:35:11 GMT
+- request:
+    method: get
+    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 6f7c8bd4-e2cd-4db4-9cad-212cfb114687
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
+      Date:
+      - Sun, 16 Jun 2019 07:35:11 GMT
+      Content-Length:
+      - '977'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1","Actions":{"#ComputerSystem.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulShutdown","GracefulRestart","ForceRestart"],"target":"/redfish/v1/Systems/System-1-1-1-1/Actions/ComputerSystem.Reset"}},"Description":"G5
+        Computer System Node","Id":"System-1-1-1-1","IndicatorLED":"Off","Links":{"Chassis":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"}]},"Manufacturer":"Dell","MemorySummary":{"Status":{"Health":null,"State":"Enabled"},"TotalSystemMemoryGiB":32},"Model":"DSS9630M","Name":"G5
+        Computer System","PowerState":"Off","ProcessorSummary":{"Count":2,"Model":"","Status":{"Health":"OK","State":"Enabled"}},"Processors":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors"},"SerialNumber":"CN701636AB0013","Status":{"Health":"OK","State":"StandbyOffline"},"Storage":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage"},"SystemType":"Physical","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff"}'
+    http_version: 
+  recorded_at: Sun, 16 Jun 2019 07:35:11 GMT
+- request:
+    method: post
+    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Actions/ComputerSystem.Reset
+    body:
+      encoding: UTF-8
+      string: '{"ResetType":"On"}'
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 6f7c8bd4-e2cd-4db4-9cad-212cfb114687
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
+      Date:
+      - Sun, 16 Jun 2019 07:35:11 GMT
+      Content-Length:
+      - '31'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"message":"Success"}}'
+    http_version: 
+  recorded_at: Sun, 16 Jun 2019 07:35:11 GMT
+- request:
+    method: delete
+    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions/6f7c8bd4-e2cd-4db4-9cad-212cfb114687
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.64.0
+      Accept:
+      - application/json
+      Odata-Version:
+      - '4.0'
+      X-Auth-Token:
+      - 6f7c8bd4-e2cd-4db4-9cad-212cfb114687
+  response:
+    status:
+      code: 204
+      message: 'No Content '
+    headers:
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
+      Date:
+      - Sun, 16 Jun 2019 07:35:11 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Sun, 16 Jun 2019 07:35:11 GMT
+recorded_with: VCR 3.0.3

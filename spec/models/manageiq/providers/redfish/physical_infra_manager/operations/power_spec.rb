@@ -50,4 +50,16 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager do
         .to raise_error(MiqException::Error)
     end
   end
+
+  describe "#power_down", :vcr do
+    it "powers down the server with first suitable option" do
+      expect(ems.power_down(server, nil).status).to eq(200)
+    end
+  end
+
+  describe "#power_up", :vcr do
+    it "power up the server with first suitable option" do
+      expect(ems.power_up(server, nil).status).to eq(200)
+    end
+  end
 end

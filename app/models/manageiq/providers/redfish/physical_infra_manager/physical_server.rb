@@ -9,5 +9,13 @@ module ManageIQ::Providers::Redfish
     def provider_object(connection)
       connection.find!(ems_ref)
     end
+
+    def power_down
+      change_state(:power_down)
+    end
+
+    def power_up
+      change_state(:power_up)
+    end
   end
 end
