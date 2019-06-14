@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.0.2g
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
       Date:
-      - Fri, 19 Apr 2019 08:04:57 GMT
+      - Thu, 06 Jun 2019 18:06:24 GMT
       Content-Length:
       - '362'
       Connection:
@@ -33,7 +33,7 @@ http_interactions:
       string: '{"@odata.id":"/redfish/v1/","Chassis":{"@odata.id":"/redfish/v1/Chassis"},"EventService":{"@odata.id":"/redfish/v1/EventService"},"Id":"RootService","Links":{"Sessions":{"@odata.id":"/redfish/v1/SessionService/Sessions"}},"Name":"RackManager
         Root Service","SessionService":{"@odata.id":"/redfish/v1/SessionService"},"Systems":{"@odata.id":"/redfish/v1/Systems"}}'
     http_version: 
-  recorded_at: Fri, 19 Apr 2019 08:04:57 GMT
+  recorded_at: Thu, 06 Jun 2019 18:06:24 GMT
 - request:
     method: post
     uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
@@ -57,20 +57,20 @@ http_interactions:
       Content-Type:
       - application/json
       X-Auth-Token:
-      - 032d2c4e-a30f-430c-98ce-5da08d9dac55
+      - 9c82d6e9-425f-4059-bb41-a6ec0a7e73c5
       Server:
-      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.0.2g
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
       Date:
-      - Fri, 19 Apr 2019 08:04:57 GMT
+      - Thu, 06 Jun 2019 18:06:24 GMT
       Content-Length:
-      - '256'
+      - '253'
       Connection:
       - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/032d2c4e-a30f-430c-98ce-5da08d9dac55","Id":"032d2c4e-a30f-430c-98ce-5da08d9dac55","Name":"032d2c4e-a30f-430c-98ce-5da08d9dac55","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
+      string: '{"@odata.id":"/redfish/v1/SessionService/Sessions/9c82d6e9-425f-4059-bb41-a6ec0a7e73c5","Id":"9c82d6e9-425f-4059-bb41-a6ec0a7e73c5","Name":"9c82d6e9-425f-4059-bb41-a6ec0a7e73c5","@odata.type":"#Session.v1_1_0.Session","UserName":"REDFISH_USERID","Password":null}'
     http_version: 
-  recorded_at: Fri, 19 Apr 2019 08:04:57 GMT
+  recorded_at: Thu, 06 Jun 2019 18:06:24 GMT
 - request:
     method: get
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1
@@ -85,7 +85,7 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 032d2c4e-a30f-430c-98ce-5da08d9dac55
+      - 9c82d6e9-425f-4059-bb41-a6ec0a7e73c5
   response:
     status:
       code: 200
@@ -94,20 +94,20 @@ http_interactions:
       Content-Type:
       - application/json
       Server:
-      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.0.2g
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
       Date:
-      - Fri, 19 Apr 2019 08:04:57 GMT
+      - Thu, 06 Jun 2019 18:06:24 GMT
       Content-Length:
-      - '984'
+      - '1243'
       Connection:
       - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1","Actions":{"#ComputerSystem.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulShutdown","GracefulRestart","ForceRestart"],"target":"/redfish/v1/Systems/System-1-1-1-1/Actions/ComputerSystem.Reset"}},"Description":"G5
+      string: '{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1","Actions":{"#ComputerSystem.Reset":{"ResetType@Redfish.AllowableValues":["On","ForceOff","GracefulShutdown","GracefulRestart","ForceRestart"],"target":"/redfish/v1/Systems/System-1-1-1-1/Actions/ComputerSystem.Reset"}},"Boot":{"BootOrder":["Hdd","Cd","Usb"],"BootSourceOverrideEnabled":"Disabled","BootSourceOverrideEnabled@Redfish.AllowableValues":["Continuous","Disabled","Once"],"BootSourceOverrideMode":"Legacy","BootSourceOverrideTarget":"Hdd","UefiTargetBootSourceOverride":null},"Description":"G5
         Computer System Node","Id":"System-1-1-1-1","IndicatorLED":"Off","Links":{"Chassis":[{"@odata.id":"/redfish/v1/Chassis/Sled-1-1-1"}]},"Manufacturer":"Dell","MemorySummary":{"Status":{"Health":null,"State":"Enabled"},"TotalSystemMemoryGiB":32},"Model":"DSS9630M","Name":"G5
-        Computer System","PowerState":"PoweringOn","ProcessorSummary":{"Count":2,"Model":"","Status":{"Health":"OK","State":"Enabled"}},"Processors":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors"},"SerialNumber":"CN701636AB0013","Status":{"Health":"OK","State":"StandbyOffline"},"Storage":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage"},"SystemType":"Physical","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff"}'
+        Computer System","PowerState":"On","ProcessorSummary":{"Count":2,"Model":"","Status":{"Health":"OK","State":"Enabled"}},"Processors":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Processors"},"SerialNumber":"CN701636AB0013","Status":{"Health":"OK","State":"StandbyOffline"},"Storage":{"@odata.id":"/redfish/v1/Systems/System-1-1-1-1/Storage"},"SystemType":"Physical","UUID":"ffffffff-ffff-ffff-ffff-ffffffffffff"}'
     http_version: 
-  recorded_at: Fri, 19 Apr 2019 08:04:57 GMT
+  recorded_at: Thu, 06 Jun 2019 18:06:24 GMT
 - request:
     method: post
     uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Actions/ComputerSystem.Reset
@@ -122,45 +122,32 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 032d2c4e-a30f-430c-98ce-5da08d9dac55
+      - 9c82d6e9-425f-4059-bb41-a6ec0a7e73c5
       Content-Type:
       - application/json
   response:
     status:
-      code: 500
-      message: 'Internal Server Error '
+      code: 400
+      message: 'Bad Request '
     headers:
       Content-Type:
-      - text/html; charset=ISO-8859-1
+      - application/json
       Server:
-      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.0.2g
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
       Date:
-      - Fri, 19 Apr 2019 08:04:57 GMT
+      - Thu, 06 Jun 2019 18:06:24 GMT
       Content-Length:
-      - '335'
+      - '59'
       Connection:
-      - close
+      - Keep-Alive
     body:
       encoding: ASCII-8BIT
-      string: |
-        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
-        <HTML>
-          <HEAD><TITLE>Internal Server Error</TITLE></HEAD>
-          <BODY>
-            <H1>Internal Server Error</H1>
-            undefined method `key?' for nil:NilClass
-            <HR>
-            <ADDRESS>
-             WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.0.2g at
-             REDFISH_HOST:8889
-            </ADDRESS>
-          </BODY>
-        </HTML>
+      string: '{"error":{"message":"Invalid reset type for curent state"}}'
     http_version: 
-  recorded_at: Fri, 19 Apr 2019 08:04:57 GMT
+  recorded_at: Thu, 06 Jun 2019 18:06:24 GMT
 - request:
     method: delete
-    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions/032d2c4e-a30f-430c-98ce-5da08d9dac55
+    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions/9c82d6e9-425f-4059-bb41-a6ec0a7e73c5
     body:
       encoding: US-ASCII
       string: ''
@@ -172,21 +159,21 @@ http_interactions:
       Odata-Version:
       - '4.0'
       X-Auth-Token:
-      - 032d2c4e-a30f-430c-98ce-5da08d9dac55
+      - 9c82d6e9-425f-4059-bb41-a6ec0a7e73c5
   response:
     status:
       code: 204
       message: 'No Content '
     headers:
       Server:
-      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.0.2g
+      - WEBrick/1.3.1 (Ruby/2.4.4/2018-03-28) OpenSSL/1.1.0i
       Date:
-      - Fri, 19 Apr 2019 08:04:57 GMT
+      - Thu, 06 Jun 2019 18:06:24 GMT
       Connection:
       - Keep-Alive
     body:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Fri, 19 Apr 2019 08:04:57 GMT
+  recorded_at: Thu, 06 Jun 2019 18:06:25 GMT
 recorded_with: VCR 3.0.3
