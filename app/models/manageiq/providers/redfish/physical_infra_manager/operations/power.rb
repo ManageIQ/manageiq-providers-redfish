@@ -42,6 +42,16 @@ module ManageIQ::Providers::Redfish
       raise MiqException::Error, "Restarting BMC is not supported."
     end
 
+    # Select any supported method of powering the server down.
+    def power_down(server, _options)
+      trigger_first_valid_power_action(server, %w[ForceOff GracefulShutdown])
+    end
+
+    # Select any supported method of powering the server up.
+    def power_up(server, _options)
+      trigger_first_valid_power_action(server, %w[On ForceOn])
+    end
+
     private
 
     def trigger_first_valid_power_action(server, rtypes)
