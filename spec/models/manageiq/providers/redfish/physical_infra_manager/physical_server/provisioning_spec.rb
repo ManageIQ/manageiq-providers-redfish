@@ -40,19 +40,18 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer do
     end
   end
 
-  describe '#reboot_using_pxe' do
+  describe '#next_boot_using_pxe' do
     context 'when boot order setup succeeds' do
       it 'server is restarted' do
         expect(system).to receive(:patch).and_return(double('RESPONSE', :status => 200, :data => {}))
-        expect(subject).to receive(:restart_now)
-        subject.reboot_using_pxe
+        subject.next_boot_using_pxe
       end
     end
 
     context 'when boot order setup fails' do
       it 'is provisioning aborted' do
         expect(system).to receive(:patch).and_return(double('RESPONSE', :status => 400, :data => {}))
-        expect { subject.reboot_using_pxe }.to raise_error(MiqException::MiqProvisionError)
+        expect { subject.next_boot_using_pxe }.to raise_error(MiqException::MiqProvisionError)
       end
     end
   end
@@ -66,6 +65,18 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer do
     context 'when Off' do
       before { allow(system).to receive(:PowerState).and_return('Off') }
       it { expect(subject.powered_on_now?).to be_falsey }
+    end
+  end
+
+  describe '#powered_off_now?' do
+    context 'when On' do
+      before { allow(system).to receive(:PowerState).and_return('On') }
+      it { expect(subject.powered_off_now?).to be_falsey }
+    end
+
+    context 'when Off' do
+      before { allow(system).to receive(:PowerState).and_return('Off') }
+      it { expect(subject.powered_off_now?).to be_truthy }
     end
   end
 
