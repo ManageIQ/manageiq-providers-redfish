@@ -18,7 +18,7 @@ module ManageIQ::Providers::Redfish
             }
           }
         )
-        raise MiqException::MiqProvisionError, "Cannot override boot order: #{response.data[:body]}" if response.status >= 400
+        raise MiqException::MiqProvisionError, "Cannot override boot order: #{response}" if response.status >= 400
       end
     end
 
