@@ -7,6 +7,7 @@ module ManageIQ::Providers::Redfish
       physical_racks
       physical_chassis
       physical_chassis_details
+      firmwares
     end
 
     private
@@ -117,6 +118,23 @@ module ManageIQ::Providers::Redfish
               :uid_ems      => controller["@odata.id"]
             )
           end
+        end
+      end
+    end
+
+    def firmwares
+      collector.firmware_inventory.each do |firmware|
+        # RelatedItem is actually an array and is not a typo.
+        (firmware.RelatedItem || []).each do |item|
+          server = persister.physical_servers.lazy_find(item["@odata.id"])
+          computer = persister.physical_server_computer_systems.lazy_find(server)
+          hardware = persister.physical_server_hardwares.lazy_find(computer)
+          persister.physical_server_firmwares.build(
+            :resource => hardware,
+            :build    => firmware.SoftwareId,
+            :name     => firmware.Name,
+            :version  => firmware.Version
+          )
         end
       end
     end

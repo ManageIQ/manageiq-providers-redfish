@@ -9,6 +9,7 @@ module ManageIQ::Providers::Redfish::Inventory::Persister::Definitions::Physical
       physical_server_hardwares
       physical_server_network_devices
       physical_server_storage_adapters
+      physical_server_firmwares
 
       physical_racks
       physical_chassis

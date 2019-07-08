@@ -11,5 +11,9 @@ module ManageIQ::Providers::Redfish
     def physical_chassis
       rf_client.Chassis.Members.reject { |c| c.ChassisType == "Rack" }
     end
+
+    def firmware_inventory
+      rf_client.UpdateService.FirmwareInventory&.Members || []
+    end
   end
 end

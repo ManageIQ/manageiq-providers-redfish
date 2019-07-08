@@ -31,6 +31,11 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
           :disk_capacity   => 6_017_150_230_528,
           :memory_mb       => 32_768,
         },
+        :firmware     => {
+          :build   => "IVE1",
+          :name    => "Bios",
+          :version => "1.20",
+        },
         :nic          => {
           :device_name  => "Intel X722 LOM (onboard)",
           :manufacturer => "Intel",
@@ -65,6 +70,11 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
           :cpu_total_cores => 20,
           :disk_capacity   => 412_316_860_416,
           :memory_mb       => 32_768,
+        },
+        :firmware     => {
+          :build   => "MyGTH-76",
+          :name    => "UEFI",
+          :version => "2.50.4a",
         },
         :nic          => {},
         :storage      => {},
@@ -187,6 +197,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
         assert_physical_servers
         assert_physical_server_details
         assert_hardwares
+        assert_firmwares
         assert_nics
         assert_storage_adapters
         assert_racks
@@ -238,6 +249,13 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
       system = ComputerSystem.find_by!(:managed_entity => server)
       hardware = Hardware.find_by!(:computer_system => system)
       check_attributes(hardware, attrs, :hardware)
+    end
+  end
+
+  def assert_firmwares
+    servers.each do |server_ems_ref, attrs|
+      server = PhysicalServer.find_by!(:ems_ref => server_ems_ref)
+      check_attributes(server.hardware.firmwares.first, attrs, :firmware)
     end
   end
 
