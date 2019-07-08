@@ -31,6 +31,12 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
           :disk_capacity   => 6_017_150_230_528,
           :memory_mb       => 32_768,
         },
+        :nic          => {
+          :device_name  => "Intel X722 LOM (onboard)",
+          :manufacturer => "Intel",
+          :model        => "Contoso X",
+          :uid_ems      => "/redfish/v1/Chassis/Sled-1-1-1/NetworkAdapters/nic-1",
+        },
       },
       "/redfish/v1/Systems/System-1-1-1-2" => nil,
       "/redfish/v1/Systems/System-1-2-1-1" => {
@@ -54,6 +60,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
           :disk_capacity   => 412_316_860_416,
           :memory_mb       => 32_768,
         },
+        :nic          => {},
       },
     }
   end
@@ -173,6 +180,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
         assert_physical_servers
         assert_physical_server_details
         assert_hardwares
+        assert_nics
         assert_racks
         assert_physical_chassis
         assert_physical_chassis_details
@@ -222,6 +230,13 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
       system = ComputerSystem.find_by!(:managed_entity => server)
       hardware = Hardware.find_by!(:computer_system => system)
       check_attributes(hardware, attrs, :hardware)
+    end
+  end
+
+  def assert_nics
+    servers.each do |server_ems_ref, attrs|
+      server = PhysicalServer.find_by!(:ems_ref => server_ems_ref)
+      check_attributes(server.hardware.nics.first, attrs, :nic)
     end
   end
 

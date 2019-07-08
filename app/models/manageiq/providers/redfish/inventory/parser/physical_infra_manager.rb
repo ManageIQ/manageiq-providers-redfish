@@ -89,12 +89,23 @@ module ManageIQ::Providers::Redfish
       collector.physical_servers.each do |s|
         server = persister.physical_servers.lazy_find(s["@odata.id"])
         computer = persister.physical_server_computer_systems.lazy_find(server)
-        persister.physical_server_hardwares.build(
+        hardware = persister.physical_server_hardwares.build(
           :computer_system => computer,
           :cpu_total_cores => get_server_cpu_core_count(s),
           :disk_capacity   => get_server_disk_capacity(s),
           :memory_mb       => get_server_memory_mb(s),
         )
+        (s.NetworkInterfaces&.Members || []).each do |net_iface|
+          net_adapter = net_iface.Links.NetworkAdapter
+          persister.physical_server_network_devices.build(
+            :hardware     => hardware,
+            :device_name  => net_adapter.Name,
+            :device_type  => "ethernet",
+            :manufacturer => net_adapter.Manufacturer,
+            :model        => net_adapter.Model,
+            :uid_ems      => net_adapter["@odata.id"]
+          )
+        end
       end
     end
 
