@@ -106,6 +106,18 @@ module ManageIQ::Providers::Redfish
             :uid_ems      => net_adapter["@odata.id"]
           )
         end
+        (s.Storage&.Members || []).each do |storage|
+          (storage.StorageControllers || []).each do |controller|
+            persister.physical_server_storage_adapters.build(
+              :hardware     => hardware,
+              :device_name  => controller.Name,
+              :device_type  => "storage",
+              :manufacturer => controller.Manufacturer,
+              :model        => controller.Model,
+              :uid_ems      => controller["@odata.id"]
+            )
+          end
+        end
       end
     end
 

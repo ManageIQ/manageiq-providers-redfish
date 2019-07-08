@@ -37,6 +37,12 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
           :model        => "Contoso X",
           :uid_ems      => "/redfish/v1/Chassis/Sled-1-1-1/NetworkAdapters/nic-1",
         },
+        :storage      => {
+          :device_name  => "RAID Storage Adapter",
+          :manufacturer => "Contoso",
+          :model        => "SAS3508+SAS35x36",
+          :uid_ems      => "/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1#/StorageControllers/0",
+        },
       },
       "/redfish/v1/Systems/System-1-1-1-2" => nil,
       "/redfish/v1/Systems/System-1-2-1-1" => {
@@ -61,6 +67,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
           :memory_mb       => 32_768,
         },
         :nic          => {},
+        :storage      => {},
       },
     }
   end
@@ -181,6 +188,7 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
         assert_physical_server_details
         assert_hardwares
         assert_nics
+        assert_storage_adapters
         assert_racks
         assert_physical_chassis
         assert_physical_chassis_details
@@ -237,6 +245,13 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
     servers.each do |server_ems_ref, attrs|
       server = PhysicalServer.find_by!(:ems_ref => server_ems_ref)
       check_attributes(server.hardware.nics.first, attrs, :nic)
+    end
+  end
+
+  def assert_storage_adapters
+    servers.each do |server_ems_ref, attrs|
+      server = PhysicalServer.find_by!(:ems_ref => server_ems_ref)
+      check_attributes(server.hardware.storage_adapters.first, attrs, :storage)
     end
   end
 
