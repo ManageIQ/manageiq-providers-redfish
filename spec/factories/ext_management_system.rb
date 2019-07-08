@@ -15,15 +15,15 @@ FactoryBot.define do
 
       hostname do
         # Keep in sync with filter_sensitive_data in spec/spec_helper.rb!
-        Rails.application.secrets.redfish.try(:[], "host") || "redfishhost"
+        Rails.application.secrets.redfish.try(:[], :host) || "redfishhost"
       end
 
       after(:create) do |ems|
         secrets = Rails.application.secrets.redfish
         ems.authentications << FactoryBot.create(
           :authentication,
-          :userid   => secrets.try(:[], "userid") || "REDFISH_USERID",
-          :password => secrets.try(:[], "password") || "REDFISH_PASSWORD"
+          :userid   => secrets.try(:[], :userid) || "REDFISH_USERID",
+          :password => secrets.try(:[], :password) || "REDFISH_PASSWORD"
         )
       end
     end
