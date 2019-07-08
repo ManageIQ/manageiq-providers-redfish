@@ -50,13 +50,20 @@ module ManageIQ::Providers::Redfish
           :description        => s.Description,
           :location           => format_location(location),
           :location_led_state => s.IndicatorLED,
+          :machine_type       => machine_type(s),
           :manufacturer       => s.Manufacturer,
           :model              => s.Model,
+          :product_name       => s.Name,
           :rack_name          => location.dig("Placement", "Rack"),
           :resource           => server,
+          :room               => location.dig("PostalAddress", "Room"),
           :serial_number      => s.SerialNumber,
         )
       end
+    end
+
+    def machine_type(server)
+      server.Processors.Members.first.InstructionSet
     end
 
     def get_server_location(server)

@@ -18,9 +18,12 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
           :description        => "G5 Computer System Node",
           :location           => "123, Adams Ave., Chesapeake, VA",
           :location_led_state => "Off",
+          :machine_type       => "x86-64",
           :manufacturer       => "Dell",
           :model              => "DSS9630M",
+          :product_name       => "G5 Computer System",
           :rack_name          => "Rack-1",
+          :room               => "Room B",
           :serial_number      => "CN701636AB0013",
         },
         :hardware     => {
