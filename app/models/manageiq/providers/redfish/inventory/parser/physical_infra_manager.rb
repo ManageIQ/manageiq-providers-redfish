@@ -28,7 +28,9 @@ module ManageIQ::Providers::Redfish
           :raw_power_state  => s.PowerState,
           :type             => "ManageIQ::Providers::Redfish::PhysicalInfraManager::PhysicalServer",
         )
-        persister.computer_systems.build(:managed_entity => server)
+        persister.physical_server_computer_systems.build(
+          :managed_entity => server
+        )
       end
     end
 
@@ -79,8 +81,8 @@ module ManageIQ::Providers::Redfish
     def hardwares
       collector.physical_servers.each do |s|
         server = persister.physical_servers.lazy_find(s["@odata.id"])
-        computer = persister.computer_systems.lazy_find(server)
-        persister.hardwares.build(
+        computer = persister.physical_server_computer_systems.lazy_find(server)
+        persister.physical_server_hardwares.build(
           :computer_system => computer,
           :cpu_total_cores => get_server_cpu_core_count(s),
           :disk_capacity   => get_server_disk_capacity(s),
