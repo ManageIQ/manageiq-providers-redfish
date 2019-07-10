@@ -5,8 +5,9 @@ module ManageIQ::Providers::Redfish::Inventory::Persister::Definitions::Physical
     %i(
       physical_servers
       physical_server_details
-      computer_systems
-      hardwares
+      physical_server_computer_systems
+      physical_server_hardwares
+
       physical_racks
       physical_chassis
       physical_chassis_details

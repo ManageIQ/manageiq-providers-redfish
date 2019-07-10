@@ -182,8 +182,8 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager::Refresher do
     expect(ems.physical_servers.count).to eq(3)
     expect(ems.physical_servers.map(&:ems_ref)).to match_array(servers.keys)
     expect(ems.physical_server_details.count).to eq(3)
-    expect(ems.computer_systems.count).to eq(3)
-    expect(ems.hardwares.count).to eq(3)
+    expect(ems.physical_server_computer_systems.count).to eq(3)
+    expect(ems.physical_server_hardwares.count).to eq(3)
 
     expect(ems.physical_racks.count).to eq(2)
     expect(ems.physical_racks.map(&:ems_ref)).to match_array(racks.keys)
