@@ -4,5 +4,6 @@ module ManageIQ::Providers::Redfish
 
     include_concern "Power"
     include_concern "Led"
+    include_concern "Firmware"
   end
 end
