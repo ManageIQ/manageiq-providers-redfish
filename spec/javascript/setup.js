@@ -13,6 +13,7 @@ global.mountRedux = (component) => mount(component, DEFAULT_CONTEXT);
 // Global variables that Components usually get from elsewhere.
 global.ManageIQ = { record: { recordId: -1 } };
 global.__ = jest.fn().mockImplementation((val) => `_${val}_`);
+global.sprintf = require('sprintf-js').sprintf;
 
 // Redux store mocks.
 global.mockStore = configureStore();

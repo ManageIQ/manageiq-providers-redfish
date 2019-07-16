@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FirmwareUpdate renders form with two physicalServers 1`] = `
+<Form
+  bsClass="form"
+  componentClass="form"
+  horizontal={true}
+  inline={false}
+>
+  <FormSpy
+    onChange={[Function]}
+  />
+  <Grid
+    bsClass="container"
+    componentClass="div"
+    fluid={true}
+  >
+    <Row
+      bsClass="row"
+      componentClass="div"
+    >
+      <Col
+        bsClass="col"
+        componentClass="div"
+        xs={12}
+      >
+        <h2>
+          _Number of servers to update firmware for: 2_
+        </h2>
+      </Col>
+    </Row>
+    <hr />
+    <Row
+      bsClass="row"
+      componentClass="div"
+    >
+      <Col
+        bsClass="col"
+        componentClass="div"
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          format={[Function]}
+          inputColumnSize={8}
+          label="_Firmware Binary_"
+          labelColumnSize={3}
+          name="firmwareBinary"
+          options={Array []}
+          parse={[Function]}
+          placeholder="_Select a Firmware Binary_"
+          searchable={true}
+          validate={[Function]}
+          validateOnMount={false}
+        />
+      </Col>
+      <hr />
+    </Row>
+  </Grid>
+</Form>
+`;
+
+exports[`FirmwareUpdate renders form with two physicalServers and one firmware binary 1`] = `
+<Form
+  bsClass="form"
+  componentClass="form"
+  horizontal={true}
+  inline={false}
+>
+  <FormSpy
+    onChange={[Function]}
+  />
+  <Grid
+    bsClass="container"
+    componentClass="div"
+    fluid={true}
+  >
+    <Row
+      bsClass="row"
+      componentClass="div"
+    >
+      <Col
+        bsClass="col"
+        componentClass="div"
+        xs={12}
+      >
+        <h2>
+          _Number of servers to update firmware for: 2_
+        </h2>
+      </Col>
+    </Row>
+    <hr />
+    <Row
+      bsClass="row"
+      componentClass="div"
+    >
+      <Col
+        bsClass="col"
+        componentClass="div"
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          format={[Function]}
+          inputColumnSize={8}
+          label="_Firmware Binary_"
+          labelColumnSize={3}
+          name="firmwareBinary"
+          options={
+            Array [
+              Object {
+                "label": "BINARY1",
+                "value": "binary1",
+              },
+            ]
+          }
+          parse={[Function]}
+          placeholder="_Select a Firmware Binary_"
+          searchable={true}
+          validate={[Function]}
+          validateOnMount={false}
+        />
+      </Col>
+      <hr />
+    </Row>
+  </Grid>
+</Form>
+`;
+
+exports[`FirmwareUpdate renders form with zero physicalServers 1`] = `
+<Form
+  bsClass="form"
+  componentClass="form"
+  horizontal={true}
+  inline={false}
+>
+  <FormSpy
+    onChange={[Function]}
+  />
+  <Grid
+    bsClass="container"
+    componentClass="div"
+    fluid={true}
+  >
+    <Row
+      bsClass="row"
+      componentClass="div"
+    >
+      <Col
+        bsClass="col"
+        componentClass="div"
+        xs={12}
+      >
+        <h2>
+          _Number of servers to update firmware for: 0_
+        </h2>
+      </Col>
+    </Row>
+    <hr />
+    <Row
+      bsClass="row"
+      componentClass="div"
+    >
+      <Col
+        bsClass="col"
+        componentClass="div"
+        xs={12}
+      >
+        <Field
+          component={[Function]}
+          format={[Function]}
+          inputColumnSize={8}
+          label="_Firmware Binary_"
+          labelColumnSize={3}
+          name="firmwareBinary"
+          options={Array []}
+          parse={[Function]}
+          placeholder="_Select a Firmware Binary_"
+          searchable={true}
+          validate={[Function]}
+          validateOnMount={false}
+        />
+      </Col>
+      <hr />
+    </Row>
+  </Grid>
+</Form>
+`;
+
+exports[`FirmwareUpdate renders spinner 1`] = `
+<div
+  className="spinner spinner-lg"
+/>
+`;

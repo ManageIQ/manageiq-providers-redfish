@@ -1,0 +1,766 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RedfishServerFirmwareUpdateDialog componentInitHook fetchBinaries fails 1`] = `
+<Connect(RedfishServerFirmwareUpdateDialog)>
+  <RedfishServerFirmwareUpdateDialog
+    dispatch={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "payload": Object {
+                "newRecord": true,
+                "pristine": true,
+              },
+              "type": "FormButtons.init",
+            },
+          ],
+          Array [
+            Object {
+              "payload": "_Apply Firmware_",
+              "type": "FormButtons.customLabel",
+            },
+          ],
+          Array [
+            Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          ],
+          Array [
+            Object {
+              "payload": true,
+              "type": "FormButtons.saveable",
+            },
+          ],
+          Array [
+            Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          ],
+          Array [
+            Object {
+              "payload": false,
+              "type": "FormButtons.saveable",
+            },
+          ],
+          Array [
+            Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          ],
+          Array [
+            Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          ],
+          Array [
+            Object {
+              "payload": Object {
+                "newRecord": true,
+                "pristine": true,
+              },
+              "type": "FormButtons.init",
+            },
+          ],
+          Array [
+            Object {
+              "payload": "_Apply Firmware_",
+              "type": "FormButtons.customLabel",
+            },
+          ],
+          Array [
+            Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          ],
+          Array [
+            Object {
+              "payload": true,
+              "type": "FormButtons.saveable",
+            },
+          ],
+          Array [
+            Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          ],
+          Array [
+            Object {
+              "payload": false,
+              "type": "FormButtons.saveable",
+            },
+          ],
+          Array [
+            Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          ],
+          Array [
+            Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": Object {
+                "newRecord": true,
+                "pristine": true,
+              },
+              "type": "FormButtons.init",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": "_Apply Firmware_",
+              "type": "FormButtons.customLabel",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": true,
+              "type": "FormButtons.saveable",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": false,
+              "type": "FormButtons.saveable",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": Object {
+                "newRecord": true,
+                "pristine": true,
+              },
+              "type": "FormButtons.init",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": "_Apply Firmware_",
+              "type": "FormButtons.customLabel",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": true,
+              "type": "FormButtons.saveable",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": false,
+              "type": "FormButtons.saveable",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          },
+        ],
+      }
+    }
+  >
+    <p>
+      MSG
+    </p>
+  </RedfishServerFirmwareUpdateDialog>
+</Connect(RedfishServerFirmwareUpdateDialog)>
+`;
+
+exports[`RedfishServerFirmwareUpdateDialog componentInitHook fetchBinaries succeeds 1`] = `
+<Connect(RedfishServerFirmwareUpdateDialog)>
+  <RedfishServerFirmwareUpdateDialog
+    dispatch={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "payload": Object {
+                "newRecord": true,
+                "pristine": true,
+              },
+              "type": "FormButtons.init",
+            },
+          ],
+          Array [
+            Object {
+              "payload": "_Apply Firmware_",
+              "type": "FormButtons.customLabel",
+            },
+          ],
+          Array [
+            Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          ],
+          Array [
+            Object {
+              "payload": true,
+              "type": "FormButtons.saveable",
+            },
+          ],
+          Array [
+            Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          ],
+          Array [
+            Object {
+              "payload": false,
+              "type": "FormButtons.saveable",
+            },
+          ],
+          Array [
+            Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": Object {
+                "newRecord": true,
+                "pristine": true,
+              },
+              "type": "FormButtons.init",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": "_Apply Firmware_",
+              "type": "FormButtons.customLabel",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": Object {
+                "addClicked": [Function],
+              },
+              "type": "FormButtons.callbacks",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": true,
+              "type": "FormButtons.saveable",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": false,
+              "type": "FormButtons.saveable",
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "payload": true,
+              "type": "FormButtons.pristine",
+            },
+          },
+        ],
+      }
+    }
+  >
+    <FirmwareUpdate
+      firmwareBinaries={
+        Array [
+          Object {
+            "label": "BINARY1 (DESCR1)",
+            "value": 1,
+          },
+        ]
+      }
+      initialValues={Object {}}
+      loading={false}
+      physicalServerIds={
+        Array [
+          123,
+        ]
+      }
+      updateFormState={[Function]}
+    >
+      <ReactFinalForm
+        initialValues={Object {}}
+        onSubmit={[Function]}
+        render={[Function]}
+      >
+        <Form
+          bsClass="form"
+          componentClass="form"
+          horizontal={true}
+          inline={false}
+        >
+          <form
+            className="form-horizontal"
+          >
+            <FormSpy
+              onChange={[Function]}
+            />
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={true}
+            >
+              <div
+                className="container-fluid"
+              >
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      xs={12}
+                    >
+                      <div
+                        className="col-xs-12"
+                      >
+                        <h2>
+                          _Number of servers to update firmware for: 1_
+                        </h2>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+                <hr />
+                <Row
+                  bsClass="row"
+                  componentClass="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      bsClass="col"
+                      componentClass="div"
+                      xs={12}
+                    >
+                      <div
+                        className="col-xs-12"
+                      >
+                        <Field
+                          component={[Function]}
+                          format={[Function]}
+                          inputColumnSize={8}
+                          label="_Firmware Binary_"
+                          labelColumnSize={3}
+                          name="firmwareBinary"
+                          options={
+                            Array [
+                              Object {
+                                "label": "BINARY1 (DESCR1)",
+                                "value": 1,
+                              },
+                            ]
+                          }
+                          parse={[Function]}
+                          placeholder="_Select a Firmware Binary_"
+                          searchable={true}
+                          validate={[Function]}
+                          validateOnMount={false}
+                        >
+                          <FinalFormSelect
+                            input={
+                              Object {
+                                "name": "firmwareBinary",
+                                "onBlur": [Function],
+                                "onChange": [Function],
+                                "onFocus": [Function],
+                                "value": "",
+                              }
+                            }
+                            inputColumnSize={8}
+                            label="_Firmware Binary_"
+                            labelColumnSize={3}
+                            meta={
+                              Object {
+                                "active": false,
+                                "data": Object {},
+                                "dirty": false,
+                                "dirtySinceLastSubmit": false,
+                                "error": "_Firmware Binary is required_",
+                                "initial": undefined,
+                                "invalid": true,
+                                "pristine": true,
+                                "submitError": undefined,
+                                "submitFailed": false,
+                                "submitSucceeded": false,
+                                "submitting": false,
+                                "touched": false,
+                                "valid": false,
+                                "visited": false,
+                              }
+                            }
+                            options={
+                              Array [
+                                Object {
+                                  "label": "BINARY1 (DESCR1)",
+                                  "value": 1,
+                                },
+                              ]
+                            }
+                            placeholder="_Select a Firmware Binary_"
+                            searchable={true}
+                            validateOnMount={false}
+                          >
+                            <FinalFormComponent
+                              clearable={false}
+                              componentType="select"
+                              input={
+                                Object {
+                                  "name": "firmwareBinary",
+                                  "onBlur": [Function],
+                                  "onChange": [Function],
+                                  "onFocus": [Function],
+                                  "value": "",
+                                }
+                              }
+                              inputColumnSize={8}
+                              label="_Firmware Binary_"
+                              labelColumnSize={3}
+                              labelKey="label"
+                              meta={
+                                Object {
+                                  "active": false,
+                                  "data": Object {},
+                                  "dirty": false,
+                                  "dirtySinceLastSubmit": false,
+                                  "error": "_Firmware Binary is required_",
+                                  "initial": undefined,
+                                  "invalid": true,
+                                  "pristine": true,
+                                  "submitError": undefined,
+                                  "submitFailed": false,
+                                  "submitSucceeded": false,
+                                  "submitting": false,
+                                  "touched": false,
+                                  "valid": false,
+                                  "visited": false,
+                                }
+                              }
+                              multi={false}
+                              options={
+                                Array [
+                                  Object {
+                                    "label": "BINARY1 (DESCR1)",
+                                    "value": 1,
+                                  },
+                                ]
+                              }
+                              placeholder="_Select a Firmware Binary_"
+                              searchable={true}
+                              validateOnMount={false}
+                              valueKey="value"
+                            >
+                              <FormGroup
+                                bsClass="form-group"
+                                validationState={null}
+                              >
+                                <div
+                                  className="form-group"
+                                >
+                                  <Col
+                                    bsClass="col"
+                                    className="control-label"
+                                    componentClass="label"
+                                    xs={3}
+                                  >
+                                    <label
+                                      className="control-label col-xs-3"
+                                    >
+                                      _Firmware Binary_
+                                    </label>
+                                  </Col>
+                                  <Col
+                                    bsClass="col"
+                                    componentClass="div"
+                                    xs={8}
+                                  >
+                                    <div
+                                      className="col-xs-8"
+                                    >
+                                      <Select
+                                        arrowRenderer={[Function]}
+                                        autosize={true}
+                                        backspaceRemoves={true}
+                                        backspaceToRemoveMessage="Press backspace to remove {label}"
+                                        className=" final-form-select"
+                                        clearAllText="Clear all"
+                                        clearRenderer={[Function]}
+                                        clearValueText="Clear value"
+                                        clearable={false}
+                                        closeOnSelect={true}
+                                        deleteRemoves={true}
+                                        delimiter=","
+                                        disabled={false}
+                                        escapeClearsValue={true}
+                                        filterOptions={[Function]}
+                                        id="firmwareBinary"
+                                        ignoreAccents={true}
+                                        ignoreCase={true}
+                                        inputProps={Object {}}
+                                        isLoading={false}
+                                        joinValues={false}
+                                        label="_Firmware Binary_"
+                                        labelKey="label"
+                                        matchPos="any"
+                                        matchProp="any"
+                                        menuBuffer={0}
+                                        menuRenderer={[Function]}
+                                        multi={false}
+                                        name="firmwareBinary"
+                                        noResultsText="No results found"
+                                        onBlur={[Function]}
+                                        onBlurResetsInput={true}
+                                        onChange={[Function]}
+                                        onCloseResetsInput={true}
+                                        onFocus={[Function]}
+                                        onSelectResetsInput={true}
+                                        openOnClick={true}
+                                        optionClassName="final-form-select-option"
+                                        optionComponent={[Function]}
+                                        options={
+                                          Array [
+                                            Object {
+                                              "label": "BINARY1 (DESCR1)",
+                                              "value": 1,
+                                            },
+                                          ]
+                                        }
+                                        pageSize={5}
+                                        placeholder="_Select a Firmware Binary_"
+                                        removeSelected={true}
+                                        required={false}
+                                        rtl={false}
+                                        scrollMenuIntoView={true}
+                                        searchable={true}
+                                        simpleValue={false}
+                                        tabSelectsValue={true}
+                                        trimFilter={true}
+                                        value=""
+                                        valueComponent={[Function]}
+                                        valueKey="value"
+                                      >
+                                        <div
+                                          className="Select  final-form-select is-searchable Select--single"
+                                        >
+                                          <div
+                                            className="Select-control"
+                                            onKeyDown={[Function]}
+                                            onMouseDown={[Function]}
+                                            onTouchEnd={[Function]}
+                                            onTouchMove={[Function]}
+                                            onTouchStart={[Function]}
+                                          >
+                                            <div
+                                              className="Select-multi-value-wrapper"
+                                              id="react-select-2--value"
+                                            >
+                                              <div
+                                                className="Select-placeholder"
+                                              >
+                                                _Select a Firmware Binary_
+                                              </div>
+                                              <AutosizeInput
+                                                aria-activedescendant="react-select-2--value"
+                                                aria-expanded="false"
+                                                aria-haspopup="false"
+                                                aria-owns=""
+                                                className="Select-input"
+                                                id="firmwareBinary"
+                                                injectStyles={true}
+                                                minWidth="5"
+                                                onBlur={[Function]}
+                                                onChange={[Function]}
+                                                onFocus={[Function]}
+                                                required={false}
+                                                role="combobox"
+                                                value=""
+                                              >
+                                                <div
+                                                  className="Select-input"
+                                                  style={
+                                                    Object {
+                                                      "display": "inline-block",
+                                                    }
+                                                  }
+                                                >
+                                                  <input
+                                                    aria-activedescendant="react-select-2--value"
+                                                    aria-expanded="false"
+                                                    aria-haspopup="false"
+                                                    aria-owns=""
+                                                    id="firmwareBinary"
+                                                    onBlur={[Function]}
+                                                    onChange={[Function]}
+                                                    onFocus={[Function]}
+                                                    required={false}
+                                                    role="combobox"
+                                                    style={
+                                                      Object {
+                                                        "boxSizing": "content-box",
+                                                        "width": "5px",
+                                                      }
+                                                    }
+                                                    value=""
+                                                  />
+                                                  <div
+                                                    style={
+                                                      Object {
+                                                        "height": 0,
+                                                        "left": 0,
+                                                        "overflow": "scroll",
+                                                        "position": "absolute",
+                                                        "top": 0,
+                                                        "visibility": "hidden",
+                                                        "whiteSpace": "pre",
+                                                      }
+                                                    }
+                                                  />
+                                                </div>
+                                              </AutosizeInput>
+                                            </div>
+                                            <span
+                                              className="Select-arrow-zone"
+                                              onMouseDown={[Function]}
+                                            >
+                                              <span
+                                                className="Select-arrow"
+                                                onMouseDown={[Function]}
+                                              />
+                                            </span>
+                                          </div>
+                                        </div>
+                                      </Select>
+                                    </div>
+                                  </Col>
+                                </div>
+                              </FormGroup>
+                            </FinalFormComponent>
+                          </FinalFormSelect>
+                        </Field>
+                      </div>
+                    </Col>
+                    <hr />
+                  </div>
+                </Row>
+              </div>
+            </Grid>
+          </form>
+        </Form>
+      </ReactFinalForm>
+    </FirmwareUpdate>
+  </RedfishServerFirmwareUpdateDialog>
+</Connect(RedfishServerFirmwareUpdateDialog)>
+`;

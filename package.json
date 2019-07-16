@@ -16,8 +16,8 @@
   "dependencies": {
     "@manageiq/react-ui-components": "~0.9.5",
     "prop-types": "^15.6.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0"
   },
