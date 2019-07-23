@@ -1,11 +1,11 @@
 # ManageIQ plugin for the Redfish provider
 
 [![Gem Version](https://badge.fury.io/rb/manageiq-providers-redfish.svg)](http://badge.fury.io/rb/manageiq-providers-redfish)
-[![Build Status](https://travis-ci.org/ManageIQ/manageiq-providers-redfish.svg?branch=master)](https://travis-ci.org/ManageIQ/manageiq-providers-redfish)
+[![Build Status](https://travis-ci.org/ManageIQ/manageiq-providers-redfish.svg?branch=ivanchuk)](https://travis-ci.org/ManageIQ/manageiq-providers-redfish)
 [![Code Climate](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish)
 [![Test Coverage](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/coverage)
 [![Dependency Status](https://gemnasium.com/ManageIQ/manageiq-providers-redfish.svg)](https://gemnasium.com/ManageIQ/manageiq-providers-redfish)
-[![Security](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/master.svg)](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/master)
+[![Security](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/ivanchuk.svg)](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/ivanchuk)
 
 [![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ManageIQ/manageiq-providers-redfish?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Translate](https://img.shields.io/badge/translate-zanata-blue.svg)](https://translate.zanata.org/zanata/project/view/manageiq-providers-redfish)
