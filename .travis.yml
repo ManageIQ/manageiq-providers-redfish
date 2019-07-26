@@ -1,7 +1,7 @@
+---
 dist: xenial
 language: ruby
 rvm:
-- 2.4.6
 - 2.5.3
 sudo: false
 notifications:
@@ -22,10 +22,6 @@ env:
   matrix:
   - TEST_SUITE=spec
   - TEST_SUITE=yarn:test
-matrix:
-  exclude:
-  - rvm: 2.4.5
-    env: TEST_SUITE=yarn:test
 addons:
   postgresql: '10'
 install:
