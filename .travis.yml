@@ -24,7 +24,7 @@ env:
   - TEST_SUITE=yarn:test
 matrix:
   exclude:
-  - rvm: 2.4.5
+  - rvm: 2.4.6
     env: TEST_SUITE=yarn:test
 addons:
   postgresql: '10'
