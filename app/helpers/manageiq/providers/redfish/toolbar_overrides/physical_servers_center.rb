@@ -24,7 +24,7 @@ module ManageIQ::Providers::Redfish
                   :button         => :physical_server_provision,
                   :modal_title    => N_("Provision Selected Physical Servers"),
                   :component_name => "RedfishServerProvisionDialog",
-                }.to_json,
+                },
               },
               :enabled => false,
               :onwhen  => "1+"
@@ -42,7 +42,7 @@ module ManageIQ::Providers::Redfish
                   :button         => :physical_server_firmware_update,
                   :modal_title    => N_("Update Physical Servers' Firmware"),
                   :component_name => "RedfishServerFirmwareUpdateDialog",
-                }.to_json,
+                },
               },
               :enabled => false,
               :onwhen  => "1+"
