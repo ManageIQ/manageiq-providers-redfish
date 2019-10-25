@@ -1,8 +1,9 @@
+---
 dist: xenial
 language: ruby
 rvm:
-- 2.4.6
-- 2.5.3
+- 2.5.7
+- 2.6.5
 sudo: false
 notifications:
   webhooks:
@@ -24,7 +25,7 @@ env:
   - TEST_SUITE=yarn:test
 matrix:
   exclude:
-  - rvm: 2.4.6
+  - rvm: 2.5.7
     env: TEST_SUITE=yarn:test
 addons:
   postgresql: '10'
