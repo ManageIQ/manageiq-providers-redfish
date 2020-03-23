@@ -14,10 +14,6 @@ module ManageIQ::Providers::Redfish
       @ems_type ||= "redfish_ph_infra".freeze
     end
 
-    def inventory_object_refresh?
-      true
-    end
-
     def self.description
       @description ||= "Redfish".freeze
     end
