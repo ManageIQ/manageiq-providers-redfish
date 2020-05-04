@@ -46,7 +46,9 @@ class RedfishServerProvisionDialog extends React.Component {
       fetchPxeImagesForServer(formState.values.pxeServer).then(images => {
         this.setState({pxeImages: images.resources.map(this.pxeImageToSelectOption)});
       }, handleApiError(this));
-    } else if(formState.modified.pxeImage){
+    }
+
+    if(formState.modified.pxeImage){
       fetchTemplatesForPxeImage(formState.values.pxeImage).then(templates => {
         this.setState({customizationTemplates: templates.resources.map(this.templateToSelectOption)});
       }, handleApiError(this));
