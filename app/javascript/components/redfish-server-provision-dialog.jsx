@@ -1,111 +1,94 @@
-import React from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import PxeDetails from "./forms/pxe-details"
-import { handleApiError, fetchPxeServers, fetchPxeImagesForServer, fetchTemplatesForPxeImage,
-  createProvisionRequest
-} from "../utils/api";
+import MiqFormRenderer from '@@ddf';
 
-class RedfishServerProvisionDialog extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleFormStateUpdate = this.handleFormStateUpdate.bind(this);
-    this.state = {
-      loading: true,
-      physicalServerIds: [],
-      pxeServers: [],
-      pxeImages: [],
-      customizationTemplates: [],
-    }
-  }
+import createSchema from './server-provision.schema';
+import { selectedPhysicalServers } from "../utils/common";
 
-  selectedPhysicalServers = () => {
-    if(ManageIQ.gridChecks && ManageIQ.gridChecks.length > 0){ // Multi-record page
-      this.setState({physicalServerIds: ManageIQ.gridChecks});
-    } else if(ManageIQ.record.recordId){ // Single-record page
-      this.setState({physicalServerIds: [ManageIQ.record.recordId]});
-    } else{
-      this.setState({physicalServerIds: [], error: __('Please select at lest one physical server to provision.')});
-    }
-  };
+const fetchPxeServers = () => API.get(`/api/pxe_servers?expand=resources&attributes=id,name,uri`).then(({ resources }) =>
+  resources.map(({ id, name, uri }) => ({ value: id, label: `${name} (${uri})`}))
+);
 
-  pxeServerToSelectOption = pxeServer => { return { value: pxeServer.id, label: `${pxeServer.name} (${pxeServer.uri})` } };
-  pxeImageToSelectOption = pxeImage => { return { value: pxeImage.id, label: pxeImage.name } };
-  templateToSelectOption = template => { return { value: template.id, label: template.name } };
+const fetchPxeImages = (server) => API.get(`/api/pxe_servers/${server}/pxe_images?expand=resources&attributes=id,name,pxe_image_type_id`).then(({ resources }) =>
+  resources.map(({ id: value, name: label }) => ({ value, label }))
+);
 
-  initializeData = () => fetchPxeServers().then((pxeServers) => {
-      this.setState({
-        pxeServers: pxeServers.resources.map(this.pxeServerToSelectOption),
-        loading: false
-      });
-    }, handleApiError(this));
+const fetchcustomizationTemplates = (image) => API.get(`/api/pxe_images/${image}/customization_templates?expand=resources&attributes=id,name`).then(({ resources }) =>
+  resources.map(({ id: value, name: label }) => ({ value, label }))
+);
 
-  onChange = (formState) => {
-    if(formState.modified.pxeServer){
-      this.setState({customizationTemplates: []});
-      fetchPxeImagesForServer(formState.values.pxeServer).then(images => {
-        this.setState({pxeImages: images.resources.map(this.pxeImageToSelectOption)});
-      }, handleApiError(this));
-    }
+const RedfishServerProvisionDialog = ({ dispatch }) => {
+  const physicalServerIds = selectedPhysicalServers();
+  const [{ pxeServer, pxeImage }, setState] = useState({});
 
-    if(formState.modified.pxeImage){
-      fetchTemplatesForPxeImage(formState.values.pxeImage).then(templates => {
-        this.setState({customizationTemplates: templates.resources.map(this.templateToSelectOption)});
-      }, handleApiError(this));
-    }
-  };
+  const pxeServerPromise = useMemo(() => fetchPxeServers());
+  const pxeImagePromise = useMemo(() => pxeServer ? fetchPxeImages(pxeServer) : undefined, [pxeServer]);
+  const customizationTemplatePromise = useMemo(() => pxeImage ? fetchcustomizationTemplates(pxeImage) : undefined, [pxeImage]);
 
-  componentDidMount() {
-    this.props.dispatch({
+  useEffect(() => {
+    dispatch({
       type: "FormButtons.init",
       payload: {
         newRecord: true,
         pristine: true,
-        addClicked: () => createProvisionRequest(
-          this.state.physicalServerIds, this.state.values.pxeImage, this.state.values.customizationTemplate
-        )
       }
     });
-    this.props.dispatch({
-      type: "FormButtons.customLabel",
-      payload: __('Provision')
-    });
-    this.selectedPhysicalServers();
-    this.initializeData()
-  }
 
-  handleFormStateUpdate(formState) {
-    this.props.dispatch({
+    dispatch({
+      type: "FormButtons.customLabel",
+      payload: __('Provision'),
+    });
+  }, []);
+
+  const submitValues = ({ pxeImage: pxe_image_id, customizationTemplate: customization_template_id }) => {
+    API.post(`/api/requests`, {
+      options: {
+        request_type: 'provision_physical_server',
+        src_ids: physicalServerIds,
+        pxe_image_id,
+        customization_template_id,
+      },
+      auto_approve: false,
+    }).then(response => {
+      response['results'].forEach(res => window.add_flash(res.message, res.status === 'Ok' ? 'success' : 'error'));
+    });
+  };
+
+  const handleFormStateUpdate = (formState) => {
+    dispatch({
       type: "FormButtons.saveable",
       payload: formState.valid
     });
-    this.props.dispatch({
+    dispatch({
       type: "FormButtons.pristine",
       payload: formState.pristine
     });
-    this.setState({
-      values: formState.values
+    dispatch({
+      type: 'FormButtons.callbacks',
+      payload: { addClicked: () => submitValues(formState.values) },
     });
-    this.onChange(formState);
-  }
 
-  render() {
-    if(this.state.error) {
-      return <p>{this.state.error}</p>
-    }
-    return (
-      <PxeDetails
-        updateFormState={this.handleFormStateUpdate}
-        physicalServerIds={this.state.physicalServerIds}
-        pxeServers={this.state.pxeServers}
-        pxeImages={this.state.pxeImages}
-        customizationTemplates={this.state.customizationTemplates}
-        loading={this.state.loading}
-        initialValues={this.state.values}
-      />
-    );
-  }
-}
+    if (formState.modified.pxeServer && pxeServer !== formState.values.pxeServer) {
+      setState(state => ({ ...state, pxeServer: formState.values.pxeServer }));
+    };
+
+    if (formState.modified.pxeImage && pxeImage !== formState.values.pxeImage) {
+      setState(state => ({ ...state, pxeImage: formState.values.pxeImage }));
+    };
+  };
+
+  const schema = createSchema(pxeServerPromise, pxeImagePromise, customizationTemplatePromise);
+
+  return (
+    <MiqFormRenderer
+      schema={schema}
+      onSubmit={submitValues}
+      showFormControls={false}
+      onStateUpdate={handleFormStateUpdate}
+    />
+  );
+};
 
 RedfishServerProvisionDialog.propTypes = {
   dispatch: PropTypes.func.isRequired,
