@@ -4,7 +4,6 @@
 [![Build Status](https://travis-ci.com/ManageIQ/manageiq-providers-redfish.svg?branch=master)](https://travis-ci.com/ManageIQ/manageiq-providers-redfish)
 [![Code Climate](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish)
 [![Test Coverage](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/coverage)
-[![Dependency Status](https://gemnasium.com/ManageIQ/manageiq-providers-redfish.svg)](https://gemnasium.com/ManageIQ/manageiq-providers-redfish)
 [![Security](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/master.svg)](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/master)
 
 [![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ManageIQ/manageiq-providers-redfish?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
