@@ -19,12 +19,6 @@ namespace :yarn do
     system('yarn install')
     exit $CHILD_STATUS.exitstatus
   end
-
-  desc "run jest tests"
-  task :test do
-    system('yarn test')
-    exit $CHILD_STATUS.exitstatus
-  end
 end
 
 task :default => :spec
