@@ -1,76 +1,69 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import FirmwareUpdate from "./forms/firmware-update"
-import { handleApiErrorHooks, fetchFirmwareBinariesForServer, createFirmwareUpdateRequest } from "../utils/api";
+import MiqFormRenderer from '@@ddf';
+
+import createSchema from './firmware-update.schema';
 import { selectedPhysicalServers } from "../utils/common";
 
-const RedfishServerFirmwareUpdateDialog = (props) => {
-  const [loading, setLoading] = useState(true);
-  const [firmwareBinaries, setFirmwareBinaries] = useState([]);
-  const [error, setError] = useState('');
-  const [values, setValues] = useState({});
+const fetchFirmwareBinaries = (serverId) =>
+  API.get(`/api/physical_servers/${serverId}/firmware_binaries?expand=resources&attributes=id,name,description`).then(({ resources }) =>
+    resources.map(({ id, name, description }) => ({ value: id, label: `${name} (${description})`}))
+  );
+
+const RedfishServerFirmwareUpdateDialog = ({ dispatch }) => {
   const physicalServerIds = selectedPhysicalServers();
+  const fetchPromise = useMemo(() => fetchFirmwareBinaries(physicalServerIds[0]), [physicalServerIds]);
 
   useEffect(() => {
-    props.dispatch({
+    dispatch({
       type: "FormButtons.init",
       payload: {
         newRecord: true,
         pristine: true,
       }
     });
-    props.dispatch({
+
+    dispatch({
       type: "FormButtons.customLabel",
-      payload: __('Apply Firmware')
+      payload: __('Apply Firmware'),
     });
-    if(physicalServerIds.length > 0) {
-      fetchBinaries()
-    } else {
-      setError(__('Please pick at least one physical server and open this popup again.'));
-    }
   }, []);
 
-  // Everytime a dropdown value changes we have to update the callback function so that its
-  // closure contains the most recent state values.
-  useEffect(() => {
-    props.dispatch({
-      type: "FormButtons.callbacks",
-      payload: {
-        addClicked: () => createFirmwareUpdateRequest(physicalServerIds, values.firmwareBinary)
-      }
+  const submitValues = ({ firmwareBinaryId }) => {
+    API.post(`/api/requests`, {
+      options: {
+        request_type: 'physical_server_firmware_update',
+        src_ids: physicalServerIds,
+        firmware_binary_id: firmwareBinaryId
+      },
+      auto_approve: true
+    }).then(response => {
+      response['results'].forEach(res => window.add_flash(res.message, res.status === 'Ok' ? 'success' : 'error'));
     });
-  }, [values]);
-
-  const fwBinaryToSelectOption = fwBinary => ({ value: fwBinary.id, label: `${fwBinary.name} (${fwBinary.description})` });
-
-  const fetchBinaries = () => fetchFirmwareBinariesForServer(physicalServerIds[0]).then((fwBinaries) => {
-    setFirmwareBinaries(fwBinaries.resources.map(fwBinaryToSelectOption));
-    setLoading(false);
-  }, handleApiErrorHooks(setLoading, setError));
+  };
 
   const handleFormStateUpdate = (formState) => {
-    props.dispatch({
+    dispatch({
       type: "FormButtons.saveable",
       payload: formState.valid
     });
-    props.dispatch({
+    dispatch({
       type: "FormButtons.pristine",
       payload: formState.pristine
     });
-    setValues(() => formState.values);
+    dispatch({
+      type: 'FormButtons.callbacks',
+      payload: { addClicked: () => submitValues(formState.values) },
+    });
   };
 
-  if(error) {
-    return <p>{error}</p>
-  }
   return (
-    <FirmwareUpdate
-      updateFormState={handleFormStateUpdate}
-      physicalServerIds={physicalServerIds}
-      firmwareBinaries={firmwareBinaries}
-      loading={loading}
-      initialValues={values}
+    <MiqFormRenderer
+      schema={createSchema(fetchPromise)}
+      onSubmit={submitValues}
+      showFormControls={false}
+      onStateUpdate={handleFormStateUpdate}
     />
   );
 };

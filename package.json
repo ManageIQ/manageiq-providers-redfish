@@ -13,47 +13,10 @@
     "url": "https://github.com/ManageIQ/manageiq-providers-redfish/issues"
   },
   "homepage": "https://github.com/ManageIQ/manageiq-providers-redfish#readme",
-  "dependencies": {
-    "@manageiq/react-ui-components": "~0.9.5",
-    "prop-types": "^15.6.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
-  },
-  "devDependencies": {
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-object-assign": "^6.8.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-to-json": "^3.3.4",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.4.2"
-  },
+  "dependencies": {},
   "engines": {
     "node": ">= 6.9.1",
     "npm": ">= 3.10.3",
     "yarn": ">= 0.20.1"
   },
-  "scripts": {
-    "test": "jest"
-  },
-  "jest": {
-    "testURL": "http://localhost",
-    "setupTestFrameworkScriptFile": "<rootDir>/spec/javascript/setup.js",
-    "roots": [
-      "<rootDir>/spec/javascript"
-    ],
-    "moduleNameMapper": {
-      "\\.(css)$": "identity-obj-proxy"
-    }
-  }
 }
