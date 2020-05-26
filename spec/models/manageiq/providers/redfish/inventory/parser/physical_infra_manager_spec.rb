@@ -1,5 +1,6 @@
 describe ManageIQ::Providers::Redfish::Inventory::Parser::PhysicalInfraManager do
   def new_resource(content)
+    require "redfish_client"
     RedfishClient::Resource.new(nil, :raw => content)
   end
 
