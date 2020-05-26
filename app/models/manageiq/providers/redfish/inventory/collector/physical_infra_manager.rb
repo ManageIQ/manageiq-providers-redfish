@@ -1,19 +1,40 @@
 module ManageIQ::Providers::Redfish
   class Inventory::Collector::PhysicalInfraManager < Inventory::Collector
+    def collect
+      physical_servers
+      physical_racks
+      physical_chassis
+      firmware_inventory
+    ensure
+      disconnect!
+    end
+
     def physical_servers
-      rf_client.Systems.Members
+      @physical_servers ||= connection.Systems.Members
     end
 
     def physical_racks
-      rf_client.Chassis.Members.select { |c| c.ChassisType == "Rack" }
+      @physical_racks ||= connection.Chassis.Members.select { |c| c.ChassisType == "Rack" }
     end
 
     def physical_chassis
-      rf_client.Chassis.Members.reject { |c| c.ChassisType == "Rack" }
+      @physical_chassis ||= connection.Chassis.Members.reject { |c| c.ChassisType == "Rack" }
     end
 
     def firmware_inventory
-      rf_client.UpdateService.FirmwareInventory&.Members || []
+      @firmware_inventory ||= connection.UpdateService.FirmwareInventory&.Members || []
+    end
+
+    private
+
+    def connection
+      @connection ||= manager.connect
+    end
+
+    def disconnect!
+      @connection&.logout
+    rescue => error
+      $redfish_log.warn("Disconnect failed: #{error}")
     end
   end
 end
