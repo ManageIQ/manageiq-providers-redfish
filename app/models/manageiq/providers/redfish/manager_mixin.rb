@@ -31,46 +31,74 @@ module ManageIQ::Providers::Redfish::ManagerMixin
   module ClassMethods
     def params_for_create
       @params_for_create ||= {
-        :title  => "Configure Nuage",
         :fields => [
           {
-            :component  => "text-field",
-            :name       => "endpoints.default.server",
-            :label      => "Server Hostname/IP Address",
-            :isRequired => true,
-            :validate   => [{:type => "required-validator"}]
+            :component => 'sub-form',
+            :name      => 'endpoints-subform',
+            :title     => _('Endpoints'),
+            :fields    => [
+              {
+                :component              => 'validate-provider-credentials',
+                :name                   => 'authentications.default.valid',
+                :skipSubmit             => true,
+                :validationDependencies => %w[type],
+                :fields                 => [
+                  {
+                    :component  => "select-field",
+                    :name       => "endpoints.default.security_protocol",
+                    :label      => _("Security Protocol"),
+                    :isRequired => true,
+                    :validate   => [{:type => "required-validator"}],
+                    :options    => [
+                      {
+                        :label => _("SSL without validation"),
+                        :value => "ssl-no-validation"
+                      },
+                      {
+                        :label => _("SSL"),
+                        :value => "ssl-with-validation"
+                      },
+                      {
+                        :label => _("Non-SSL"),
+                        :value => "non-ssl"
+                      }
+                    ]
+                  },
+                  {
+                    :component  => "text-field",
+                    :name       => "endpoints.default.hostname",
+                    :label      => _("Hostname (or IPv4 or IPv6 address)"),
+                    :isRequired => true,
+                    :validate   => [{:type => "required-validator"}],
+                  },
+                  {
+                    :component    => "text-field",
+                    :name         => "endpoints.default.port",
+                    :label        => _("API Port"),
+                    :type         => "number",
+                    :initialValue => 443,
+                    :isRequired   => true,
+                    :validate     => [{:type => "required-validator"}],
+                  },
+                  {
+                    :component  => "text-field",
+                    :name       => "authentications.default.userid",
+                    :label      => "Username",
+                    :isRequired => true,
+                    :validate   => [{:type => "required-validator"}],
+                  },
+                  {
+                    :component  => "password-field",
+                    :name       => "authentications.default.password",
+                    :label      => "Password",
+                    :type       => "password",
+                    :isRequired => true,
+                    :validate   => [{:type => "required-validator"}],
+                  },
+                ]
+              },
+            ],
           },
-          {
-            :component  => "text-field",
-            :name       => "endpoints.default.username",
-            :label      => "Username",
-            :isRequired => true,
-            :validate   => [{:type => "required-validator"}]
-          },
-          {
-            :component  => "text-field",
-            :name       => "endpoints.default.password",
-            :label      => "Password",
-            :type       => "password",
-            :isRequired => true,
-            :validate   => [{:type => "required-validator"}]
-          },
-          {
-            :component  => "text-field",
-            :name       => "endpoints.default.port",
-            :label      => "Port",
-            :type       => "number",
-            :isRequired => true,
-            :validate   => [{:type => "required-validator"}]
-          },
-          {
-            :component    => "text-field",
-            :name         => "endpoints.default.protocol",
-            :label        => "Security Protocol",
-            :initialValue => "ssl-no-validation", # TODO: This should be a dropdown
-            :isRequired   => true,
-            :validate     => [{:type => "required-validator"}]
-          }
         ]
       }.freeze
     end
@@ -80,21 +108,28 @@ module ManageIQ::Providers::Redfish::ManagerMixin
     # args: {
     #   "endpoints" => {
     #     "default" => {
-    #       "username" => String,
-    #       "password" => String,
-    #       "server" => String,
+    #       "security_protocol" => String,
+    #       "hostname" => String,
     #       "port" => Integer,
-    #       "protocol" => String
+    #     }
+    #   "authentications" => {
+    #     "default" => {
+    #       "userid" => String,
+    #       "password" => String,
     #     }
     #   }
+
     def verify_credentials(args)
-      default_endpoint = args.dig("endpoints", "default")
+      endpoint = args.dig("endpoints", "default")
+      authentication = args.dig("authentications", "default")
 
-      username, password, host, port, protocol = default_endpoint&.values_at(
-        "username", "password", "server", "port", "protocol"
-      )
+      hostname, port, security_protocol = endpoint&.values_at("hostname", "port", "security_protocol")
+      userid, password = authentication&.values_at("userid", "password")
 
-      !!raw_connect(username, password, host, port, protocol)
+      password = MiqPassword.try_decrypt(password)
+      password ||= find(args["id"]).authentication_password(endpoint_name) if args["id"]
+
+      !!raw_connect(userid, password, hostname, port, security_protocol)
     end
 
     def raw_connect(username, password, host, port, protocol)
