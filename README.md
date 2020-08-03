@@ -94,7 +94,7 @@ it and instruct mock server to serve it:
 
  1. edit ~/miq/manageiq/bundler.d/overrides.rb
  2. bin/update
- 3. MIQ_SPARTAN=minimal:ems_inventory bundle exec rake evm:start
+ 3. start the ManageIQ application with worker support
  4. go to localhost:3000 (admin/smartvm)
 
 
