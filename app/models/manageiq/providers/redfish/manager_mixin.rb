@@ -44,11 +44,11 @@ module ManageIQ::Providers::Redfish::ManagerMixin
                 :validationDependencies => %w[type],
                 :fields                 => [
                   {
-                    :component  => "select-field",
+                    :component  => "select",
                     :name       => "endpoints.default.security_protocol",
                     :label      => _("Security Protocol"),
                     :isRequired => true,
-                    :validate   => [{:type => "required-validator"}],
+                    :validate   => [{:type => "required"}],
                     :options    => [
                       {
                         :label => _("SSL without validation"),
@@ -69,7 +69,7 @@ module ManageIQ::Providers::Redfish::ManagerMixin
                     :name       => "endpoints.default.hostname",
                     :label      => _("Hostname (or IPv4 or IPv6 address)"),
                     :isRequired => true,
-                    :validate   => [{:type => "required-validator"}],
+                    :validate   => [{:type => "required"}],
                   },
                   {
                     :component    => "text-field",
@@ -78,14 +78,14 @@ module ManageIQ::Providers::Redfish::ManagerMixin
                     :type         => "number",
                     :initialValue => 443,
                     :isRequired   => true,
-                    :validate     => [{:type => "required-validator"}],
+                    :validate     => [{:type => "required"}],
                   },
                   {
                     :component  => "text-field",
                     :name       => "authentications.default.userid",
                     :label      => "Username",
                     :isRequired => true,
-                    :validate   => [{:type => "required-validator"}],
+                    :validate   => [{:type => "required"}],
                   },
                   {
                     :component  => "password-field",
@@ -93,7 +93,7 @@ module ManageIQ::Providers::Redfish::ManagerMixin
                     :label      => "Password",
                     :type       => "password",
                     :isRequired => true,
-                    :validate   => [{:type => "required-validator"}],
+                    :validate   => [{:type => "required"}],
                   },
                 ]
               },
