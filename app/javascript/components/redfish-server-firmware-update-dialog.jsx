@@ -15,7 +15,7 @@ const RedfishServerFirmwareUpdateDialog = ({ dispatch }) => {
   const physicalServerIds = selectedPhysicalServers();
   const fetchPromise = useMemo(() => fetchFirmwareBinaries(physicalServerIds[0]), [physicalServerIds]);
 
-  useEffect(() => {
+  const initialize = (formOptions) => {
     dispatch({
       type: "FormButtons.init",
       payload: {
@@ -28,7 +28,12 @@ const RedfishServerFirmwareUpdateDialog = ({ dispatch }) => {
       type: "FormButtons.customLabel",
       payload: __('Apply Firmware'),
     });
-  }, []);
+
+    dispatch({
+      type: 'FormButtons.callbacks',
+      payload: { addClicked: () => formOptions.submit() },
+    });
+  };
 
   const submitValues = ({ firmwareBinaryId }) => {
     API.post(`/api/requests`, {
@@ -43,27 +48,12 @@ const RedfishServerFirmwareUpdateDialog = ({ dispatch }) => {
     });
   };
 
-  const handleFormStateUpdate = (formState) => {
-    dispatch({
-      type: "FormButtons.saveable",
-      payload: formState.valid
-    });
-    dispatch({
-      type: "FormButtons.pristine",
-      payload: formState.pristine
-    });
-    dispatch({
-      type: 'FormButtons.callbacks',
-      payload: { addClicked: () => submitValues(formState.values) },
-    });
-  };
-
   return (
     <MiqFormRenderer
       schema={createSchema(fetchPromise)}
       onSubmit={submitValues}
       showFormControls={false}
-      onStateUpdate={handleFormStateUpdate}
+      initialize={initialize}
     />
   );
 };
