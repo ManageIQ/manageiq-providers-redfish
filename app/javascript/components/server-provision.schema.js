@@ -8,6 +8,7 @@ const createSchema = (pxeServerPromise, pxeImagePromise, customizationTemplatePr
   fields: [
     {
       component: componentTypes.SELECT,
+      id: 'pxeServer',
       name: 'pxeServer',
       label: __('PXE Server'),
       placeholder: __('Select a PXE Server'),
@@ -21,6 +22,7 @@ const createSchema = (pxeServerPromise, pxeImagePromise, customizationTemplatePr
     },
     {
       component: componentTypes.SELECT,
+      id: 'pxeImage',
       name: 'pxeImage',
       label: __('PXE Image'),
       placeholder: __('Select a PXE Image'),
@@ -38,6 +40,7 @@ const createSchema = (pxeServerPromise, pxeImagePromise, customizationTemplatePr
     },
     {
       component: componentTypes.SELECT,
+      id: 'customizationTemplate',
       name: 'customizationTemplate',
       label: __('Customization Template'),
       placeholder: __('Select a Customization Template'),
