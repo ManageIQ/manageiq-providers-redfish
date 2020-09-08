@@ -26,7 +26,7 @@ const RedfishServerProvisionDialog = ({ dispatch }) => {
   const pxeImagePromise = useMemo(() => pxeServer ? fetchPxeImages(pxeServer) : undefined, [pxeServer]);
   const customizationTemplatePromise = useMemo(() => pxeImage ? fetchcustomizationTemplates(pxeImage) : undefined, [pxeImage]);
 
-  useEffect(() => {
+  const initialize = (formOptions) => {
     dispatch({
       type: "FormButtons.init",
       payload: {
@@ -39,7 +39,12 @@ const RedfishServerProvisionDialog = ({ dispatch }) => {
       type: "FormButtons.customLabel",
       payload: __('Provision'),
     });
-  }, []);
+
+    dispatch({
+      type: 'FormButtons.callbacks',
+      payload: { addClicked: () => formOptions.submit() },
+    });
+  };
 
   const submitValues = ({ pxeImage: pxe_image_id, customizationTemplate: customization_template_id }) => {
     API.post(`/api/requests`, {
@@ -55,20 +60,9 @@ const RedfishServerProvisionDialog = ({ dispatch }) => {
     });
   };
 
+  // Using the `debug` prop for handling state updates is just a temporary solution to have the old implementation
+  // working with DDFv2. Eventually it has to be replaced with something cleaner.
   const handleFormStateUpdate = (formState) => {
-    dispatch({
-      type: "FormButtons.saveable",
-      payload: formState.valid
-    });
-    dispatch({
-      type: "FormButtons.pristine",
-      payload: formState.pristine
-    });
-    dispatch({
-      type: 'FormButtons.callbacks',
-      payload: { addClicked: () => submitValues(formState.values) },
-    });
-
     if (formState.modified.pxeServer && pxeServer !== formState.values.pxeServer) {
       setState(state => ({ ...state, pxeServer: formState.values.pxeServer }));
     };
@@ -85,7 +79,8 @@ const RedfishServerProvisionDialog = ({ dispatch }) => {
       schema={schema}
       onSubmit={submitValues}
       showFormControls={false}
-      onStateUpdate={handleFormStateUpdate}
+      debug={handleFormStateUpdate}
+      initialize={initialize}
     />
   );
 };
