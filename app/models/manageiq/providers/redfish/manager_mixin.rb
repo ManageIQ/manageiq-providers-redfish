@@ -134,7 +134,7 @@ module ManageIQ::Providers::Redfish::ManagerMixin
       hostname, port, security_protocol = endpoint&.values_at("hostname", "port", "security_protocol")
       userid, password = authentication&.values_at("userid", "password")
 
-      password = MiqPassword.try_decrypt(password)
+      password = ManageIQ::Password.try_decrypt(password)
       password ||= find(args["id"]).authentication_password(endpoint_name) if args["id"]
 
       !!raw_connect(userid, password, hostname, port, security_protocol)
