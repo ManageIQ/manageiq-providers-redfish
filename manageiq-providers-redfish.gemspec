@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "redfish_client", "~> 0.5.1"
 
+  spec.add_development_dependency "manageiq-style"
   spec.add_development_dependency "redfish_tools", "~> 0.1"
   spec.add_development_dependency "simplecov"
 end
