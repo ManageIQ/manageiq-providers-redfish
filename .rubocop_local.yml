@@ -1,3 +1,0 @@
-Style/GlobalVars:
-  AllowedVariables:
-    - $redfish_log

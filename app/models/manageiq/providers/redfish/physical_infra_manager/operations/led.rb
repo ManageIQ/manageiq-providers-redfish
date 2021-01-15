@@ -20,17 +20,17 @@ module ManageIQ::Providers::Redfish
     private
 
     def set_led_state(state, server)
-      $redfish_log.info("Setting #{server.ems_ref} LED state to #{state}.")
+      _log.info("Setting #{server.ems_ref} LED state to #{state}.")
       with_provider_connection do |client|
         system = client.find(server.ems_ref)
         if system.nil?
-          $redfish_log.error("#{server.ems_ref} does not exist anymore.")
+          _log.error("#{server.ems_ref} does not exist anymore.")
           return
         end
 
         response = system.patch(:payload => { "IndicatorLED" => state })
         unless response.status == 200
-          $redfish_log.error("LED state change on #{server.ems_ref} failed.")
+          _log.error("LED state change on #{server.ems_ref} failed.")
         end
       end
     end

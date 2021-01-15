@@ -34,7 +34,7 @@ module ManageIQ::Providers::Redfish
     def disconnect!
       @connection&.logout
     rescue => error
-      $redfish_log.warn("Disconnect failed: #{error}")
+      _log.warn("Disconnect failed: #{error}")
     end
   end
 end
