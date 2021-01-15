@@ -31,14 +31,14 @@ module ManageIQ::Providers::Redfish
     end
 
     def restart_to_sys_setup(_args, _options)
-      $redfish_log.error("Restarting to system setup is not supported.")
+      _log.error("Restarting to system setup is not supported.")
       raise MiqException::Error, "Restarting to system setup is not supported."
     end
 
     def restart_mgmt_controller(_server, _options)
       # TODO(tadeboro): This operation is not well defined, since server can
       # (and usually is) managed by more that one manager.
-      $redfish_log.error("Restarting BMC is not supported.")
+      _log.error("Restarting BMC is not supported.")
       raise MiqException::Error, "Restarting BMC is not supported."
     end
 
@@ -59,7 +59,7 @@ module ManageIQ::Providers::Redfish
         available_rtypes = get_available_rtypes(system)
         rtype = rtypes.find { |t| available_rtypes.include?(t) }
         if rtype.nil?
-          $redfish_log.error("#{rtypes} and ${available_rtypes} are disjunct.")
+          _log.error("#{rtypes} and #{available_rtypes} are disjunct.")
           raise MiqException::Error, "No acceptable reset type"
         end
 
@@ -82,7 +82,7 @@ module ManageIQ::Providers::Redfish
     end
 
     def execute_reset_action(system, rtype)
-      $redfish_log.info("Attempting to execute #{rtype} reset.")
+      _log.info("Attempting to execute #{rtype} reset.")
       response = system.Actions["#ComputerSystem.Reset"].post(
         :field => "target", :payload => { "ResetType" => rtype }
       )
@@ -90,7 +90,7 @@ module ManageIQ::Providers::Redfish
         raise MiqException::Error, "'#{rtype}' reset failed: #{response.body}."
       end
 
-      $redfish_log.info("#{rtype} reset done.")
+      _log.info("#{rtype} reset done.")
       response
     end
   end

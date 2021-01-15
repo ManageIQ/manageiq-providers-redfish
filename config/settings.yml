@@ -7,17 +7,12 @@
         :general:
           :critical:
           - !ruby/regexp /^redfish_/
-
 :http_proxy:
   :redfish:
     :host:
     :password:
     :port:
     :user:
-
-:log:
-  :level_redfish: info
-
 :workers:
   :worker_base:
     :queue_worker_base:

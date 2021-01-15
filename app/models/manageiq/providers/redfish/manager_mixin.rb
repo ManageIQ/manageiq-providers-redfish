@@ -20,7 +20,7 @@ module ManageIQ::Providers::Redfish::ManagerMixin
   def disconnect(connection)
     connection.logout
   rescue StandardError => error
-    $redfish_log.warn("Disconnect failed: #{error}")
+    _log.warn("Disconnect failed: #{error}")
   end
 
   def verify_credentials(auth_type = nil, options = {})
