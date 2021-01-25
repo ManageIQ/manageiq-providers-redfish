@@ -14,9 +14,7 @@
     :port:
     :user:
 :workers:
-  :worker_base:
-    :queue_worker_base:
-      :ems_refresh_worker:
-        :ems_refresh_worker_redfish_physical_infra: {}
-    :event_catcher:
-      :event_catcher_redfish: {}
+  :ems_refresh_worker_redfish_physical_infra:
+    :inherits_from: ems_refresh_worker
+  :event_catcher_redfish:
+    :inherits_from: event_catcher
