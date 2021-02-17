@@ -47,13 +47,14 @@ module ManageIQ::Providers::Redfish::ManagerMixin
                 :validationDependencies => %w[type],
                 :fields                 => [
                   {
-                    :component  => "select",
-                    :id         => "endpoints.default.security_protocol",
-                    :name       => "endpoints.default.security_protocol",
-                    :label      => _("Security Protocol"),
-                    :isRequired => true,
-                    :validate   => [{:type => "required"}],
-                    :options    => [
+                    :component    => "select",
+                    :id           => "endpoints.default.security_protocol",
+                    :name         => "endpoints.default.security_protocol",
+                    :label        => _("Security Protocol"),
+                    :isRequired   => true,
+                    :validate     => [{:type => "required"}],
+                    :initialValue => 'ssl-with-validation',
+                    :options      => [
                       {
                         :label => _("SSL without validation"),
                         :value => "ssl-no-validation"
