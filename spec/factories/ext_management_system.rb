@@ -12,18 +12,14 @@ FactoryBot.define do
     trait :vcr do
       security_protocol { "ssl" }
       port { 8889 }
-
-      hostname do
-        # Keep in sync with filter_sensitive_data in spec/spec_helper.rb!
-        Rails.application.secrets.redfish.try(:[], :host) || "redfishhost"
-      end
+      hostname { Rails.application.secrets.redfish[:host] }
 
       after(:create) do |ems|
         secrets = Rails.application.secrets.redfish
         ems.authentications << FactoryBot.create(
           :authentication,
-          :userid   => secrets.try(:[], :userid) || "REDFISH_USERID",
-          :password => secrets.try(:[], :password) || "REDFISH_PASSWORD"
+          :userid   => secrets[:userid],
+          :password => secrets[:password]
         )
       end
     end
