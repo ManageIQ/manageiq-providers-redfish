@@ -6,7 +6,7 @@
       :event_groups:
         :general:
           :critical:
-          - !ruby/regexp /^redfish_/
+          - /^redfish_/
 :http_proxy:
   :redfish:
     :host:
