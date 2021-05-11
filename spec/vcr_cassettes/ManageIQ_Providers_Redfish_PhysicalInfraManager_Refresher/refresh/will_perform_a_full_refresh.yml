@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1
+    uri: https://redfish-host:8889/redfish/v1
     body:
       encoding: US-ASCII
       string: ''
@@ -36,7 +36,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: post
-    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
+    uri: https://redfish-host:8889/redfish/v1/SessionService/Sessions
     body:
       encoding: UTF-8
       string: '{"UserName":"REDFISH_USERID","Password":"REDFISH_PASSWORD"}'
@@ -73,7 +73,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems
+    uri: https://redfish-host:8889/redfish/v1/Systems
     body:
       encoding: US-ASCII
       string: ''
@@ -109,7 +109,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -146,7 +146,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2
     body:
       encoding: US-ASCII
       string: ''
@@ -183,7 +183,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -219,7 +219,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Sled-1-1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -255,7 +255,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-2-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Sled-1-2-1
     body:
       encoding: US-ASCII
       string: ''
@@ -291,7 +291,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Block-1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -328,7 +328,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Rack-1
     body:
       encoding: US-ASCII
       string: ''
@@ -364,7 +364,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Processors
     body:
       encoding: US-ASCII
       string: ''
@@ -399,7 +399,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors/1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Processors/1
     body:
       encoding: US-ASCII
       string: ''
@@ -438,7 +438,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors/2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Processors/2
     body:
       encoding: US-ASCII
       string: ''
@@ -477,7 +477,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Processors
     body:
       encoding: US-ASCII
       string: ''
@@ -512,7 +512,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors/1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Processors/1
     body:
       encoding: US-ASCII
       string: ''
@@ -551,7 +551,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors/2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Processors/2
     body:
       encoding: US-ASCII
       string: ''
@@ -590,7 +590,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-2
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Block-1-2
     body:
       encoding: US-ASCII
       string: ''
@@ -627,7 +627,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Processors
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1/Processors
     body:
       encoding: US-ASCII
       string: ''
@@ -663,7 +663,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Processors/CPU.Socket.1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1/Processors/CPU.Socket.1
     body:
       encoding: US-ASCII
       string: ''
@@ -700,7 +700,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage
     body:
       encoding: US-ASCII
       string: ''
@@ -736,7 +736,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1
     body:
       encoding: US-ASCII
       string: ''
@@ -774,7 +774,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8
     body:
       encoding: US-ASCII
       string: ''
@@ -811,7 +811,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0
     body:
       encoding: US-ASCII
       string: ''
@@ -847,7 +847,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1
     body:
       encoding: US-ASCII
       string: ''
@@ -883,7 +883,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2
     body:
       encoding: US-ASCII
       string: ''
@@ -919,7 +919,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
     body:
       encoding: US-ASCII
       string: ''
@@ -957,7 +957,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
     body:
       encoding: US-ASCII
       string: ''
@@ -995,7 +995,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/NetworkInterfaces
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/NetworkInterfaces
     body:
       encoding: US-ASCII
       string: ''
@@ -1031,7 +1031,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/NetworkInterfaces/1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/NetworkInterfaces/1
     body:
       encoding: US-ASCII
       string: ''
@@ -1070,7 +1070,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-1/NetworkAdapters/nic-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Sled-1-1-1/NetworkAdapters/nic-1
     body:
       encoding: US-ASCII
       string: ''
@@ -1106,7 +1106,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage
     body:
       encoding: US-ASCII
       string: ''
@@ -1142,7 +1142,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1
     body:
       encoding: US-ASCII
       string: ''
@@ -1179,7 +1179,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8
     body:
       encoding: US-ASCII
       string: ''
@@ -1216,7 +1216,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0
     body:
       encoding: US-ASCII
       string: ''
@@ -1252,7 +1252,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1
     body:
       encoding: US-ASCII
       string: ''
@@ -1288,7 +1288,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2
     body:
       encoding: US-ASCII
       string: ''
@@ -1324,7 +1324,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
     body:
       encoding: US-ASCII
       string: ''
@@ -1362,7 +1362,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
     body:
       encoding: US-ASCII
       string: ''
@@ -1400,7 +1400,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers
     body:
       encoding: US-ASCII
       string: ''
@@ -1437,7 +1437,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers/AHCI.Embedded.1-1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers/AHCI.Embedded.1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -1475,7 +1475,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis
+    uri: https://redfish-host:8889/redfish/v1/Chassis
     body:
       encoding: US-ASCII
       string: ''
@@ -1510,7 +1510,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-2
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Sled-1-1-2
     body:
       encoding: US-ASCII
       string: ''
@@ -1546,7 +1546,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-2
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Rack-2
     body:
       encoding: US-ASCII
       string: ''
@@ -1582,7 +1582,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-2-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Block-2-1
     body:
       encoding: US-ASCII
       string: ''
@@ -1619,7 +1619,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService
+    uri: https://redfish-host:8889/redfish/v1/UpdateService
     body:
       encoding: US-ASCII
       string: ''
@@ -1655,7 +1655,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService/FirmwareInventory
+    uri: https://redfish-host:8889/redfish/v1/UpdateService/FirmwareInventory
     body:
       encoding: US-ASCII
       string: ''
@@ -1690,7 +1690,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService/FirmwareInventory/Bios
+    uri: https://redfish-host:8889/redfish/v1/UpdateService/FirmwareInventory/Bios
     body:
       encoding: US-ASCII
       string: ''
@@ -1726,7 +1726,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService/FirmwareInventory/NIC-drvs
+    uri: https://redfish-host:8889/redfish/v1/UpdateService/FirmwareInventory/NIC-drvs
     body:
       encoding: US-ASCII
       string: ''
@@ -1762,7 +1762,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService/FirmwareInventory/UEFI
+    uri: https://redfish-host:8889/redfish/v1/UpdateService/FirmwareInventory/UEFI
     body:
       encoding: US-ASCII
       string: ''
@@ -1798,7 +1798,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1
+    uri: https://redfish-host:8889/redfish/v1
     body:
       encoding: US-ASCII
       string: ''
@@ -1832,7 +1832,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: post
-    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
+    uri: https://redfish-host:8889/redfish/v1/SessionService/Sessions
     body:
       encoding: UTF-8
       string: '{"UserName":"REDFISH_USERID","Password":"REDFISH_PASSWORD"}'
@@ -1869,7 +1869,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems
+    uri: https://redfish-host:8889/redfish/v1/Systems
     body:
       encoding: US-ASCII
       string: ''
@@ -1905,7 +1905,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -1942,7 +1942,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2
     body:
       encoding: US-ASCII
       string: ''
@@ -1979,7 +1979,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -2015,7 +2015,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Sled-1-1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -2051,7 +2051,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-2-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Sled-1-2-1
     body:
       encoding: US-ASCII
       string: ''
@@ -2087,7 +2087,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Block-1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -2124,7 +2124,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Rack-1
     body:
       encoding: US-ASCII
       string: ''
@@ -2160,7 +2160,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Processors
     body:
       encoding: US-ASCII
       string: ''
@@ -2195,7 +2195,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors/1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Processors/1
     body:
       encoding: US-ASCII
       string: ''
@@ -2234,7 +2234,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Processors/2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Processors/2
     body:
       encoding: US-ASCII
       string: ''
@@ -2273,7 +2273,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Processors
     body:
       encoding: US-ASCII
       string: ''
@@ -2308,7 +2308,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors/1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Processors/1
     body:
       encoding: US-ASCII
       string: ''
@@ -2347,7 +2347,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Processors/2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Processors/2
     body:
       encoding: US-ASCII
       string: ''
@@ -2386,7 +2386,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-1-2
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Block-1-2
     body:
       encoding: US-ASCII
       string: ''
@@ -2423,7 +2423,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Processors
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1/Processors
     body:
       encoding: US-ASCII
       string: ''
@@ -2459,7 +2459,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Processors/CPU.Socket.1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1/Processors/CPU.Socket.1
     body:
       encoding: US-ASCII
       string: ''
@@ -2496,7 +2496,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage
     body:
       encoding: US-ASCII
       string: ''
@@ -2532,7 +2532,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1
     body:
       encoding: US-ASCII
       string: ''
@@ -2570,7 +2570,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8
     body:
       encoding: US-ASCII
       string: ''
@@ -2607,7 +2607,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.0
     body:
       encoding: US-ASCII
       string: ''
@@ -2643,7 +2643,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.1
     body:
       encoding: US-ASCII
       string: ''
@@ -2679,7 +2679,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/RAID_Slot1/Drives/Disk.2
     body:
       encoding: US-ASCII
       string: ''
@@ -2715,7 +2715,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
     body:
       encoding: US-ASCII
       string: ''
@@ -2753,7 +2753,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
     body:
       encoding: US-ASCII
       string: ''
@@ -2791,7 +2791,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/NetworkInterfaces
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/NetworkInterfaces
     body:
       encoding: US-ASCII
       string: ''
@@ -2827,7 +2827,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/NetworkInterfaces/1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/NetworkInterfaces/1
     body:
       encoding: US-ASCII
       string: ''
@@ -2866,7 +2866,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-1/NetworkAdapters/nic-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Sled-1-1-1/NetworkAdapters/nic-1
     body:
       encoding: US-ASCII
       string: ''
@@ -2902,7 +2902,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage
     body:
       encoding: US-ASCII
       string: ''
@@ -2938,7 +2938,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1
     body:
       encoding: US-ASCII
       string: ''
@@ -2975,7 +2975,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8
     body:
       encoding: US-ASCII
       string: ''
@@ -3012,7 +3012,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.0
     body:
       encoding: US-ASCII
       string: ''
@@ -3048,7 +3048,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.1
     body:
       encoding: US-ASCII
       string: ''
@@ -3084,7 +3084,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/RAID_Slot1/Drives/Disk.2
     body:
       encoding: US-ASCII
       string: ''
@@ -3120,7 +3120,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay0
     body:
       encoding: US-ASCII
       string: ''
@@ -3158,7 +3158,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-2/Storage/M.2_Slot8/Drives/Drive.M.2_Bay1
     body:
       encoding: US-ASCII
       string: ''
@@ -3196,7 +3196,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers
     body:
       encoding: US-ASCII
       string: ''
@@ -3233,7 +3233,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers/AHCI.Embedded.1-1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-2-1-1/Storage/Controllers/AHCI.Embedded.1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -3271,7 +3271,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis
+    uri: https://redfish-host:8889/redfish/v1/Chassis
     body:
       encoding: US-ASCII
       string: ''
@@ -3306,7 +3306,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:55 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Sled-1-1-2
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Sled-1-1-2
     body:
       encoding: US-ASCII
       string: ''
@@ -3342,7 +3342,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:56 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Rack-2
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Rack-2
     body:
       encoding: US-ASCII
       string: ''
@@ -3378,7 +3378,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:56 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Chassis/Block-2-1
+    uri: https://redfish-host:8889/redfish/v1/Chassis/Block-2-1
     body:
       encoding: US-ASCII
       string: ''
@@ -3415,7 +3415,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:56 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService
+    uri: https://redfish-host:8889/redfish/v1/UpdateService
     body:
       encoding: US-ASCII
       string: ''
@@ -3451,7 +3451,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:56 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService/FirmwareInventory
+    uri: https://redfish-host:8889/redfish/v1/UpdateService/FirmwareInventory
     body:
       encoding: US-ASCII
       string: ''
@@ -3486,7 +3486,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:56 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService/FirmwareInventory/Bios
+    uri: https://redfish-host:8889/redfish/v1/UpdateService/FirmwareInventory/Bios
     body:
       encoding: US-ASCII
       string: ''
@@ -3522,7 +3522,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:56 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService/FirmwareInventory/NIC-drvs
+    uri: https://redfish-host:8889/redfish/v1/UpdateService/FirmwareInventory/NIC-drvs
     body:
       encoding: US-ASCII
       string: ''
@@ -3558,7 +3558,7 @@ http_interactions:
   recorded_at: Mon, 08 Jul 2019 21:02:56 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/UpdateService/FirmwareInventory/UEFI
+    uri: https://redfish-host:8889/redfish/v1/UpdateService/FirmwareInventory/UEFI
     body:
       encoding: US-ASCII
       string: ''
