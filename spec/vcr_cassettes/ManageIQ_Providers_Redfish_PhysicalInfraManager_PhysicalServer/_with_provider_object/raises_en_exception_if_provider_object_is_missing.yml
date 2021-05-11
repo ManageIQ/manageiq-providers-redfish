@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1
+    uri: https://redfish-host:8889/redfish/v1
     body:
       encoding: US-ASCII
       string: ''
@@ -36,7 +36,7 @@ http_interactions:
   recorded_at: Wed, 05 Jun 2019 11:31:11 GMT
 - request:
     method: post
-    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
+    uri: https://redfish-host:8889/redfish/v1/SessionService/Sessions
     body:
       encoding: UTF-8
       string: '{"UserName":"REDFISH_USERID","Password":"REDFISH_PASSWORD"}'
@@ -73,7 +73,7 @@ http_interactions:
   recorded_at: Wed, 05 Jun 2019 11:31:11 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/invalid
+    uri: https://redfish-host:8889/invalid
     body:
       encoding: US-ASCII
       string: ''
@@ -106,7 +106,7 @@ http_interactions:
   recorded_at: Wed, 05 Jun 2019 11:31:11 GMT
 - request:
     method: delete
-    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions/f994d5ca-d5af-4a9b-a459-f4ce487d3cae
+    uri: https://redfish-host:8889/redfish/v1/SessionService/Sessions/f994d5ca-d5af-4a9b-a459-f4ce487d3cae
     body:
       encoding: US-ASCII
       string: ''

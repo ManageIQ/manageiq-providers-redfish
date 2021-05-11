@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1
+    uri: https://redfish-host:8889/redfish/v1
     body:
       encoding: US-ASCII
       string: ''
@@ -36,7 +36,7 @@ http_interactions:
   recorded_at: Sun, 16 Jun 2019 07:35:11 GMT
 - request:
     method: post
-    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions
+    uri: https://redfish-host:8889/redfish/v1/SessionService/Sessions
     body:
       encoding: UTF-8
       string: '{"UserName":"REDFISH_USERID","Password":"REDFISH_PASSWORD"}'
@@ -73,7 +73,7 @@ http_interactions:
   recorded_at: Sun, 16 Jun 2019 07:35:11 GMT
 - request:
     method: get
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1
     body:
       encoding: US-ASCII
       string: ''
@@ -110,7 +110,7 @@ http_interactions:
   recorded_at: Sun, 16 Jun 2019 07:35:11 GMT
 - request:
     method: post
-    uri: https://REDFISH_HOST:8889/redfish/v1/Systems/System-1-1-1-1/Actions/ComputerSystem.Reset
+    uri: https://redfish-host:8889/redfish/v1/Systems/System-1-1-1-1/Actions/ComputerSystem.Reset
     body:
       encoding: UTF-8
       string: '{"ResetType":"ForceOff"}'
@@ -147,7 +147,7 @@ http_interactions:
   recorded_at: Sun, 16 Jun 2019 07:35:11 GMT
 - request:
     method: delete
-    uri: https://REDFISH_HOST:8889/redfish/v1/SessionService/Sessions/06dc8091-5520-40ab-b986-6a7c87769bea
+    uri: https://redfish-host:8889/redfish/v1/SessionService/Sessions/06dc8091-5520-40ab-b986-6a7c87769bea
     body:
       encoding: US-ASCII
       string: ''
