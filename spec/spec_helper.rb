@@ -18,5 +18,8 @@ VCR.configure do |config|
     :update_content_length_header => true
   }
 
-  config.filter_sensitive_data(Rails.application.secrets.redfish_defaults[:user]) { Rails.application.secrets.redfish[:user] }
+  secrets = Rails.application.secrets
+  secrets.redfish.each_key do |secret|
+    config.filter_sensitive_data(secrets.redfish_defaults[secret]) { secrets.redfish[secret] }
+  end
 end
