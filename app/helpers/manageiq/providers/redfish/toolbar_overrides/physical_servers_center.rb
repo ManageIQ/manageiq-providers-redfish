@@ -1,6 +1,5 @@
 module ManageIQ::Providers::Redfish
-  class ToolbarOverrides::PhysicalServersCenter \
-      < ::ApplicationHelper::Toolbar::Override
+  class ToolbarOverrides::PhysicalServersCenter < ::ApplicationHelper::Toolbar::Override
     button_group(
       "physical_server_policy",
       [
@@ -14,9 +13,9 @@ module ManageIQ::Providers::Redfish
             button(
               :physical_server_provision,
               "pficon pficon-add-circle-o fa-lg",
-              t = N_("Provision Selected Physical Servers"),
+              t = N_("Provision Selected Redfish Physical Servers"),
               t,
-              :klass   => ApplicationHelper::Button::ButtonWithoutRbacCheck,
+              :klass   => Button::PhysicalServerButton,
               :data    => {
                 "function"      => "sendDataWithRx",
                 "function-data" => {
@@ -32,9 +31,9 @@ module ManageIQ::Providers::Redfish
             button(
               :physical_server_firmware_update,
               "pficon pficon-maintenance fa-lg",
-              t = N_("Update Firmware of Physical Servers"),
+              t = N_("Update Firmware of Selected Redfish Physical Servers"),
               t,
-              :klass   => ApplicationHelper::Button::ButtonWithoutRbacCheck,
+              :klass   => Button::PhysicalServerButton,
               :data    => {
                 "function"      => "sendDataWithRx",
                 "function-data" => {
