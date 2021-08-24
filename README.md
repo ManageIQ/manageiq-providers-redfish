@@ -1,9 +1,9 @@
 # ManageIQ::Providers::Redfish
 
-[![Build Status](https://travis-ci.com/ManageIQ/manageiq-providers-redfish.svg?branch=lasker)](https://travis-ci.com/ManageIQ/manageiq-providers-redfish)
+[![Build Status](https://travis-ci.com/ManageIQ/manageiq-providers-redfish.svg?branch=morphy)](https://travis-ci.com/ManageIQ/manageiq-providers-redfish)
 [![Maintainability](https://api.codeclimate.com/v1/badges/80ba546f5ac1d1fd09fc/maintainability)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/80ba546f5ac1d1fd09fc/test_coverage)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/test_coverage)
-[![Security](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/lasker.svg)](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/lasker)
+[![Security](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/morphy.svg)](https://hakiri.io/github/ManageIQ/manageiq-providers-redfish/morphy)
 
 [![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ManageIQ/manageiq-providers-redfish?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
