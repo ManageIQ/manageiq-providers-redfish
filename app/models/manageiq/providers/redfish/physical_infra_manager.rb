@@ -10,6 +10,8 @@ module ManageIQ::Providers::Redfish
     include ManagerMixin
     include_concern "Operations"
 
+    supports :create
+
     def self.ems_type
       @ems_type ||= "redfish_ph_infra".freeze
     end
