@@ -1,6 +1,6 @@
 # ManageIQ::Providers::Redfish
 
-[![Build Status](https://travis-ci.com/ManageIQ/manageiq-providers-redfish.svg?branch=master)](https://travis-ci.com/github/ManageIQ/manageiq-providers-redfish)
+[![CI](https://github.com/ManageIQ/manageiq-providers-redfish/actions/workflows/ci.yaml/badge.svg)](https://github.com/ManageIQ/manageiq-providers-redfish/actions/workflows/ci.yaml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/80ba546f5ac1d1fd09fc/maintainability)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/80ba546f5ac1d1fd09fc/test_coverage)](https://codeclimate.com/github/ManageIQ/manageiq-providers-redfish/test_coverage)
 
