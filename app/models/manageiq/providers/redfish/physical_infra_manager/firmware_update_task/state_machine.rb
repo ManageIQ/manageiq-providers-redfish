@@ -25,6 +25,8 @@ module ManageIQ::Providers::Redfish::PhysicalInfraManager::FirmwareUpdateTask::S
   def poll_firmware_update
     update_and_notify_parent(:message => msg('poll firmware update'))
     miq_request.affected_ems.with_provider_connection do |client|
+      require "redfish_client"
+
       old_response = RedfishClient::Response.from_hash(phase_context[:monitor])
       response = client.get(:path => old_response.monitor)
       if response.done?

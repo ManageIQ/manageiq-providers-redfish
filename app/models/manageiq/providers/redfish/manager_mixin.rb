@@ -1,5 +1,3 @@
-require "redfish_client"
-
 module ManageIQ::Providers::Redfish::ManagerMixin
   extend ActiveSupport::Concern
 
@@ -142,6 +140,8 @@ module ManageIQ::Providers::Redfish::ManagerMixin
     end
 
     def raw_connect(username, password, host, port, protocol)
+      require "redfish_client"
+
       url = service_url(protocol, host, port)
       verify = (protocol == "ssl-with-validation")
 
