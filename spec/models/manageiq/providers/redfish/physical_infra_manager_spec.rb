@@ -1,4 +1,6 @@
 describe ManageIQ::Providers::Redfish::PhysicalInfraManager do
+  require 'redfish_client'
+
   it ".ems_type" do
     expect(described_class.ems_type).to eq("redfish_ph_infra")
   end
@@ -7,8 +9,6 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager do
     expect(described_class.description).to eq("Redfish")
   end
 
-  let(:rf_module) { class_double("RedfishClient").as_stubbed_const }
-  let(:rf_client) { instance_double("RedfishClient::Root") }
   subject(:ems) do
     FactoryBot.create(:ems_redfish_physical_infra, :auth,
                        :hostname => "host",
@@ -17,26 +17,26 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager do
 
   context ".raw_connect" do
     it "connects over http" do
-      expect(rf_module).to receive(:new).with(
+      expect(RedfishClient).to receive(:new).with(
         "http://host:1234", :prefix => "/redfish/v1", :verify => false
-      ).and_return(rf_client)
-      expect(rf_client).to receive(:login).with("user", "pass")
+      ).and_return(RedfishClient::Root)
+      expect(RedfishClient::Root).to receive(:login).with("user", "pass")
       described_class.raw_connect("user", "pass", "host", 1234, "non-ssl")
     end
 
     it "connects over https" do
-      expect(rf_module).to receive(:new).with(
+      expect(RedfishClient).to receive(:new).with(
         "https://host:1234", :prefix => "/redfish/v1", :verify => false
-      ).and_return(rf_client)
-      expect(rf_client).to receive(:login).with("user", "pass")
+      ).and_return(RedfishClient::Root)
+      expect(RedfishClient::Root).to receive(:login).with("user", "pass")
       described_class.raw_connect("user", "pass", "host", 1234, "ssl")
     end
 
     it "connects over verified https" do
-      expect(rf_module).to receive(:new).with(
+      expect(RedfishClient).to receive(:new).with(
         "https://host:1234", :prefix => "/redfish/v1", :verify => true
-      ).and_return(rf_client)
-      expect(rf_client).to receive(:login).with("user", "pass")
+      ).and_return(RedfishClient::Root)
+      expect(RedfishClient::Root).to receive(:login).with("user", "pass")
       described_class.raw_connect("user", "pass", "host", 1234,
                                   "ssl-with-validation")
     end
@@ -49,28 +49,28 @@ describe ManageIQ::Providers::Redfish::PhysicalInfraManager do
     end
 
     it "connects over http" do
-      expect(rf_module).to receive(:new).with(
+      expect(RedfishClient).to receive(:new).with(
         "http://host:1234", :prefix => "/redfish/v1", :verify => false
-      ).and_return(rf_client)
-      expect(rf_client).to receive(:login).with("testuser", "secret")
+      ).and_return(RedfishClient::Root)
+      expect(RedfishClient::Root).to receive(:login).with("testuser", "secret")
       ems.security_protocol = "non-ssl"
       ems.connect
     end
 
     it "connects over https" do
-      expect(rf_module).to receive(:new).with(
+      expect(RedfishClient).to receive(:new).with(
         "https://host:1234", :prefix => "/redfish/v1", :verify => false
-      ).and_return(rf_client)
-      expect(rf_client).to receive(:login).with("testuser", "secret")
+      ).and_return(RedfishClient::Root)
+      expect(RedfishClient::Root).to receive(:login).with("testuser", "secret")
       ems.security_protocol = "ssl"
       ems.connect
     end
 
     it "connects over verified https" do
-      expect(rf_module).to receive(:new).with(
+      expect(RedfishClient).to receive(:new).with(
         "https://host:1234", :prefix => "/redfish/v1", :verify => true
-      ).and_return(rf_client)
-      expect(rf_client).to receive(:login).with("testuser", "secret")
+      ).and_return(RedfishClient::Root)
+      expect(RedfishClient::Root).to receive(:login).with("testuser", "secret")
       ems.security_protocol = "ssl-with-validation"
       ems.connect
     end
