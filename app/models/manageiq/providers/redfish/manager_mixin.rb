@@ -153,14 +153,8 @@ module ManageIQ::Providers::Redfish::ManagerMixin
       end
     end
 
-    SCHEME_LUT = {
-      "ssl"                 => "https",
-      "ssl-with-validation" => "https",
-      "non-ssl"             => "http"
-    }.freeze
-
     def service_url(protocol, host, port)
-      scheme = SCHEME_LUT[protocol]
+      scheme = protocol == "non-ssl" ? "http" : "https"
       URI::Generic.build(:scheme => scheme, :host => host, :port => port).to_s
     end
 
