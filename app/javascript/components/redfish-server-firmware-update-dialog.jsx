@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import MiqFormRenderer from '@@ddf';
@@ -6,14 +6,23 @@ import MiqFormRenderer from '@@ddf';
 import createSchema from './firmware-update.schema';
 import { selectedPhysicalServers } from "../utils/common";
 
-const fetchFirmwareBinaries = (serverId) =>
-  API.get(`/api/physical_servers/${serverId}/firmware_binaries?expand=resources&attributes=id,name,description`).then(({ resources }) =>
-    resources.map(({ id, name, description }) => ({ value: id, label: `${name} (${description})`}))
-  );
-
 const RedfishServerFirmwareUpdateDialog = ({ dispatch }) => {
   const physicalServerIds = selectedPhysicalServers();
-  const fetchPromise = useMemo(() => fetchFirmwareBinaries(physicalServerIds[0]), [physicalServerIds]);
+  const [{ firmwareBinaryOptions }, setState] = useState();
+  
+  API.get(`/api/physical_servers/${physicalServerIds[0]}/firmware_binaries?expand=resources&attributes=id,name,description`).then(({ resources }) => {
+    const firmwareBinaries = [];
+    resources.forEach((firmwareBinary) => {
+      firmwareBinaries.push({
+        value: firmwareBinary.id,
+        label: `${firmwareBinary.name} (${firmwareBinary.description})`
+      })
+    });
+    setState({
+      firmwareBinaryOptions: firmwareBinaries,
+    });
+  }
+);
 
   const initialize = (formOptions) => {
     dispatch({
@@ -50,7 +59,7 @@ const RedfishServerFirmwareUpdateDialog = ({ dispatch }) => {
 
   return (
     <MiqFormRenderer
-      schema={createSchema(fetchPromise)}
+      schema={createSchema(firmwareBinaryOptions)}
       onSubmit={submitValues}
       showFormControls={false}
       initialize={initialize}

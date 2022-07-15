@@ -1,6 +1,6 @@
 import { componentTypes, validatorTypes } from '@@ddf';
 
-const createSchema = (fetchPromise) => ({
+const createSchema = (firmwareBinaryOptions) => ({
   fields: [{
     component: componentTypes.SELECT,
     id: 'firmwareBinary',
@@ -13,7 +13,7 @@ const createSchema = (fetchPromise) => ({
       type: validatorTypes.REQUIRED,
       message: __('Firmware Binary is required'),
     }],
-    loadOptions: () => fetchPromise,
+    options: firmwareBinaryOptions,
   }],
 });
 
