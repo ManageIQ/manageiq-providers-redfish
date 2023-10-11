@@ -22,7 +22,7 @@ module ManageIQ::Providers::Redfish
     end
 
     def firmware_inventory
-      @firmware_inventory ||= connection.UpdateService.FirmwareInventory&.Members || []
+      @firmware_inventory ||= connection.UpdateService&.FirmwareInventory&.Members || []
     end
 
     private
