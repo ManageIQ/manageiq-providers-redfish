@@ -42,7 +42,7 @@ module ManageIQ::Providers::Redfish::ManagerMixin
                 :name                   => 'authentications.default.valid',
                 :skipSubmit             => true,
                 :isRequired             => true,
-                :validationDependencies => %w[type],
+                :validationDependencies => %w[type zone_id],
                 :fields                 => [
                   {
                     :component    => "select",
