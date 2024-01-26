@@ -8,7 +8,7 @@ module ManageIQ::Providers::Redfish
 
     include Vmdb::Logging
     include ManagerMixin
-    include_concern "Operations"
+    include Operations
 
     supports :create
 
