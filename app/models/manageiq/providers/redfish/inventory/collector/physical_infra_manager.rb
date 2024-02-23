@@ -10,15 +10,19 @@ module ManageIQ::Providers::Redfish
     end
 
     def physical_servers
-      @physical_servers ||= connection.Systems.Members
+      @physical_servers ||= connection.Systems.Members.compact
     end
 
     def physical_racks
-      @physical_racks ||= connection.Chassis.Members.select { |c| c.ChassisType == "Rack" }
+      @physical_racks ||= chassis_members.select { |c| c.ChassisType == "Rack" }
     end
 
     def physical_chassis
-      @physical_chassis ||= connection.Chassis.Members.reject { |c| c.ChassisType == "Rack" }
+      @physical_chassis ||= chassis_members.reject { |c| c.ChassisType == "Rack" }
+    end
+
+    def chassis_members
+      @chassis_members ||= connection.Chassis.Members.compact
     end
 
     def firmware_inventory
