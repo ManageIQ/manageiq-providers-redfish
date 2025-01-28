@@ -81,6 +81,8 @@ module ManageIQ::Providers::Redfish
     end
 
     def format_location(location)
+      return if location.nil?
+
       %w(HouseNumber Street City Country).collect do |field|
         location.dig("PostalAddress", field)
       end.compact.join(", ")
