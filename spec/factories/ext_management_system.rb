@@ -12,14 +12,13 @@ FactoryBot.define do
     trait :vcr do
       security_protocol { "ssl" }
       port { 8889 }
-      hostname { Rails.application.secrets.redfish[:host] }
+      hostname { VcrSecrets.redfish.host }
 
       after(:create) do |ems|
-        secrets = Rails.application.secrets.redfish
         ems.authentications << FactoryBot.create(
           :authentication,
-          :userid   => secrets[:userid],
-          :password => secrets[:password]
+          :userid   => VcrSecrets.redfish.userid,
+          :password => VcrSecrets.redfish.password
         )
       end
     end
